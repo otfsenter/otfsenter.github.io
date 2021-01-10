@@ -1,8 +1,8 @@
 .. _english_1368_up_main_different_angle:
 
-*********************
-skill three捏软乎的
-*********************
+*************************
+skill three: 捏软乎的
+*************************
 
 这话听上去怎么像是在说“拣软柿子捏”啊？没错，就是这个意思，因为软的好欺负。
 
@@ -14,63 +14,65 @@ skill three捏软乎的
 
 很多人脑子里的第一反应会是thin这个词，“瘦”的意思嘛！但又不是很有把握，因为我们以前只是在说“他长得很瘦”的时候用到这个词，但不晓得说“瘦肉”是不是也可以用这个词。好啦，既然没把握，就不要“霸王硬上弓”啦，你要是说成i like to eat thin meat.可就闹笑话了！那怎么办呢？其实准确的表达应该是lean meat, lean是指含脂肪比较少的肉，但这个词并不在r词汇表中，所以这时我们就要换一个说法，“瘦”不会说，你还不会说“肥”吗？喜欢吃瘦肉，反过来讲不就是“不喜欢吃肥肉”吗？fat这个词你是有把握的啊！除了胖之外，我们都知道它有“脂肪”的意思，那这个肥肉的表达是有把握的啦！所以，这句话你就可以灵机一动说成是：
 
-*i don't like fat meat.*
+**i don't like fat meat.**
 
 再举个类似的例子。你想跟老外说，“这个土豆是生的”。“生”（raw）这个词不会说，不会说就不要勉强嘛！“生”不会，“熟”我还不会吗？我说它没煮过不就可以了吗？所以，这话就可以说成：
 
-*this potato is not cooked.*
+**this potato is not cooked.**
 
 这就是我们要讲的转换角度第一招：“正着不会反着说”。还有其他两招分别是：“我不会说你来说”和“人不会说东西说”。
 
-##### 正着不会反着说
+正着不会反着说
+============================
 
 先说第一招，“正着不会反着说”。其实这招很好理解，就是用反义词嘛！没错，这世界原本就很简单，上有天下有地，人分男女，兽有公母，阴的反面就是阳，善的对手就是恶。只要把你会说的那个词否定掉就是你不会说的那个意思了。这招虽然比较简单，但我这儿还是有几个词需要强调一下。
 
 一是keep的用法。这个词在英语中经常用来进行否定表达的，可以用来代替很多汉语中相反的概念，只是因为我们不大熟悉这个词的用法，所以用起来并不是很顺手。比方说，我们汉语习惯说“零钱不用找了”。这个“找”字很多人一时反应不过来怎么说，其实就可以用keep进行反向表达，“不用找”的意思就是“可以留着”，所以可以说成是：you can keep the change.或you can keep it.这其实也是最地道的英语表达。还有下面的例子：
 
-*keep it to yourself.*
+**keep it to yourself.**
 
 这事不能对别人说。
 
-*he keeps something from his wife.*
+**he keeps something from his wife.**
 
 他对妻子隐瞒了些什么。
 
-*the baby keeps us up all night.*
+**the baby keeps us up all night.**
 
 宝宝闹腾得我们一夜没睡。
 
 二是off的用法。off也是我们很不习惯用的一个词，但这个词的能量非常大，在后面的章节会有详细说明，这里先就其否定词的作用让大家一窥斑豹。举个例子，我们买东西的时候经常会碰到打折的产品，比如说，“所有的衬衫打八折”。当然我们可以用discount这个词，但这个词并不在我们的r词汇表之上，那如何通过off这个词来解决呢？很简单，你只要说：
 
-*all the shirts are 20%off.*
+**all the shirts are 20%off.**
 
 什么意思？就是说所有衬衫的价格会去掉20%。其实这种表达比起用discount来还更简洁一些，因为discount是名词，你还必须加一个动词才能把意思说完整。
 
 还有另外一个类似的例子。你去理发的时候（尤其是男士），一般理发师会问你：“要留多长啊？”这个“留”字，很多人又不知道怎么说了，但用了off这个词，问题就一下子解决了：
 
-*how much do you want your hair off?*
+**how much do you want your hair off?**
 
 off的否定作用还可以帮你解决以下问题：
 
-*his free throw shooting was off.*
+**his free throw shooting was off.**
 
 他罚球没有罚中。
 
-*he rides bicycle with his hands off the handle.*
+**he rides bicycle with his hands off the handle.**
 
 他骑车的时候不扶车把。
 
 以上两个例子其实也说明了英语和汉语在看问题角度上的一个差别，一个正着看，另一个反着看。掌握了这个规律也有助于我们把英语说得更加灵活。
 
 #### 我不会说你来说
+============================
 
 转换角度第二招：“我不会说你来说”。
 
 这是什么意思呢？大家还记得本章节刚开始时的那个例句吗？“小儿子继承了她所有的财产。”一共有四个说法，其中前两个是：
 
-*her youngest son got all her property.*
+**her youngest son got all her property.**
 
-*she gave all the property to her youngest son.*
+**she gave all the property to her youngest son.**
 
 这两句话就是“我不会说你来说”的体现。我们说话的很多时候是在表达两个人之间关于某种事物的所有关系，这个事物可能是具体的，也可能是抽象的。既可以表达为一个人给了另一个人某种东西，反过来也可以表达为另一个人从这个人手里得到了某种东西。也就是说，如果“我”做主语不好表达，那就换成以“你”来做主语。就这个例句而言，当事人分别是她的小儿子和她，要表达的是这两人之间对财产的所有关系。她把财产给了小儿子，也就等于小儿子从她那里得到了她的财产。
 
@@ -88,11 +90,11 @@ i borrowed 300，000 yuan from the bank.
 
 如果infect（传染）不会说，你可以换个角度以“我”做主语，说成是：
 
-*i got the cold from you.*
+**i got the cold from you.**
 
 当然，如果你知道infect还有个大词可以代替的话，这句也可以说成：
 
-*you gave me the cold.*
+**you gave me the cold.**
 
 类似的例子还有，你问商家：
 
@@ -100,15 +102,16 @@ i borrowed 300，000 yuan from the bank.
 
 如果“刷卡”不会说，那就换成“我”做主语，变成：
 
-*can i use bank card?*
+**can i use bank card?**
 
-##### 人不会说东西说
+人不会说东西说
+============================
 
 转换角度第三招，“人不会说东西说”。
 
 如果我不会说的事情换成你还是不会说怎么办？那就只能用最后一招了，让“东西替你开口表达”！继续引用前面的例句：小儿子继承了她所有的财产。
 
-*all her property goes to her youngest son.*
+**all her property goes to her youngest son.**
 
 在这句话中，主语既不是“小儿子”也不是“她”，而是变成了“财产”这个第三者。按说财产是个没有生命的东西，既没长脚也没长腿，怎么能让它go呢？这就是英语和汉语之间一个非常大的区别，也是我们要重点掌握的一个表达技巧。汉语习惯于从人的角度，以人做主语来表达，但英语却经常转换角度，以物做主语进行表达。这样做的好处就是：可以让英语说得更简单一些，因为有些事情不好从人的角度来表述或者不需要知道是谁做的事情。
 
@@ -118,19 +121,19 @@ go是这一类词的典型代表。比如在颁奖典礼上，嘉宾经常要说
 
 汉语用的是人做主语，英语当然也可以直接说成是：the winner is xxx.但在很多场合下，是用奖品做主语，说成下面这个样子：
 
-*the award goes to xxx.*
+**the award goes to xxx.**
 
 奖品变成一个会走路的东西了。生活中，我们也有大量类似的用法，比如：
 
-*my headache just doesn't go.*
+**my headache just doesn't go.**
 
 我的头疼老是好不了。
 
-i don't know where all my money goes！
+**i don't know where all my money goes！**
 
 我不知道钱都花到哪儿去了！
 
-*where do these plates go?*
+**where do these plates go?**
 
 这些盘子要放在哪儿呀？
 
@@ -138,31 +141,31 @@ i don't know where all my money goes！
 
 除了go之外，经常用来以物做主语的典型动词还有come, bring, say, speak, wait, stay, stop等动词，如：
 
-*this dress comes in three colors.*
+**this dress comes in three colors.**
 
 这条裙子有三种颜色。
 
-*what brings you here today?*
+**what brings you here today?**
 
 今天什么风把你给吹来了？
 
-*what do these figures say?*
+**what do these figures say?**
 
 这些数字说明了什么？
 
-*her success speaks for itself.*
+**her success speaks for itself.**
 
 她的成功说明了一切。
 
-*the paperwork can stay till tomorrow.*
+**the paperwork can stay till tomorrow.**
 
 案头工作可以明天再做。
 
-*my hat wont stay.*
+**my hat wont stay.**
 
 我的帽子老戴不住。
 
-*your responsibility doesn't stop here.*
+**your responsibility doesn't stop here.**
 
 你该干的事还没干完呢！
 

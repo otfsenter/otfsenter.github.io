@@ -1,10 +1,11 @@
 .. _english_1368_up_main_big_word:
 
-******************
-skill one挑个大的
-******************
+***********************
+skill one: 挑个大的
+***********************
 
-##### 英语就像一棵大杨树
+英语就像一棵大杨树
+============================
 
 买菜、买水果一般都是挑个大的，说英语也是这样。为了系统性地说明这个道理，我准备换一个比喻，不说买菜，说种树。
 
@@ -20,37 +21,38 @@ skill one挑个大的
 
 拿语言学的专业术语来说，这些最初形成的词叫上义词，而在这些词的基础上创造的词叫下义词。为了形象一点，我们管这些最初的枝干叫大词，而由此生成的叫小词。所以才说要挑个大的。
 
-##### 一个顶一百个
+一个顶一百个
+============================
 
 以前面那个例子来说，get就是inherit的上义词，inherit就是get的下义词，get是大词，inherit是小词。它们的区别就在于，大词可以代替小词使用，而小词却不可以逆向代替大词。
 
 既然我们管get叫大词，那它到底“大”在哪里呢？它“大”就“大”在除了刚才说的inherit之外，还可以代替很多很多的小词，请看下面的例子。
 
-*i get a lot of e-mails every day.*
+**i get a lot of e-mails every day.**
 
 我每天都收到很多邮件。（代替receive）
 
-*the policeman finally got him.*
+**the policeman finally got him.**
 
 警察最终抓住了他。（代替catch）
 
-*i'll get the doctor.*
+**i'll get the doctor.**
 
 我去叫医生。（代替call）
 
-*let's get some fresh air.*
+**let's get some fresh air.**
 
 让我们呼吸一下新鲜空气。（代替breathe）
 
-*she gets$19 an hour.*
+**she gets$19 an hour.**
 
 她一小时挣19美元。（代替earn）
 
-*he didn't get the joke.*
+**he didn't get the joke.**
 
 他没听懂这个笑话。（代替understand）
 
-*we need to get the four-twenty bus if were going to be there by six.*
+**we need to get the four-twenty bus if were going to be there by six.**
 
 要想六点钟到的话，我们得搭乘四点二十的那班公交车。（代替ride）
 
@@ -62,21 +64,21 @@ i'm going to get you for that, you little brat！
 
 我要为此惩罚你，小捣蛋！（代替punish）
 
-*that stupid dog tried to get me.*
+**that stupid dog tried to get me.**
 
 那条蠢狗试图袭击我。（代替attack）
 
-*i'll get dinner if you get the movie.*
+**i'll get dinner if you get the movie.**
 
 你要是请看电影的话我就请吃晚饭。（代替treat）
 
-*what time will we get there?*
+**what time will we get there?**
 
 我们到那儿得几点了？（代替arrive）
 
 以上代替的小词多吗？不多，只有12个，get还可以代替下面的词（不再给例句）：
 
-*persuade, convince, induce, influence, sway, entice, coax, incite, impel, wheedle, manage, fix, succeed, arrange, contrive, wangle, annoy, upset, anger, bother, disturb, trouble, bug, irritate, aggravate, gall, madden, exasperate, nettle, vex, irk, rile, pique, buy, obtain, gain, acquire, win, land, score, achieve, net, secure, attain, reap, glean, procure, collect, net, realize, gross, reap, fetch, bring, collect, prepare, cook, follow, notice, appreciate, perceive, grasp, comprehend, fathom, develop, contract, experience, sustain, undergo, grab, capture, trap, seize, nail, collar, nab, apprehend, contact, reach, puzzle, confuse, baffle, bewilder, confound, perplex, mystify, stump, beat, flummox, nonplus, touch, affect, excite, stir, stimulate, arouse.*
+**persuade, convince, induce, influence, sway, entice, coax, incite, impel, wheedle, manage, fix, succeed, arrange, contrive, wangle, annoy, upset, anger, bother, disturb, trouble, bug, irritate, aggravate, gall, madden, exasperate, nettle, vex, irk, rile, pique, buy, obtain, gain, acquire, win, land, score, achieve, net, secure, attain, reap, glean, procure, collect, net, realize, gross, reap, fetch, bring, collect, prepare, cook, follow, notice, appreciate, perceive, grasp, comprehend, fathom, develop, contract, experience, sustain, undergo, grab, capture, trap, seize, nail, collar, nab, apprehend, contact, reach, puzzle, confuse, baffle, bewilder, confound, perplex, mystify, stump, beat, flummox, nonplus, touch, affect, excite, stir, stimulate, arouse.**
 
 再加上上面的算多吗？也不多，一共才108个。
 
@@ -88,7 +90,8 @@ i'm going to get you for that, you little brat！
 
 以上只是举了一个单词做例子，和get并肩齐名的大词还有have, give, take, make。在我看来，这几个单词就是那棵大杨树最大的几个树杈，你要是不会用它们，或者把它们当小柴火棍烧了，那就太可惜了，简直是暴殄天物！但这就是事实，我们过去学的英语很多都是把这些真正的大词视作草芥，而拼着命地去背那些八竿子打不着，甚至一辈子都用不着的小词。
 
-##### think有很多种
+think有很多种
+============================
 
 下面我再举一个例子，说明大词的重要作用。
 
@@ -110,43 +113,44 @@ think这个单词大家都熟悉吧？它也是个大词，只不过很多人意
 
 刚才举的是动词的例子，为了说得更全面，我再分别从名词和形容词中各拿一个例子来做说明。
 
-##### 有感觉的都是feeling
+有感觉的都是feeling
+============================
 
 先说名词feeling。这个词很多人只知道把它当感情来讲，事实上，汉语中相当一部分与感知相关的词都可以用这个词来表达。请看下面的例子：
 
-*i didn't mean to hurt your feelings.*
+**i didn't mean to hurt your feelings.**
 
 我无意伤害你的感情。（感情，代替emotion）
 
-*i still have feelings for her.*
+**i still have feelings for her.**
 
 我依然爱着她。（爱情，代替love）
 
-*you have no feelings for others.*
+**you have no feelings for others.**
 
 你这人没有同情心。（同情，代替sympathy）
 
-*i got the feeling that he didn't like me much.*
+**i got the feeling that he didn't like me much.**
 
 我觉得他不是很喜欢我。（印象，代替impression）
 
-*i don't have any strong feelings about it.*
+**i don't have any strong feelings about it.**
 
 对这事我没啥感觉。（观点，代替opinion）
 
-*who care about my feeling?*
+**who care about my feeling?**
 
 谁会考虑我的感受？（态度，代替attitude）
 
-*she has a wonderful feeling for colors.*
+**she has a wonderful feeling for colors.**
 
 她对色彩很有感觉。（悟性，代替understanding）
 
-*i had a strange feeling in my neck.*
+**i had a strange feeling in my neck.**
 
 我脖子梗怪怪的，不大舒服。（感觉，代替sensation）
 
-*i've lost all feeling in my legs.*
+**i've lost all feeling in my legs.**
 
 我腿上没感觉了。（知觉，代替sense）
 
@@ -154,51 +158,52 @@ think这个单词大家都熟悉吧？它也是个大词，只不过很多人意
 
 这就叫大词——上义词。不是硬性规定出来的，而是有道理可讲的。我们学英语就是要遵循这些客观规律，需要有人帮你把这些大词找出来，作为第一批要掌握的词汇。
 
-##### bad不都是“坏”的意思
+bad不都是“坏”的意思
+============================
 
 再举一个形容词的例子：bad。大家都知道这个词是“坏”的意思，那么它都有哪些下义词呢？请看例句。
 
-*i thought it was a very bad article.*
+**i thought it was a very bad article.**
 
 我觉得这文章写得很烂。（劣质的，代替inferior）
 
-*smoking gives you bad breath.*
+**smoking gives you bad breath.**
 
 抽烟会让你有难闻的口气。（难闻的，代替unpleasant）
 
-*you're a bad liar.*
+**you're a bad liar.**
 
 你好可怜，谎也不会撒。（可怜的，代替poor）
 
-*he had a bad accident.*
+**he had a bad accident.**
 
 他发生了严重的事故。（严重的，代替serious）
 
-*it is a bad time to call him.*
+**it is a bad time to call him.**
 
 这个时间给他打电话不大合适。（不合适的，代替inappropriate）
 
-*i don't think i am a bad person.*
+**i don't think i am a bad person.**
 
 我认为我不是坏人。（邪恶的，代替evil）
 
-*you are a bad boy.*
+**you are a bad boy.**
 
 你是个调皮小子。（调皮的，代替naughty）
 
-*too much work is bad for your health.*
+**too much work is bad for your health.**
 
 拼命工作有害健康。（有害的，代替harmful）
 
-*i've got a bad back.*
+**i've got a bad back.**
 
 我背很疼。（疼痛的，代替painful）
 
-*she felt bad about leaving him.*
+**she felt bad about leaving him.**
 
 离开他，她觉得愧疚。（内疚的，代替guilty）
 
-*i'm afraid i'm feeling pretty bad.*
+**i'm afraid i'm feeling pretty bad.**
 
 我觉得病得很厉害。（生病的，代替ill）
 

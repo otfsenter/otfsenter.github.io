@@ -21,21 +21,21 @@
 
 通常情况下，这句话会被翻译成下面这个样子：
 
-*her youngest son inherited all her property.*
+**her youngest son inherited all her property.**
 
 如果你恰巧知道inherit这个词，也熟悉property这个词，ok，问题解决了。但很不幸的是，你是跟着robbin老师学的，robbin老师的词汇表里没有inherit这个词，只有property，怎么办？你会不会大骂robbin老师是个骗子？那我告诉你，我不但能教你把这个意思表达出来，还能教你变着花样地把这句话表达出来！
 
-根据我的教学，这句话至少有以下四种表达方式：
+根据我的教学，这句话至少有以下四种表达方式:
 
-* her youngest son got all her property.*
+** her youngest son got all her property. **
 
-* she gave all the property to her youngest son.*
+** she gave all the property to her youngest son. **
 
-* all her property goes to her youngest son.*
+** all her property goes to her youngest son.**
 
 最后一句是教给那些连property都背不下来的：
 
-* she gave her youngest son all she had.*
+** she gave her youngest son all she had.**
 
 怎么样？清楚不？好懂不？地道不？简单不？
 

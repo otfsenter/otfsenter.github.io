@@ -1,10 +1,11 @@
 .. _english_1368_up_main_basic_word:
 
-******************
-skill two拣实心的
-******************
+*************************
+skill two: 拣实心的
+*************************
 
-##### “重要”有四种说法
+“重要”有四种说法
+=============================
 
 在上一个章节中，“挑个大的”帮我们解决了那些不在r词汇表的小词的表达问题，那么这第二个技巧“拣实心的”又是什么意思呢？它又能帮我们解决什么问题呢？
 
@@ -14,11 +15,11 @@ skill two拣实心的
 
 通常情况下，我们会说成是：
 
-*it is an important decision.*
+**it is an important decision.**
 
 当然这种说法没有任何问题，但这句话在口语中还可以表达为：
 
-*it is a big decision.*
+**it is a big decision.**
 
 在这个例子中，important就叫“空心词”，而big就是“实心词”。因为后者是我们可以直接体验到的，生活中有很多big的东西，什么big house, big car, big city，我们通过肉眼就可以感知到什么是big。而important这个词则是头脑中的概念，看不见，摸不着。
 
@@ -26,17 +27,18 @@ skill two拣实心的
 
 反过来说，啥叫重要？什么样的东西重要？当然，我们可以创造出像important这样的词专门表达这个意思，但从另一个角度考虑，重要的东西一定有它的具体特点——一些可以被感知的特点，要么大，要么高，要么数量多，要么位置靠前。所以，我们除了可以用big来代替important外，还可以用其他具体概念来代替它，比如下面这两个例子：
 
-*if it means that much to you, i'll go find something else.*
+**if it means that much to you, i'll go find something else.**
 
 要是它对你那么重要，我就再去找找别的东西吧！（从数量角度说明事物的重要性）
 
-*for him, family comes before everything.*
+**for him, family comes before everything.**
 
 对他来说，家庭比什么都重要。（从位置角度说明事物的重要性）
 
 从以上例句可以看出，一个简单的“重要”的概念，我们就可以生出四种不同的表达方式，除important外，其他三种分别从大小、数量、位置来描述，都是非常具体、形象的。这就给我们的表达提供了更多的选择，在我们不知道某个概念对应的最直接的词或最直接的短语时，就可以通过这种方式来解决问题。事实上，英语中有很多抽象概念并没有一个专门的词汇来与之对应，也是需要用这些具体的词通过比喻来实现的。所以，这就是我们学习英语的第二个重要的技能，学会用具体的r词汇表达抽象的概念，也就是说，用实心词来表达抽象的概念。
 
-##### size不光是尺寸的意思
+size不光是尺寸的意思
+============================
 
 再给大家举一个例子，size这个词，大家都知道是“尺寸”的意思，是一个很具体的实心词了，对吧？我们买鞋、买衣服甚至买房子都需要讲究它的尺寸，但如果我们把这个定义延伸到一些抽象的概念上，就会发现原来它可以如此轻松地解决一些问题。请尝试用英语表达以下句子：
 
@@ -48,11 +50,11 @@ skill two拣实心的
 
 头两句的“严重性”和“艰巨性”都属于抽象概念，一般初学者很难找到合适的词来表达，最后一句中的“他欠了那么多钱”虽然可以用一个从句来表达，但不够简洁。事实上，这三句话都是可以用size这个词来表达的，我们来看参考译文：
 
-*nobody realized the size of the problem.*
+**nobody realized the size of the problem.**
 
-*she knows the size of the task.*
+**she knows the size of the task.**
 
-*we were shocked at the size of his debts.*
+**we were shocked at the size of his debts.**
 
 size在这三句话里，是不是有四两拨千斤的感觉？这就是实心词的魅力所在。
 

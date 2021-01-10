@@ -1,8 +1,8 @@
 .. _english_1368_up_main_explain:
 
-******************
-skill four自产自用
-******************
+********************************************
+skill four: 自产自用
+********************************************
 
 终于说到这个终极杀手了！
 
@@ -10,7 +10,8 @@ skill four自产自用
 
 有人说了，这么厉害？为什么会这么厉害？这么厉害是有它深层原因的，待会儿向大家解释。
 
-##### 兽医、频率、优先权
+兽医、频率、优先权
+====================================
 
 所谓的“自产自用”到底是什么意思呢？其实很简单，就是说如果有个词你不知道，或没记住，干脆就用解释的方法把你想说的意思表达出来，自己生产自己用。先举几个简单的例子。
 
@@ -20,75 +21,78 @@ skill four自产自用
 
 但是，你完全可以这样问：
 
-*how often does earthquake happen in japan?*
+**how often does earthquake happen in japan?**
 
 啥叫频率？不就是多长时间发生一次吗？
 
 再举个高级一点的例子。你偶尔学了priority这个词（“优先”的意思），感觉很厉害，但是到了真正要表达的时候，却把这个词给忘了，怎么办？话还得说啊。同样道理，你只要把这个词结合句子解释一下就可以了。priority在词典中的解释是：
 
-*something that you think is more important than other things and should be done first.*
+**something that you think is more important than other things and should be done first.**
 
 比如说，你想说的是，“结婚是头等大事”，本来可以说：
 
-*getting married is the first priority.*
+**getting married is the first priority.**
 
 现在把priority给忘了，不要紧，这句话可以解释成：
 
-*getting married is more important than other things and should be done first.*
+**getting married is more important than other things and should be done first.**
 
 清楚不？通顺不？流畅不？
 
-##### 求婚、走私、上诉
+求婚、走私、上诉
+====================================
 
 又有人说了，你举的好像都是名词的例子，其他词汇是不是也可以用这种方式来解决？当然可以。我再给你们举一些动词和形容词的例子。
 
 先说个大家最熟悉的吧！比如说，你同事把你得罪了，你跟他说：你应该向我道歉。你脑子里的第一反应肯定是apologize，但这个词不在r词汇表里，怎么办呢？很简单：
 
-*you should say sorry to me.*
+**you should say sorry to me.**
 
 因为apologize=say sorry。依此类推，你说“欢迎某人”，不一定要说greet somebody，只要说say hello to somebody。你说“接受请求”，不一定非得用accept，可以说say yes to something。
 
 propose（求婚）这个词也是很多学员之前就背下来的，但是，不用这个词完全可以非常轻松愉快地把事儿说明白。比如，我昨晚向她求婚了：
 
-*i asked her to marry me last night.*
+**i asked her to marry me last night.**
 
 因为牛津词典对propose这个词的解释就是to ask somebody to marry you。你几乎不需要做什么改变就可以直接把它用在句子里。
 
 如果把上面这句话再加一点内容，变成：我昨晚向她求婚，她答应了。那么再用上刚刚前面说的那个accept的表达，就可以说成：
 
-*i asked her to marry me last night and she said yes.*
+**i asked her to marry me last night and she said yes.**
 
 多神奇啊！原本是两个复杂单词的表述——propose和accept，轻松愉快地用一个小学生都会的ask和say就解决了！
 
 再说点难的。smuggle（走私）这个词，听上去很复杂，似乎没那么容易解释。其实仔细一想也简单，所谓“走私”，不就是“把一些东西或人从一个国家偷偷带到另一个国家”嘛，只不过这种行为是不合法的，所以需要加上secretly或illegally说明一下。比如，他往中国走私武器。就可以说成：
 
-*he takes weapons into china illegally.*
+**he takes weapons into china illegally.**
 
 再说个更专业的：appeal（上诉）。这是个法律术语，够专业了吧？其实解释起来并不难：to ask the court to change the decision。只不过这个要求比较正式，需加个formally修饰一下。“他要求上诉”这句话就可以说成：
 
-*he formally asked the court to change their decision.*
+**he formally asked the court to change their decision.**
 
-##### 裸体、慢性病
+裸体、慢性病
+====================================
 
 形容词也同样如此。形容词是用来描述事物在某一方面的性质或状态的，你只要把这个性质或状态说明白就可以了。我就不说简单的了，直接举几个有点难度的例子。
 
 比如说，naked（赤裸的）这个词，r词汇表中没有，其实这个词很好解释，什么叫裸体？不就是啥也没穿吗？你说“她赤身裸体”，就是“她什么衣服也没穿”的意思。而且可以用不同的句式来表达：
 
-*she wears nothing.*
+**she wears nothing.**
 
-*she has nothing on.*
+**she has nothing on.**
 
-*there're no clothes on her.*
+**there're no clothes on her.**
 
 随便挑！
 
 再说一个词chronic（慢性的），一般用来形容疾病，这个词对初学者来说比较专业、比较陌生。啥叫慢性病？不就是说这个病“会拖延很长时间”吗？所以，你说“这是个慢性病”的时候，你只要说：
 
-*this disease will last for a long time.*
+**this disease will last for a long time.**
 
 就足以让对方明白你说的是什么意思了。
 
-##### 以老带新说英语
+以老带新说英语
+====================================
 
 好了，例子举得差不多了，说到这儿，大家应该比较清楚这个“自产自用”招数的厉害了吧？它几乎无所不能。有人可能还有点担心，你这个招数听上去虽然很管用，但会不会不规范啊？老外会这样说吗？我可以很负责任地告诉你，以上给你举的所有例子不但在表达上没有任何问题，有一些还非常地道，在native speakers中使用的场合比它所解释的词汇还要多。
 
@@ -102,15 +106,16 @@ propose（求婚）这个词也是很多学员之前就背下来的，但是，�
 
 比如说：interview（面试）这个词，它的名词形式在牛津词典中的解释是：
 
-*a formal meeting at which somebody is asked questions to see if they are suitable for a particular job, or for a course of study at a college, university, etc.*
+**a formal meeting at which somebody is asked questions to see if they are suitable for a particular job, or for a course of study at a college, university, etc.**
 
 它包含的信息特别多，既涉及场合，也涉及目的，所以，用解释的方式来代替这个词用起来就会非常别扭，也没必要。
 
 再比如，动词marry（结婚），在词典中的解释是：to take someone as your husband or wife。虽然这种解释非常简单，用在句子里代替marry这个词也很顺畅，但marry是个经常用到的词，而且不难记，所以这个词就需要被收录到r词汇表中。其实在现实生活中，这两种说法都会用到，比如在结婚仪式上，主持人就是这样问的：
 
-*jack, would you like to take sarah as your wife?*
+**jack, would you like to take sarah as your wife?**
 
-##### 以不变应万变
+以不变应万变
+====================================
 
 除了解决口语表达问题外，“自产自用”的另一个现实意义是，英语单词比汉语词汇要难学得多、难记得多，学会解释能帮我们省掉很多记单词的麻烦。这不仅仅是对初学者，即使是对英语水平较高的人也有现实意义。那么，英语单词难记在哪里呢？简单来说，就是汉语的很多词是可以直接看出意思来的，而英语单词只是一系列字母的组合，除了词缀能表达些许意思外，基本看不出它的词义。
 
