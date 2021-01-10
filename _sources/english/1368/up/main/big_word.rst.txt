@@ -56,11 +56,11 @@ skill one: 挑个大的
 
 要想六点钟到的话，我们得搭乘四点二十的那班公交车。（代替ride）
 
-can you get the phone, please？i'm making dinner.
+**can you get the phone, please？i'm making dinner.**
 
 请接下电话好吗，我在做饭。（代替answer）
 
-i'm going to get you for that, you little brat！
+**i'm going to get you for that, you little brat！**
 
 我要为此惩罚你，小捣蛋！（代替punish）
 
