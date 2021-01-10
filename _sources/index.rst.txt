@@ -23,7 +23,7 @@ Python、Linux运维、自动化
     vim/index
     jetbrains/index
     en/index
-    english
+    english/index
     mysql/index
     kenan
     sphinx/index
