@@ -27,15 +27,15 @@
 
 根据我的教学，这句话至少有以下四种表达方式:
 
-** her youngest son got all her property. **
+**her youngest son got all her property.**
 
-** she gave all the property to her youngest son. **
+**she gave all the property to her youngest son.**
 
-** all her property goes to her youngest son.**
+**all her property goes to her youngest son.**
 
 最后一句是教给那些连property都背不下来的：
 
-** she gave her youngest son all she had.**
+**she gave her youngest son all she had.**
 
 怎么样？清楚不？好懂不？地道不？简单不？
 
