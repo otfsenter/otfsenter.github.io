@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get schedule person automatically with python &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/en/python/auto_get_schedule.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="english" href="../../english.html" />
+    <link rel="prev" title="Python" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Get schedule person automatically with python</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Python"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Python</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../english.html" title="Next Chapter: english"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">english &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="get-schedule-person-automatically-with-python">
+<span id="en-python-auto-get-schedule"></span><h1>Get schedule person automatically with python<a class="headerlink" href="#get-schedule-person-automatically-with-python" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
+<p>Compare start time and end time,</p>
+<p>Calculate current schedule plan,</p>
+<p>Get schedule person by plan,</p>
+<p>Refresh current schedule persion with while loop</p>
+<p>Repeat data, we can do not display schedule person which the same as last loop until different with last loop.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">schedule_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;morning&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;8:30&#39;</span><span class="p">,</span> <span class="s1">&#39;16:30&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;noon-yesterday&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;16:30&quot;</span><span class="p">,</span> <span class="s2">&quot;00:00&quot;</span><span class="p">],</span>
+    <span class="s1">&#39;noon-today&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;00:00&quot;</span><span class="p">,</span> <span class="s2">&quot;00:30&quot;</span><span class="p">],</span>
+    <span class="s1">&#39;night&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;00:30&quot;</span><span class="p">,</span> <span class="s2">&quot;8:30&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># schedule person table</span>
+<span class="n">attendants_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;morning&#39;</span><span class="p">:</span> <span class="s1">&#39;Mike&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;noon-yesterday&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;noon-today&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;night&#39;</span><span class="p">:</span> <span class="s1">&#39;Stone&#39;</span>
+<span class="p">}</span>
+
+<span class="n">now_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+<span class="n">now_month</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">month</span>
+<span class="n">now_day</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">day</span>
+
+
+<span class="k">def</span> <span class="nf">get_hour_minute</span><span class="p">(</span><span class="n">hour_minute_string</span><span class="p">):</span>
+    <span class="n">hour</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hour_minute_string</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">minute</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hour_minute_string</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">hour</span><span class="p">,</span> <span class="n">minute</span>
+
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="n">on_call_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">schedule_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+        <span class="n">time_begin_str</span><span class="p">,</span> <span class="n">time_end_str</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="n">hour_begin</span><span class="p">,</span> <span class="n">minute_begin</span> <span class="o">=</span> <span class="n">get_hour_minute</span><span class="p">(</span><span class="n">time_begin_str</span><span class="p">)</span>
+        <span class="n">hour_end</span><span class="p">,</span> <span class="n">minute_end</span> <span class="o">=</span> <span class="n">get_hour_minute</span><span class="p">(</span><span class="n">time_end_str</span><span class="p">)</span>
+
+        <span class="n">time_begin</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">now_year</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="n">now_month</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="n">now_day</span><span class="p">,</span>
+                            <span class="n">hour</span><span class="o">=</span><span class="n">hour_begin</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="n">minute_begin</span><span class="p">)</span>
+
+                            <span class="n">hour</span><span class="o">=</span><span class="n">hour_end</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="n">minute_end</span><span class="p">)</span>
+
+        <span class="n">time_now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">time_begin</span> <span class="o">&lt;=</span> <span class="n">time_now</span> <span class="o">&lt;=</span> <span class="n">time_end</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;now ：&#39;</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+            <span class="n">on_call_person</span> <span class="o">=</span> <span class="n">attendants_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;right person: &#39;</span><span class="p">,</span> <span class="n">on_call_person</span><span class="p">)</span>
+            <span class="n">on_call_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">on_call_person</span><span class="p">)</span>
+
+    <span class="n">no_on_call_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">attendants_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">on_call_list</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;person in holiday: &#39;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">no_on_call_list</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------------------------------------------------&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">run</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

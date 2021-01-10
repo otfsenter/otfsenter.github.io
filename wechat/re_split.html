@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>re.split &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/wechat/re_split.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vim" href="../vim/index.html" />
+    <link rel="prev" title="微信公众号" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">re.split</a><ul>
+<li><a class="reference internal" href="#id1">目的</a></li>
+<li><a class="reference internal" href="#id2">参数说明</a></li>
+<li><a class="reference internal" href="#id3">方括号</a></li>
+<li><a class="reference internal" href="#id4">圆括号</a></li>
+<li><a class="reference internal" href="#id5">非捕获组</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: 微信公众号"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 微信公众号</span>
+    </a>
+  </li>
+  <li>
+    <a href="../vim/index.html" title="Next Chapter: Vim"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Vim &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="re-split">
+<span id="wechat-re-split"></span><h1>re.split<a class="headerlink" href="#re-split" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>目的<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>对 line 字符串进行分割，取出每个单词</p>
+<p>预计的结果如下:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Kennedy&quot;</span><span class="p">,</span> <span class="s2">&quot;Glad&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;see&quot;</span><span class="p">,</span> <span class="s2">&quot;you&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>参数说明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><cite>re.split()</cite> 函数一般需要接收两个参数，</p>
+<p>第一个参数：正则表达式</p>
+<p>第二个参数：字符串</p>
+</div>
+<div class="section" id="id3">
+<h2>方括号<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;Hi John Kennedy! Glad to see you&#39;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[\s!]&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>result</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Kennedy&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;Glad&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;see&quot;</span><span class="p">,</span> <span class="s2">&quot;you&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>第一个参数：<cite>r’[\s!]’</cite></p>
+<p>在正则表达式中，会匹配方括号中任意一个字符，缺点是不能 以多个字符 为一个单元 作为分隔符，并且是或的关系</p>
+<p>结果中也有一个空字符串</p>
+</div>
+<div class="section" id="id4">
+<h2>圆括号<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(!\s|\s)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>result</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Hi&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;Kennedy&#39;</span><span class="p">,</span> <span class="s1">&#39;! &#39;</span><span class="p">,</span> <span class="s1">&#39;Glad&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;see&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>圆括号可以 用多个字符作为一个分隔符，并且匹配任意一个，</p>
+<p>在这里面，就是匹配 !s 或 \s 其中任意一个</p>
+<p>但是会输出分隔符本身</p>
+</div>
+<div class="section" id="id5">
+<h2>非捕获组<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(?:!\s|\s)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>result</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Hi&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Kennedy&#39;</span><span class="p">,</span> <span class="s1">&#39;Glad&#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39;see&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>这个时候就可以用正则表达式里面的 非捕获组（会把匹配上的字符忽略掉），</p>
+<p>具体的表现形式是在 圆括号 里面的 最前面 加上 <code class="docutils literal notranslate"><span class="pre">?:</span></code></p>
+<p>这样结果就会去掉分隔符</p>
+<p>达到我们的目的</p>
+<p>当然，方法不止一种</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;!\s|\s&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>result</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Hi&#39;</span><span class="p">,</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Kennedy&#39;</span><span class="p">,</span> <span class="s1">&#39;Glad&#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39;see&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>直接用 | 分割 字符串 ，放入 !s 和 \s 也能达到效果</p>
+<p>灵活的运用正则表达式，就能对字符串做出各种处理。</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

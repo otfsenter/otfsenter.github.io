@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tablify &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/vim/tablify.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="skill" href="skill.html" />
+    <link rel="prev" title="自动美化中英文排版" href="pangu.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">tablify</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="pangu.html" title="Previous Chapter: 自动美化中英文排版"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 自动美化中英文排版</span>
+    </a>
+  </li>
+  <li>
+    <a href="skill.html" title="Next Chapter: skill"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">skill &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="tablify">
+<span id="vim-tablify"></span><h1>tablify<a class="headerlink" href="#tablify" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="c">&quot; Vim tablification plugin - turns data into nice-looking tables</span>
+<span class="c">&quot; Last Change:      2018 Apr 27</span>
+<span class="c">&quot; Maintainer:       Vladimir Shvets &lt;stormherz@gmail.com&gt;</span>
+
+<span class="c">&quot; to debug or not to debug (messages, info, etc)</span>
+<span class="k">let</span> s:tablify_debug <span class="p">=</span> <span class="m">0</span>
+
+<span class="k">if</span> exists<span class="p">(</span><span class="s2">&quot;g:loaded_tablify&quot;</span><span class="p">)</span> &amp;&amp; s:tablify_debug <span class="p">==</span> <span class="m">0</span>
+    <span class="k">finish</span>
+<span class="k">endif</span>
+<span class="k">let</span> <span class="k">g</span>:loaded_tablify <span class="p">=</span> <span class="m">1</span>
+
+<span class="c">&quot; enabling restructured tables support for RST files</span>
+autocmd <span class="nb">BufEnter</span> *.rst :<span class="k">let</span> <span class="k">b</span>:tablify_restructuredtext<span class="p">=</span><span class="m">1</span>
+
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tt :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Tablify<span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">tl</span> :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Tablify<span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">tr</span> :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Tablify<span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">tc</span> :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Tablify<span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">ta</span> :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Select<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tS :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Sort<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tRL :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Realign<span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tRR :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Realign<span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tRC :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Realign<span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tK :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MoveRow<span class="p">(</span><span class="s1">&#39;up&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tJ :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MoveRow<span class="p">(</span><span class="s1">&#39;down&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tL :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MoveCol<span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span>tH :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MoveCol<span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="nb">noremap</span> <span class="p">&lt;</span><span class="k">script</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">tu</span> :<span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Untablify<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+
+<span class="c">&quot; Outputs debug messages if debug mode is set (g:debug)</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>DebugEcho<span class="p">(</span>msg<span class="p">)</span>
+    <span class="k">if</span> <span class="p">!</span>s:tablify_debug
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    echohl Debug
+    echo <span class="k">a</span>:msg
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Reassign configuration variables (called before Tablify/Untablify processing)</span>
+<span class="c">&quot; Configuration is related to buffer</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+<span class="c">    &quot; delimiters used for tablification/untablification process</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_headerDelimiter <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_headerDelimiter&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_headerDelimiter : <span class="s1">&#39;#&#39;</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_delimiter <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_delimiter&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_delimiter : <span class="s1">&#39;|&#39;</span>
+
+<span class="c">    &quot; filler symmbols for the result table</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_vertDelimiter <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_vertDelimiter&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_vertDelimiter : <span class="s1">&#39;|&#39;</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_horDelimiter <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_horDelimiter&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_horDelimiter : <span class="s1">&#39;-&#39;</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_horHeaderDelimiter <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_horHeaderDelimiter&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_horHeaderDelimiter : <span class="s1">&#39;~&#39;</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_horHeaderDelimiterBottom <span class="p">=</span> <span class="k">b</span>:tablify_horHeaderDelimiter
+    <span class="k">let</span> <span class="k">b</span>:tablify_divideDelimiter <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_divideDelimiter&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_divideDelimiter : <span class="s1">&#39;+&#39;</span>
+
+<span class="c">    &quot; number of spaces for left and right table cell padding</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_cellLeftPadding <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_cellLeftPadding&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_cellLeftPadding : <span class="m">1</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_cellRightPadding <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_cellRightPadding&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_cellRightPadding : <span class="m">1</span>
+
+<span class="c">    &quot; restructuredtext table header format</span>
+    <span class="k">let</span> <span class="k">b</span>:tablify_restructuredtext <span class="p">=</span> exists<span class="p">(</span><span class="s1">&#39;b:tablify_restructuredtext&#39;</span><span class="p">)</span> ? <span class="k">b</span>:tablify_restructuredtext : <span class="m">0</span>
+    <span class="k">if</span> <span class="k">b</span>:tablify_restructuredtext
+        <span class="k">let</span> <span class="k">b</span>:tablify_vertDelimiter <span class="p">=</span> <span class="s1">&#39;|&#39;</span>
+        <span class="k">let</span> <span class="k">b</span>:tablify_divideDelimiter <span class="p">=</span> <span class="s1">&#39;+&#39;</span>
+        <span class="k">let</span> <span class="k">b</span>:tablify_horHeaderDelimiter <span class="p">=</span> <span class="s1">&#39;-&#39;</span>
+        <span class="k">let</span> <span class="k">b</span>:tablify_horHeaderDelimiterBottom <span class="p">=</span> <span class="s1">&#39;=&#39;</span>
+    <span class="k">endif</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Main tablification function, turns selected text into table representation</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Tablify<span class="p">(</span>align<span class="p">)</span> range
+    <span class="k">if</span> <span class="k">a</span>:firstline <span class="p">==</span> <span class="k">a</span>:lastline
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> <span class="k">b</span>:align <span class="p">=</span> <span class="k">a</span>:align
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+
+    <span class="k">let</span> tableData <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetRawData<span class="p">(</span><span class="k">a</span>:firstline<span class="p">,</span> <span class="k">a</span>:lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>tableData<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    exec <span class="s2">&quot;normal &quot;</span> . <span class="k">a</span>:firstline . <span class="s1">&#39;GV&#39;</span> . <span class="p">(</span><span class="k">a</span>:lastline <span class="p">-</span> <span class="k">a</span>:firstline<span class="p">)</span> . <span class="s1">&#39;jd&#39;</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintTable<span class="p">(</span>tableData<span class="p">,</span> <span class="k">a</span>:firstline<span class="p">)</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Untablification process, reverts table to plain text</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Untablify<span class="p">()</span> range
+    <span class="k">if</span> <span class="k">a</span>:firstline <span class="p">==</span> <span class="k">a</span>:lastline
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+
+    <span class="k">let</span> prefix <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCommonPrefix<span class="p">(</span><span class="k">a</span>:firstline<span class="p">,</span> <span class="k">a</span>:lastline<span class="p">)</span>
+    <span class="k">let</span> tableData <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span><span class="k">a</span>:firstline<span class="p">,</span> <span class="k">a</span>:lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>tableData<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> lineCnt <span class="p">=</span> <span class="p">(</span><span class="k">a</span>:lastline <span class="p">-</span> <span class="k">a</span>:firstline<span class="p">)</span> <span class="p">+</span> <span class="m">1</span>
+
+    exec <span class="s2">&quot;normal &quot;</span> . <span class="k">a</span>:firstline . <span class="s2">&quot;G&quot;</span> . lineCnt . <span class="s2">&quot;dd&quot;</span>
+
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintData<span class="p">(</span>tableData<span class="p">,</span> <span class="k">a</span>:firstline<span class="p">)</span>
+
+    exec <span class="s2">&quot;normal &quot;</span> . <span class="k">a</span>:firstline . <span class="s2">&quot;G&quot;</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Creates cell content with known alignment, width, and, of course, word</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MakeCell<span class="p">(</span>word<span class="p">,</span> width<span class="p">,</span> align<span class="p">)</span>
+    <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> <span class="k">a</span>:word
+    <span class="k">let</span> wordLength <span class="p">=</span> strwidth<span class="p">(</span><span class="k">a</span>:word<span class="p">)</span>
+    <span class="k">if</span> <span class="k">a</span>:width <span class="p">&gt;</span> wordLength
+        <span class="k">if</span> <span class="k">a</span>:align <span class="p">==</span> <span class="s1">&#39;right&#39;</span>
+            <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="k">a</span>:width <span class="p">-</span> wordLength<span class="p">)</span> . <span class="k">res</span>
+        <span class="k">elseif</span> <span class="k">a</span>:align <span class="p">==</span> <span class="s1">&#39;center&#39;</span>
+            <span class="k">let</span> <span class="nb">diff</span> <span class="p">=</span> float2nr<span class="p">(</span>floor<span class="p">((</span><span class="k">a</span>:width <span class="p">-</span> wordLength<span class="p">)</span> / <span class="m">2</span>.<span class="m">0</span><span class="p">))</span>
+            <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="nb">diff</span><span class="p">)</span> . <span class="k">res</span> . repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="k">a</span>:width <span class="p">-</span> wordLength <span class="p">-</span> <span class="nb">diff</span><span class="p">)</span>
+        <span class="k">else</span>
+            <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> <span class="k">res</span> . repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="k">a</span>:width <span class="p">-</span> wordLength<span class="p">)</span>
+        <span class="k">endif</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> <span class="k">b</span>:tablify_cellLeftPadding <span class="p">&gt;</span> <span class="m">0</span>
+        <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="k">b</span>:tablify_cellLeftPadding<span class="p">)</span> . <span class="k">res</span>
+    <span class="k">endif</span>
+    <span class="k">if</span> <span class="k">b</span>:tablify_cellRightPadding <span class="p">&gt;</span> <span class="m">0</span>
+        <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> <span class="k">res</span> . repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="k">b</span>:tablify_cellRightPadding<span class="p">)</span>
+    <span class="k">endif</span>
+
+    <span class="k">return</span> <span class="k">res</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Determines common prefix for range in buffer (used for tables within multi-line comments, etc)</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCommonPrefix<span class="p">(</span>fline<span class="p">,</span> lline<span class="p">)</span>
+    <span class="k">if</span> <span class="k">a</span>:fline <span class="p">==</span> <span class="k">a</span>:lline
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> linenum <span class="p">=</span> <span class="k">a</span>:fline <span class="p">+</span> <span class="m">1</span>
+    <span class="k">let</span> firstline <span class="p">=</span> getline<span class="p">(</span><span class="k">a</span>:fline<span class="p">)</span>
+    <span class="k">let</span> prefix <span class="p">=</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="k">while</span> linenum <span class="p">&lt;=</span> <span class="k">a</span>:lline
+        <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+
+        <span class="k">if</span> strwidth<span class="p">(</span>prefix<span class="p">)</span> <span class="p">!=</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">let</span> index <span class="p">=</span> stridx<span class="p">(</span>line<span class="p">,</span> prefix<span class="p">)</span>
+            <span class="k">if</span> index <span class="p">!=</span> <span class="m">0</span>
+                <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">endif</span>
+        <span class="k">else</span>
+            <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+            <span class="k">while</span> strwidth<span class="p">(</span>line<span class="p">)</span> <span class="p">&gt;</span> <span class="k">i</span> &amp;&amp; strwidth<span class="p">(</span>firstline<span class="p">)</span> <span class="p">&gt;</span> <span class="k">i</span> &amp;&amp; line[<span class="k">i</span>] <span class="p">==</span> firstline[<span class="k">i</span>]
+                <span class="k">let</span> prefix .<span class="p">=</span> line[<span class="k">i</span>]
+                <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endwhile</span>
+
+            <span class="k">let</span> prefixLength <span class="p">=</span> len<span class="p">(</span>prefix<span class="p">)</span>
+            <span class="k">if</span> prefixLength <span class="p">==</span> <span class="m">0</span> <span class="p">||</span> prefix[prefixLength <span class="p">-</span> <span class="m">1</span>] <span class="p">!=</span> <span class="s1">&#39; &#39;</span>
+                <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">endif</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> linenum <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+
+    <span class="k">return</span> prefix
+<span class="k">endfunction</span>
+
+<span class="c">&quot; returns row lines count</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetRowLinesCount<span class="p">(</span>data<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span><span class="k">a</span>:data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> rowLinesCnt <span class="p">=</span> []
+    <span class="k">let</span> columnCnt <span class="p">=</span> len<span class="p">(</span><span class="k">a</span>:data[<span class="m">0</span>]<span class="p">)</span>
+
+    <span class="k">let</span> lineIndex <span class="p">=</span> <span class="m">0</span>
+    <span class="k">for</span> line <span class="k">in</span> <span class="k">a</span>:data
+        <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+        <span class="k">let</span> wordsCnt <span class="p">=</span> len<span class="p">(</span>line<span class="p">)</span>
+
+        <span class="k">call</span> add<span class="p">(</span>rowLinesCnt<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="k">i</span> <span class="p">&lt;</span> wordsCnt
+            <span class="k">let</span> word <span class="p">=</span> line[<span class="k">i</span>]
+
+            <span class="k">let</span> index <span class="p">=</span> stridx<span class="p">(</span>word<span class="p">,</span> <span class="s1">&#39;\n&#39;</span><span class="p">)</span>
+            <span class="k">if</span> index <span class="p">==</span> <span class="m">-1</span>
+                <span class="k">let</span> linesCnt <span class="p">=</span> <span class="m">1</span>
+            <span class="k">else</span>
+                <span class="k">let</span> linesCnt <span class="p">=</span> <span class="m">1</span>
+                <span class="k">while</span> index <span class="p">!=</span> <span class="m">-1</span>
+                    <span class="k">let</span> linesCnt <span class="p">+=</span> <span class="m">1</span>
+                    <span class="k">let</span> index <span class="p">=</span> stridx<span class="p">(</span>word<span class="p">,</span> <span class="s1">&#39;\n&#39;</span><span class="p">,</span> index <span class="p">+</span> <span class="m">1</span><span class="p">)</span>
+                <span class="k">endwhile</span>
+            <span class="k">endif</span>
+
+            <span class="k">if</span> linesCnt <span class="p">&gt;</span> rowLinesCnt[lineIndex]
+                <span class="k">let</span> rowLinesCnt[lineIndex] <span class="p">=</span> linesCnt
+            <span class="k">endif</span>
+
+            <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endwhile</span>
+
+        <span class="k">let</span> lineIndex <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endfor</span>
+
+    <span class="k">return</span> rowLinesCnt
+<span class="k">endfunction</span>
+
+<span class="c">&quot; returns max column widths for table data</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetColumnWidths<span class="p">(</span>data<span class="p">,</span> rowLinesCnt<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span><span class="k">a</span>:data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> maxColumnWidth <span class="p">=</span> []
+    <span class="k">let</span> columnCnt <span class="p">=</span> len<span class="p">(</span><span class="k">a</span>:data[<span class="m">0</span>]<span class="p">)</span>
+
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+    <span class="k">while</span> <span class="k">i</span> <span class="p">&lt;</span> columnCnt
+        <span class="k">call</span> add<span class="p">(</span>maxColumnWidth<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+
+        <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+
+    <span class="k">let</span> lineIndex <span class="p">=</span> <span class="m">0</span>
+    <span class="k">for</span> line <span class="k">in</span> <span class="k">a</span>:data
+        <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+        <span class="k">let</span> wordsCnt <span class="p">=</span> len<span class="p">(</span>line<span class="p">)</span>
+
+        <span class="k">while</span> <span class="k">i</span> <span class="p">&lt;</span> wordsCnt
+            <span class="k">if</span> <span class="k">a</span>:rowLinesCnt[lineIndex] <span class="p">&gt;</span> <span class="m">1</span>
+                <span class="k">let</span> parts <span class="p">=</span> split<span class="p">(</span>line[<span class="k">i</span>]<span class="p">,</span> <span class="s1">&#39;\\n&#39;</span><span class="p">)</span>
+                <span class="k">let</span> wordLength <span class="p">=</span> <span class="m">0</span>
+                <span class="k">for</span> part <span class="k">in</span> parts
+                    <span class="k">let</span> part <span class="p">=</span> substitute<span class="p">(</span>part<span class="p">,</span> <span class="s2">&quot;^\\s\\+\\|\\s\\+$&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+                    <span class="k">let</span> partLength <span class="p">=</span> len<span class="p">(</span>part<span class="p">)</span>
+                    <span class="k">if</span> partLength <span class="p">&gt;</span> wordLength
+                        <span class="k">let</span> wordLength <span class="p">=</span> partLength
+                    <span class="k">endif</span>
+                <span class="k">endfor</span>
+            <span class="k">else</span>
+                <span class="k">let</span> wordLength <span class="p">=</span> len<span class="p">(</span>line[<span class="k">i</span>]<span class="p">)</span>
+            <span class="k">endif</span>
+
+            <span class="k">if</span> wordLength <span class="p">&gt;</span> maxColumnWidth[<span class="k">i</span>]
+                <span class="k">let</span> maxColumnWidth[<span class="k">i</span>] <span class="p">=</span> wordLength
+            <span class="k">endif</span>
+
+            <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endwhile</span>
+
+        <span class="k">let</span> lineIndex <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endfor</span>
+
+    <span class="k">return</span> maxColumnWidth
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Sorts table by one of the columns (user input)</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Sort<span class="p">()</span> range
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+
+    <span class="k">call</span> inputsave<span class="p">()</span>
+    <span class="k">let</span> column <span class="p">=</span> str2nr<span class="p">(</span>input<span class="p">(</span><span class="s1">&#39;Sort column: &#39;</span><span class="p">))</span>
+    <span class="k">call</span> inputrestore<span class="p">()</span>
+
+    <span class="k">let</span> data <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span><span class="k">a</span>:firstline<span class="p">,</span> <span class="k">a</span>:lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> column <span class="p">&lt;</span> <span class="m">1</span> <span class="p">||</span> column <span class="p">&gt;</span> len<span class="p">(</span>data[<span class="s1">&#39;data&#39;</span>][<span class="m">0</span>]<span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> columnData <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetColumn<span class="p">(</span>data[<span class="s1">&#39;data&#39;</span>]<span class="p">,</span> column <span class="p">-</span> <span class="m">1</span><span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>columnData<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> columnDict <span class="p">=</span> {}
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+
+    <span class="k">let</span> numbersMatched <span class="p">=</span> <span class="m">0</span>
+
+    <span class="k">for</span> columnValue <span class="k">in</span> columnData
+        <span class="k">if</span> columnValue <span class="p">=~</span> <span class="s1">&#39;^\d\+$&#39;</span>
+            <span class="k">let</span> numbersMatched <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> columnDict[<span class="k">i</span>] <span class="p">=</span> columnValue
+        <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endfor</span>
+    <span class="k">let</span> allNumbers <span class="p">=</span> <span class="p">(</span>numbersMatched <span class="p">==</span> len<span class="p">(</span>columnData<span class="p">))</span> ? <span class="m">1</span> : <span class="m">0</span>
+
+    <span class="k">let</span> newData <span class="p">=</span> []
+
+    <span class="k">if</span> allNumbers <span class="p">==</span> <span class="m">0</span>
+        <span class="k">let</span> sortedValues <span class="p">=</span> <span class="k">sort</span><span class="p">(</span>columnData<span class="p">)</span>
+    <span class="k">else</span>
+        <span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>NumericSort<span class="p">(</span>i1<span class="p">,</span> i2<span class="p">)</span>
+            <span class="k">return</span> <span class="k">a</span>:i1 <span class="p">==</span> <span class="k">a</span>:i2 ? <span class="m">0</span> : <span class="k">a</span>:i1 <span class="p">&gt;</span> <span class="k">a</span>:i2 ? <span class="m">1</span> : <span class="m">-1</span>
+        <span class="k">endfunction</span>
+        <span class="k">let</span> sortedValues <span class="p">=</span> <span class="k">sort</span><span class="p">(</span>columnData<span class="p">,</span> <span class="s2">&quot;&lt;SID&gt;NumericSort&quot;</span><span class="p">)</span>
+    <span class="k">endif</span>
+
+    <span class="k">for</span> value <span class="k">in</span> sortedValues
+        <span class="k">for</span> [<span class="k">i</span><span class="p">,</span> <span class="k">v</span>] <span class="k">in</span> items<span class="p">(</span>columnDict<span class="p">)</span>
+            <span class="k">if</span> value <span class="p">==</span> <span class="k">v</span>
+                <span class="k">let</span> from <span class="p">=</span> <span class="k">i</span>
+            <span class="k">endif</span>
+        <span class="k">endfor</span>
+
+        <span class="k">call</span> add<span class="p">(</span>newData<span class="p">,</span> data[<span class="s1">&#39;data&#39;</span>][from]<span class="p">)</span>
+    <span class="k">endfor</span>
+
+    <span class="k">let</span> data[<span class="s1">&#39;data&#39;</span>] <span class="p">=</span> newData[:]
+    <span class="k">let</span> values <span class="p">=</span> newData[:]
+    <span class="k">if</span> len<span class="p">(</span>data[<span class="s1">&#39;header&#39;</span>]<span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span>
+        <span class="k">call</span> insert<span class="p">(</span>values<span class="p">,</span> data[<span class="s1">&#39;header&#39;</span>]<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+    <span class="k">endif</span>
+    <span class="k">let</span> rowLinesCnt <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetRowLinesCount<span class="p">(</span>values<span class="p">)</span>
+    <span class="k">let</span> data[<span class="s1">&#39;rowLinesCnt&#39;</span>] <span class="p">=</span> rowLinesCnt
+
+    <span class="k">let</span> linesCnt <span class="p">=</span> <span class="k">a</span>:lastline <span class="p">-</span> <span class="k">a</span>:firstline
+    exec <span class="s2">&quot;normal &quot;</span> . <span class="k">a</span>:firstline . <span class="s1">&#39;GV&#39;</span> . linesCnt . <span class="s1">&#39;jd&#39;</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintTable<span class="p">(</span>data<span class="p">,</span> <span class="k">a</span>:firstline<span class="p">)</span>
+
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Sorts table by one of the columns (user input)</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Realign<span class="p">(</span>align<span class="p">)</span> range
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+
+    <span class="k">call</span> inputsave<span class="p">()</span>
+    <span class="k">let</span> column <span class="p">=</span> str2nr<span class="p">(</span>input<span class="p">(</span><span class="s1">&#39;Realign column: &#39;</span><span class="p">))</span>
+    <span class="k">call</span> inputrestore<span class="p">()</span>
+
+    <span class="k">let</span> data <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span><span class="k">a</span>:firstline<span class="p">,</span> <span class="k">a</span>:lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> column <span class="p">&lt;</span> <span class="m">1</span> <span class="p">||</span> column <span class="p">&gt;</span> len<span class="p">(</span>data[<span class="s1">&#39;data&#39;</span>][<span class="m">0</span>]<span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> data[<span class="s1">&#39;aligns&#39;</span>][column <span class="p">-</span> <span class="m">1</span>] <span class="p">=</span> <span class="k">a</span>:align
+
+    <span class="k">let</span> linesCnt <span class="p">=</span> <span class="k">a</span>:lastline <span class="p">-</span> <span class="k">a</span>:firstline
+    exec <span class="s2">&quot;normal &quot;</span> . <span class="k">a</span>:firstline . <span class="s1">&#39;GV&#39;</span> . linesCnt . <span class="s1">&#39;jd&#39;</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintTable<span class="p">(</span>data<span class="p">,</span> <span class="k">a</span>:firstline<span class="p">)</span>
+
+<span class="k">endfunction</span>
+
+<span class="c">&quot; returns column list from table data</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetColumn<span class="p">(</span>data<span class="p">,</span> column<span class="p">)</span>
+    <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> []
+
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+
+    <span class="k">let</span> cnt <span class="p">=</span> len<span class="p">(</span><span class="k">a</span>:data[<span class="m">0</span>]<span class="p">)</span>
+    <span class="k">if</span> <span class="k">a</span>:column <span class="p">&lt;</span> <span class="m">0</span> <span class="p">||</span> <span class="k">a</span>:column <span class="p">&gt;=</span> cnt
+        <span class="k">return</span> <span class="m">0</span>
+    <span class="k">endif</span>
+
+    <span class="k">for</span> words <span class="k">in</span> <span class="k">a</span>:data
+        <span class="k">call</span> add<span class="p">(</span><span class="k">res</span><span class="p">,</span> words[<span class="k">a</span>:column]<span class="p">)</span>
+    <span class="k">endfor</span>
+
+    <span class="k">return</span> <span class="k">res</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Prints table using collected table data starting at specified line</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintTable<span class="p">(</span>data<span class="p">,</span> line<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span><span class="k">a</span>:data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> columnWidths <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;widths&#39;</span>]
+    <span class="k">let</span> columnCnt <span class="p">=</span> len<span class="p">(</span><span class="k">a</span>:data[<span class="s1">&#39;data&#39;</span>][<span class="m">0</span>]<span class="p">)</span>
+
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+    <span class="k">let</span> delimiterRow <span class="p">=</span> <span class="k">b</span>:tablify_divideDelimiter
+    <span class="k">let</span> headerTopRow <span class="p">=</span> <span class="k">b</span>:tablify_divideDelimiter
+    <span class="k">let</span> headerBottomRow <span class="p">=</span> <span class="k">b</span>:tablify_divideDelimiter
+
+    <span class="k">let</span> columnsWidth <span class="p">=</span> <span class="m">0</span>
+    <span class="k">while</span> <span class="k">i</span> <span class="p">&lt;</span> columnCnt
+        <span class="k">if</span> <span class="k">b</span>:tablify_cellLeftPadding <span class="p">&gt;</span> <span class="m">0</span>
+            <span class="k">let</span> spacer <span class="p">=</span> repeat<span class="p">(</span><span class="k">b</span>:tablify_horDelimiter<span class="p">,</span> <span class="k">b</span>:tablify_cellLeftPadding<span class="p">)</span>
+            <span class="k">let</span> delimiterRow <span class="p">=</span> delimiterRow . spacer
+            <span class="k">let</span> headerTopRow <span class="p">=</span> headerTopRow . repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiter<span class="p">,</span> <span class="k">b</span>:tablify_cellLeftPadding<span class="p">)</span>
+            <span class="k">let</span> headerBottomRow <span class="p">=</span> headerBottomRow . repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiterBottom<span class="p">,</span> <span class="k">b</span>:tablify_cellLeftPadding<span class="p">)</span>
+
+            <span class="k">let</span> columnsWidth <span class="p">+=</span> <span class="k">b</span>:tablify_cellLeftPadding
+        <span class="k">endif</span>
+        <span class="k">if</span> <span class="k">b</span>:tablify_cellRightPadding <span class="p">&gt;</span> <span class="m">0</span>
+            <span class="k">let</span> spacer <span class="p">=</span> repeat<span class="p">(</span><span class="k">b</span>:tablify_horDelimiter<span class="p">,</span> <span class="k">b</span>:tablify_cellRightPadding<span class="p">)</span>
+            <span class="k">let</span> delimiterRow <span class="p">=</span> delimiterRow . spacer
+            <span class="k">let</span> headerTopRow <span class="p">=</span> headerTopRow . repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiter<span class="p">,</span> <span class="k">b</span>:tablify_cellRightPadding<span class="p">)</span>
+            <span class="k">let</span> headerBottomRow <span class="p">=</span> headerBottomRow . repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiterBottom<span class="p">,</span> <span class="k">b</span>:tablify_cellRightPadding<span class="p">)</span>
+
+            <span class="k">let</span> columnsWidth <span class="p">+=</span> <span class="k">b</span>:tablify_cellRightPadding
+        <span class="k">endif</span>
+
+        <span class="k">let</span> delimiterRow .<span class="p">=</span> repeat<span class="p">(</span><span class="k">b</span>:tablify_horDelimiter<span class="p">,</span> columnWidths[<span class="k">i</span>]<span class="p">)</span> . <span class="k">b</span>:tablify_divideDelimiter
+        <span class="k">let</span> headerTopRow <span class="p">=</span> headerTopRow . repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiter<span class="p">,</span> columnWidths[<span class="k">i</span>]<span class="p">)</span> . <span class="k">b</span>:tablify_divideDelimiter
+        <span class="k">let</span> headerBottomRow <span class="p">=</span> headerBottomRow . repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiterBottom<span class="p">,</span> columnWidths[<span class="k">i</span>]<span class="p">)</span> . <span class="k">b</span>:tablify_divideDelimiter
+
+        <span class="k">let</span> columnsWidth <span class="p">+=</span> columnWidths[<span class="k">i</span>]
+        <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+    <span class="k">let</span> delimiterHeaderRowTop <span class="p">=</span> repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiter<span class="p">,</span> len<span class="p">(</span>columnWidths<span class="p">)</span> <span class="p">+</span> <span class="m">1</span> <span class="p">+</span> columnsWidth<span class="p">)</span>
+    <span class="k">let</span> delimiterHeaderRowBottom <span class="p">=</span> repeat<span class="p">(</span><span class="k">b</span>:tablify_horHeaderDelimiterBottom<span class="p">,</span> len<span class="p">(</span>columnWidths<span class="p">)</span> <span class="p">+</span> <span class="m">1</span> <span class="p">+</span> columnsWidth<span class="p">)</span>
+
+    <span class="k">let</span> prefix <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;prefix&#39;</span>]
+    <span class="k">let</span> delimiterRow <span class="p">=</span> prefix . delimiterRow
+    <span class="k">let</span> delimiterHeaderRowTop <span class="p">=</span> prefix . delimiterHeaderRowTop
+    <span class="k">let</span> delimiterHeaderRowBottom <span class="p">=</span> prefix . delimiterHeaderRowBottom
+
+    <span class="k">if</span> <span class="k">b</span>:tablify_restructuredtext
+        <span class="k">let</span> delimiterHeaderRowTop <span class="p">=</span> headerTopRow
+        <span class="k">let</span> delimiterHeaderRowBottom <span class="p">=</span> headerBottomRow
+    <span class="k">endif</span>
+
+    <span class="k">let</span> isHeader <span class="p">=</span> <span class="p">(</span>len<span class="p">(</span><span class="k">a</span>:data[<span class="s1">&#39;header&#39;</span>]<span class="p">)</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> ? <span class="m">0</span> : <span class="m">1</span>
+
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="k">a</span>:line
+
+    <span class="k">let</span> values <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;data&#39;</span>]
+    <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span>
+        <span class="k">call</span> insert<span class="p">(</span>values<span class="p">,</span> <span class="k">a</span>:data[<span class="s1">&#39;header&#39;</span>]<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> saveCursor <span class="p">=</span> getpos<span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+
+    <span class="k">let</span> rowLinesCnt <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;rowLinesCnt&#39;</span>]
+
+    <span class="k">let</span> lineIndex <span class="p">=</span> <span class="m">0</span>
+    <span class="k">for</span> line <span class="k">in</span> values
+        <span class="k">let</span> <span class="k">j</span> <span class="p">=</span> <span class="m">0</span>
+
+        <span class="k">if</span> rowLinesCnt[lineIndex] <span class="p">==</span> <span class="m">1</span>
+            <span class="k">let</span> newLine <span class="p">=</span> <span class="k">b</span>:tablify_vertDelimiter
+
+            <span class="k">for</span> word <span class="k">in</span> line
+                <span class="k">let</span> cell <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MakeCell<span class="p">(</span>word<span class="p">,</span> columnWidths[<span class="k">j</span>]<span class="p">,</span> <span class="k">a</span>:data[<span class="s1">&#39;aligns&#39;</span>][<span class="k">j</span>]<span class="p">)</span>
+                <span class="k">let</span> newLine .<span class="p">=</span> cell . <span class="k">b</span>:tablify_vertDelimiter
+
+                <span class="k">let</span> <span class="k">j</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endfor</span>
+
+            <span class="k">call</span> append<span class="p">(</span><span class="k">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> prefix . newLine<span class="p">)</span>
+            <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">else</span>
+            <span class="k">let</span> <span class="nb">lines</span> <span class="p">=</span> []
+            <span class="k">let</span> <span class="k">k</span> <span class="p">=</span> <span class="m">0</span>
+            <span class="k">while</span> <span class="k">k</span> <span class="p">&lt;</span> rowLinesCnt[lineIndex]
+                <span class="k">let</span> lst <span class="p">=</span> []
+                <span class="k">for</span> <span class="nb">rlc</span> <span class="k">in</span> columnWidths
+                    <span class="k">let</span> length <span class="p">=</span> <span class="nb">rlc</span> <span class="p">+</span> <span class="k">b</span>:tablify_cellLeftPadding <span class="p">+</span> <span class="k">b</span>:tablify_cellRightPadding
+                    <span class="k">call</span> add<span class="p">(</span>lst<span class="p">,</span> repeat<span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> length<span class="p">))</span>
+                <span class="k">endfor</span>
+
+                <span class="k">call</span> add<span class="p">(</span><span class="nb">lines</span><span class="p">,</span> lst<span class="p">)</span>
+                <span class="k">let</span> <span class="k">k</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endwhile</span>
+
+            <span class="k">let</span> <span class="k">k</span> <span class="p">=</span> <span class="m">0</span>
+            <span class="k">for</span> word <span class="k">in</span> line
+                <span class="k">let</span> parts <span class="p">=</span> split<span class="p">(</span>word<span class="p">,</span> <span class="s1">&#39;\\n&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+
+                <span class="k">let</span> newLine <span class="p">=</span> <span class="k">b</span>:tablify_vertDelimiter
+                <span class="k">if</span> len<span class="p">(</span>parts<span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span>
+                    <span class="k">let</span> <span class="k">n</span> <span class="p">=</span> <span class="m">0</span>
+                    <span class="k">for</span> part <span class="k">in</span> parts
+                        <span class="k">let</span> trimmedPart <span class="p">=</span> substitute<span class="p">(</span>part<span class="p">,</span> <span class="s2">&quot;^\\s\\+\\|\\s\\+$&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+
+                        <span class="k">let</span> cell <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MakeCell<span class="p">(</span>trimmedPart<span class="p">,</span> columnWidths[<span class="k">j</span>]<span class="p">,</span> <span class="k">a</span>:data[<span class="s1">&#39;aligns&#39;</span>][<span class="k">j</span>]<span class="p">)</span>
+                        <span class="k">let</span> <span class="nb">lines</span>[<span class="k">n</span>][<span class="k">k</span>] <span class="p">=</span> cell
+
+                        <span class="k">let</span> <span class="k">n</span> <span class="p">+=</span> <span class="m">1</span>
+                    <span class="k">endfor</span>
+                <span class="k">else</span>
+                    <span class="k">let</span> cell <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MakeCell<span class="p">(</span>word<span class="p">,</span> columnWidths[<span class="k">j</span>]<span class="p">,</span> <span class="k">a</span>:data[<span class="s1">&#39;aligns&#39;</span>][<span class="k">j</span>]<span class="p">)</span>
+                    <span class="k">let</span> <span class="nb">lines</span>[<span class="m">0</span>][<span class="k">k</span>] <span class="p">=</span> cell
+                <span class="k">endif</span>
+
+                <span class="k">let</span> <span class="k">j</span> <span class="p">+=</span> <span class="m">1</span>
+                <span class="k">let</span> <span class="k">k</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endfor</span>
+
+            <span class="k">for</span> addLine <span class="k">in</span> <span class="nb">lines</span>
+                <span class="k">let</span> newLine <span class="p">=</span> <span class="k">join</span><span class="p">(</span>addLine<span class="p">,</span> <span class="k">b</span>:tablify_vertDelimiter<span class="p">)</span>
+                <span class="k">let</span> newLine <span class="p">=</span> <span class="k">b</span>:tablify_vertDelimiter . newLine . <span class="k">b</span>:tablify_vertDelimiter
+
+                <span class="k">call</span> append<span class="p">(</span><span class="k">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> prefix . newLine<span class="p">)</span>
+                <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endfor</span>
+        <span class="k">endif</span>
+
+        <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span> &amp;&amp; lineIndex <span class="p">==</span> <span class="m">0</span>
+            <span class="k">call</span> append<span class="p">(</span><span class="k">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> delimiterHeaderRowBottom<span class="p">)</span>
+        <span class="k">else</span>
+            <span class="k">call</span> append<span class="p">(</span><span class="k">i</span> <span class="p">-</span> <span class="m">1</span><span class="p">,</span> delimiterRow<span class="p">)</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">let</span> lineIndex <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endfor</span>
+
+    <span class="k">let</span> lastline <span class="p">=</span> <span class="k">i</span> <span class="p">-</span> <span class="m">1</span>
+
+    <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span>
+        <span class="k">call</span> append<span class="p">(</span><span class="k">a</span>:line <span class="p">-</span> <span class="m">1</span><span class="p">,</span> delimiterHeaderRowTop<span class="p">)</span>
+    <span class="k">else</span>
+        <span class="k">call</span> append<span class="p">(</span><span class="k">a</span>:line <span class="p">-</span> <span class="m">1</span><span class="p">,</span> delimiterRow<span class="p">)</span>
+    <span class="k">endif</span>
+    <span class="k">call</span> setpos<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> saveCursor<span class="p">)</span>
+
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Prints data structure as raw text on specified line</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintData<span class="p">(</span>data<span class="p">,</span> line<span class="p">)</span>
+    <span class="k">let</span> header <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;header&#39;</span>]
+    <span class="k">let</span> isHeader <span class="p">=</span> <span class="p">(</span>len<span class="p">(</span>header<span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> ? <span class="m">1</span> : <span class="m">0</span>
+    <span class="k">let</span> values <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;data&#39;</span>]
+
+    <span class="k">let</span> prefix <span class="p">=</span> <span class="k">a</span>:data[<span class="s1">&#39;prefix&#39;</span>]
+
+    <span class="k">if</span> len<span class="p">(</span>values<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> dataLines <span class="p">=</span> values
+    <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span>
+        <span class="k">call</span> insert<span class="p">(</span>dataLines<span class="p">,</span> header<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> line <span class="p">=</span> <span class="k">a</span>:line <span class="p">-</span> <span class="m">1</span>
+
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+    <span class="k">for</span> values <span class="k">in</span> dataLines
+        <span class="k">let</span> <span class="nb">list</span> <span class="p">=</span> []
+        <span class="k">for</span> value <span class="k">in</span> values
+            <span class="k">call</span> add<span class="p">(</span><span class="nb">list</span><span class="p">,</span> value<span class="p">)</span>
+        <span class="k">endfor</span>
+
+        <span class="k">let</span> unificator <span class="p">=</span> <span class="s1">&#39; &#39;</span> . <span class="k">b</span>:tablify_delimiter . <span class="s1">&#39; &#39;</span>
+        <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span> &amp;&amp; <span class="k">i</span> <span class="p">==</span> <span class="m">0</span>
+            <span class="k">let</span> unificator <span class="p">=</span> <span class="s1">&#39; &#39;</span> . <span class="k">b</span>:tablify_headerDelimiter . <span class="s1">&#39; &#39;</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> newLine <span class="p">=</span> prefix . <span class="k">join</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> unificator<span class="p">)</span>
+        <span class="k">call</span> append<span class="p">(</span>line<span class="p">,</span> newLine<span class="p">)</span>
+
+        <span class="k">let</span> line <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endfor</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Gathers data from plain text</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetRawData<span class="p">(</span>fline<span class="p">,</span> lline<span class="p">)</span>
+    <span class="k">let</span> linenum <span class="p">=</span> <span class="k">a</span>:fline
+
+    <span class="k">let</span> header <span class="p">=</span> []
+    <span class="k">let</span> values <span class="p">=</span> []
+    <span class="k">let</span> prefix <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCommonPrefix<span class="p">(</span><span class="k">a</span>:fline<span class="p">,</span> <span class="k">a</span>:lline<span class="p">)</span>
+    <span class="k">let</span> prefixLength <span class="p">=</span> len<span class="p">(</span>prefix<span class="p">)</span>
+    <span class="k">let</span> aligns <span class="p">=</span> []
+
+    <span class="k">let</span> prevCnt <span class="p">=</span> <span class="m">0</span>
+    <span class="k">while</span> linenum <span class="p">&lt;=</span> <span class="k">a</span>:lline
+        <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+        <span class="k">if</span> line <span class="p">==</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">return</span> {}
+        <span class="k">endif</span>
+
+        <span class="k">let</span> isHeader <span class="p">=</span> <span class="m">0</span>
+
+        <span class="k">let</span> words <span class="p">=</span> split<span class="p">(</span>line<span class="p">,</span> escape<span class="p">(</span><span class="k">b</span>:tablify_delimiter<span class="p">,</span> <span class="s1">&#39;$^&#39;</span><span class="p">),</span> <span class="m">1</span><span class="p">)</span>
+
+        <span class="k">let</span> wordsCnt <span class="p">=</span> len<span class="p">(</span>words<span class="p">)</span>
+        <span class="k">if</span> wordsCnt <span class="p">==</span> <span class="m">1</span>
+            <span class="k">let</span> words <span class="p">=</span> split<span class="p">(</span>line<span class="p">,</span> escape<span class="p">(</span><span class="k">b</span>:tablify_headerDelimiter<span class="p">,</span> <span class="s1">&#39;$^&#39;</span><span class="p">),</span> <span class="m">1</span><span class="p">)</span>
+            <span class="k">let</span> wordsCnt <span class="p">=</span> len<span class="p">(</span>words<span class="p">)</span>
+            <span class="k">if</span> wordsCnt <span class="p">&gt;</span> <span class="m">1</span>
+                <span class="k">let</span> isHeader <span class="p">=</span> <span class="m">1</span>
+            <span class="k">endif</span>
+        <span class="k">endif</span>
+
+        <span class="k">if</span> linenum <span class="p">==</span> <span class="k">a</span>:fline
+            <span class="k">let</span> prevCnt <span class="p">=</span> wordsCnt
+        <span class="k">elseif</span> prevCnt <span class="p">!=</span> wordsCnt
+            <span class="k">return</span> {}
+        <span class="k">endif</span>
+
+        <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> <span class="m">0</span>
+        <span class="k">let</span> trimmedWords <span class="p">=</span> []
+        <span class="k">while</span> <span class="k">i</span> <span class="p">&lt;</span> wordsCnt
+            <span class="k">if</span> len<span class="p">(</span>aligns<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+                <span class="k">let</span> <span class="k">g</span> <span class="p">=</span> <span class="m">0</span>
+                <span class="k">while</span> <span class="k">g</span> <span class="p">&lt;</span> wordsCnt
+                    <span class="k">call</span> add<span class="p">(</span>aligns<span class="p">,</span> <span class="k">b</span>:align<span class="p">)</span>
+                    <span class="k">let</span> <span class="k">g</span> <span class="p">+=</span> <span class="m">1</span>
+                <span class="k">endwhile</span>
+            <span class="k">endif</span>
+
+            <span class="k">let</span> word <span class="p">=</span> words[<span class="k">i</span>]
+
+            <span class="k">if</span> <span class="k">i</span> <span class="p">==</span> <span class="m">0</span> &amp;&amp; prefixLength <span class="p">&gt;</span> <span class="m">0</span>
+                <span class="k">let</span> word <span class="p">=</span> strpart<span class="p">(</span>word<span class="p">,</span> prefixLength<span class="p">)</span>
+            <span class="k">endif</span>
+
+            <span class="k">let</span> trimmedWord <span class="p">=</span> substitute<span class="p">(</span>word<span class="p">,</span> <span class="s2">&quot;^\\s\\+\\|\\s\\+$&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+            <span class="k">call</span> add<span class="p">(</span>trimmedWords<span class="p">,</span> trimmedWord<span class="p">)</span>
+
+            <span class="k">let</span> <span class="k">i</span> <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endwhile</span>
+
+        <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span>
+            <span class="k">let</span> header <span class="p">=</span> trimmedWords
+        <span class="k">else</span>
+            <span class="k">call</span> add<span class="p">(</span>values<span class="p">,</span> trimmedWords<span class="p">)</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> linenum <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+
+    <span class="k">let</span> tableData <span class="p">=</span> values[:]
+    <span class="k">if</span> len<span class="p">(</span>header<span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span>
+        <span class="k">call</span> insert<span class="p">(</span>tableData<span class="p">,</span> header<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+    <span class="k">endif</span>
+    <span class="k">let</span> rowLinesCnt <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetRowLinesCount<span class="p">(</span>tableData<span class="p">)</span>
+    <span class="k">let</span> maxColumnWidths <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetColumnWidths<span class="p">(</span>tableData<span class="p">,</span> rowLinesCnt<span class="p">)</span>
+
+    <span class="k">return</span> {
+        \<span class="s1">&#39;aligns&#39;</span>: aligns<span class="p">,</span>
+        \<span class="s1">&#39;rowLinesCnt&#39;</span>: rowLinesCnt<span class="p">,</span>
+        \<span class="s1">&#39;prefix&#39;</span>: prefix<span class="p">,</span>
+        \<span class="s1">&#39;widths&#39;</span>: maxColumnWidths<span class="p">,</span>
+        \<span class="s1">&#39;header&#39;</span>: header<span class="p">,</span>
+        \<span class="s1">&#39;data&#39;</span>: values}
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Gathers data from existing table</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span>fline<span class="p">,</span> lline<span class="p">)</span>
+    <span class="k">let</span> linenum <span class="p">=</span> <span class="k">a</span>:fline
+    <span class="k">let</span> header <span class="p">=</span> []
+    <span class="k">let</span> dataLines <span class="p">=</span> []
+
+    <span class="k">let</span> prefix <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCommonPrefix<span class="p">(</span><span class="k">a</span>:fline<span class="p">,</span> <span class="k">a</span>:lline<span class="p">)</span>
+    <span class="k">let</span> prefixLength <span class="p">=</span> len<span class="p">(</span>prefix<span class="p">)</span>
+
+    <span class="k">let</span> validLines <span class="p">=</span> <span class="m">0</span>
+    <span class="k">let</span> mergedLine <span class="p">=</span> []
+    <span class="k">let</span> rowLinesCnt <span class="p">=</span> []
+    <span class="k">let</span> aligns <span class="p">=</span> []
+    <span class="k">let</span> currentRowCount <span class="p">=</span> <span class="m">1</span>
+
+    <span class="k">while</span> linenum <span class="p">&lt;=</span> <span class="k">a</span>:lline
+        <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+
+        <span class="k">if</span> line <span class="p">==</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">return</span> {}
+        <span class="k">endif</span>
+
+        <span class="k">if</span> prefixLength <span class="p">&gt;</span> <span class="m">0</span>
+            <span class="k">let</span> line <span class="p">=</span> strpart<span class="p">(</span>line<span class="p">,</span> prefixLength<span class="p">)</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> lineLength <span class="p">=</span> len<span class="p">(</span>line<span class="p">)</span>
+        <span class="k">let</span> isHeader <span class="p">=</span> <span class="p">(</span>line[<span class="m">0</span>] <span class="p">==</span> <span class="k">b</span>:tablify_horHeaderDelimiter &amp;&amp; line[lineLength <span class="p">-</span> <span class="m">1</span>] <span class="p">==</span> <span class="k">b</span>:tablify_horHeaderDelimiter<span class="p">)</span> ? <span class="m">1</span> : <span class="m">0</span>
+        <span class="k">let</span> isInnerRow <span class="p">=</span> <span class="p">(</span>line[<span class="m">0</span>] <span class="p">==</span> <span class="k">b</span>:tablify_divideDelimiter &amp;&amp; line[lineLength <span class="p">-</span> <span class="m">1</span>] <span class="p">==</span> <span class="k">b</span>:tablify_divideDelimiter<span class="p">)</span> <span class="p">||</span>
+            \<span class="p">(</span>isHeader <span class="p">==</span> <span class="m">1</span><span class="p">)</span> ? <span class="m">1</span> : <span class="m">0</span>
+
+        <span class="k">if</span> isInnerRow <span class="p">==</span> <span class="m">1</span>
+            <span class="k">let</span> validLines <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">let</span> linenum <span class="p">+=</span> <span class="m">1</span>
+
+            <span class="k">if</span> len<span class="p">(</span>mergedLine<span class="p">)</span> <span class="p">!=</span> <span class="m">0</span>
+                <span class="k">if</span> isHeader <span class="p">==</span> <span class="m">1</span>
+                    <span class="k">let</span> header <span class="p">=</span> mergedLine
+                <span class="k">else</span>
+                    <span class="k">call</span> add<span class="p">(</span>dataLines<span class="p">,</span> mergedLine<span class="p">)</span>
+                <span class="k">endif</span>
+                <span class="k">call</span> add<span class="p">(</span>rowLinesCnt<span class="p">,</span> currentRowCount<span class="p">)</span>
+            <span class="k">endif</span>
+
+            <span class="k">let</span> mergedLine <span class="p">=</span> []
+            <span class="k">let</span> currentRowCount <span class="p">=</span> <span class="m">1</span>
+            continue
+        <span class="k">endif</span>
+
+        <span class="k">let</span> data <span class="p">=</span> split<span class="p">(</span>line<span class="p">,</span> <span class="k">b</span>:tablify_vertDelimiter<span class="p">)</span>
+        <span class="k">let</span> cnt <span class="p">=</span> len<span class="p">(</span>data<span class="p">)</span>
+
+        <span class="k">let</span> <span class="k">n</span> <span class="p">=</span> <span class="m">0</span>
+        <span class="k">if</span> len<span class="p">(</span>mergedLine<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+            <span class="k">while</span> <span class="k">n</span> <span class="p">&lt;</span> cnt
+                <span class="k">call</span> insert<span class="p">(</span>mergedLine<span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="k">n</span><span class="p">)</span>
+                <span class="k">let</span> <span class="k">n</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endwhile</span>
+        <span class="k">endif</span>
+
+        <span class="k">if</span> len<span class="p">(</span>aligns<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+            <span class="k">let</span> <span class="k">n</span> <span class="p">=</span> <span class="m">0</span>
+            <span class="k">while</span> <span class="k">n</span> <span class="p">&lt;</span> cnt
+                <span class="k">call</span> insert<span class="p">(</span>aligns<span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="k">n</span><span class="p">)</span>
+                <span class="k">let</span> <span class="k">n</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endwhile</span>
+        <span class="k">endif</span>
+
+        <span class="k">let</span> <span class="k">j</span> <span class="p">=</span> <span class="m">0</span>
+        <span class="k">while</span> <span class="k">j</span> <span class="p">&lt;</span> cnt
+            <span class="k">let</span> word <span class="p">=</span> data[<span class="k">j</span>]
+
+            <span class="k">let</span> spacesPrefix <span class="p">=</span> <span class="m">0</span>
+            <span class="k">let</span> spacesSuffix <span class="p">=</span> <span class="m">0</span>
+            <span class="k">let</span> wordLength <span class="p">=</span> strwidth<span class="p">(</span>data[<span class="k">j</span>]<span class="p">)</span>
+
+            <span class="k">let</span> <span class="k">g</span> <span class="p">=</span> <span class="m">0</span>
+            <span class="k">while</span> word[<span class="k">g</span>] <span class="p">==</span> <span class="s1">&#39; &#39;</span>
+                <span class="k">let</span> spacesPrefix <span class="p">+=</span> <span class="m">1</span>
+                <span class="k">let</span> <span class="k">g</span> <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endwhile</span>
+
+            <span class="k">let</span> <span class="k">g</span> <span class="p">=</span> wordLength <span class="p">-</span> <span class="m">1</span>
+            <span class="k">while</span> word[<span class="k">g</span>] <span class="p">==</span> <span class="s1">&#39; &#39;</span>
+                <span class="k">let</span> spacesSuffix <span class="p">+=</span> <span class="m">1</span>
+                <span class="k">let</span> <span class="k">g</span> <span class="p">-=</span> <span class="m">1</span>
+            <span class="k">endwhile</span>
+
+            <span class="k">let</span> spacesPrefix <span class="p">-=</span> <span class="k">b</span>:tablify_cellLeftPadding
+            <span class="k">let</span> spacesSuffix <span class="p">-=</span> <span class="k">b</span>:tablify_cellRightPadding
+
+            <span class="k">let</span> word <span class="p">=</span> substitute<span class="p">(</span>word<span class="p">,</span> <span class="s2">&quot;^\\s\\+\\|\\s\\+$&quot;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> word <span class="p">!=</span> <span class="s1">&#39;&#39;</span>
+                <span class="k">if</span> spacesPrefix <span class="p">&gt;</span> <span class="m">0</span> &amp;&amp; spacesSuffix <span class="p">&gt;</span> <span class="m">0</span>
+                    <span class="k">let</span> aligns[<span class="k">j</span>] <span class="p">=</span> <span class="s1">&#39;center&#39;</span>
+                <span class="k">elseif</span> spacesPrefix <span class="p">&gt;</span> <span class="m">0</span>
+                    <span class="k">let</span> aligns[<span class="k">j</span>] <span class="p">=</span> <span class="s1">&#39;right&#39;</span>
+                <span class="k">elseif</span> spacesSuffix <span class="p">&gt;</span> <span class="m">0</span>
+                    <span class="k">let</span> aligns[<span class="k">j</span>] <span class="p">=</span> <span class="s1">&#39;left&#39;</span>
+                <span class="k">endif</span>
+            <span class="k">endif</span>
+
+            <span class="k">if</span> mergedLine[<span class="k">j</span>] <span class="p">!=</span> <span class="s1">&#39;&#39;</span> &amp;&amp; word <span class="p">!=</span> <span class="s1">&#39;&#39;</span>
+                <span class="k">let</span> mergedLine[<span class="k">j</span>] .<span class="p">=</span> <span class="s1">&#39;\n&#39;</span>
+                <span class="k">let</span> currentRowCount <span class="p">+=</span> <span class="m">1</span>
+            <span class="k">endif</span>
+            <span class="k">let</span> mergedLine[<span class="k">j</span>] .<span class="p">=</span> word
+            <span class="k">let</span> <span class="k">j</span> <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endwhile</span>
+
+        <span class="k">let</span> linenum <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+
+    <span class="k">let</span> values <span class="p">=</span> dataLines[:]
+    <span class="k">if</span> len<span class="p">(</span>header<span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span>
+        <span class="k">call</span> insert<span class="p">(</span>values<span class="p">,</span> header<span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> validLines <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span> {}
+    <span class="k">endif</span>
+
+    <span class="k">let</span> maxColumnWidths <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetColumnWidths<span class="p">(</span>values<span class="p">,</span> rowLinesCnt<span class="p">)</span>
+
+    <span class="k">let</span> <span class="k">res</span> <span class="p">=</span> {
+        \<span class="s1">&#39;aligns&#39;</span>: aligns<span class="p">,</span>
+        \<span class="s1">&#39;rowLinesCnt&#39;</span>: rowLinesCnt<span class="p">,</span>
+        \<span class="s1">&#39;prefix&#39;</span>: prefix<span class="p">,</span>
+        \<span class="s1">&#39;widths&#39;</span>: maxColumnWidths<span class="p">,</span>
+        \<span class="s1">&#39;header&#39;</span>: header<span class="p">,</span>
+        \<span class="s1">&#39;data&#39;</span>: dataLines}
+    <span class="k">return</span> <span class="k">res</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; returns 1 if line is in row format</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableRow<span class="p">(</span>line<span class="p">)</span>
+    <span class="k">if</span> <span class="k">a</span>:line <span class="p">==</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="m">0</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> lineLength <span class="p">=</span> len<span class="p">(</span><span class="k">a</span>:line<span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">a</span>:line[<span class="m">0</span>] <span class="p">==</span> <span class="k">b</span>:tablify_divideDelimiter &amp;&amp; <span class="k">a</span>:line[lineLength <span class="p">-</span> <span class="m">1</span>] <span class="p">==</span> <span class="k">b</span>:tablify_divideDelimiter
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> <span class="k">a</span>:line[<span class="m">0</span>] <span class="p">==</span> <span class="k">b</span>:tablify_horHeaderDelimiter &amp;&amp; <span class="k">a</span>:line[lineLength <span class="p">-</span> <span class="m">1</span>] <span class="p">==</span> <span class="k">b</span>:tablify_horHeaderDelimiter
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> elements <span class="p">=</span> split<span class="p">(</span><span class="k">a</span>:line<span class="p">,</span> escape<span class="p">(</span><span class="k">b</span>:tablify_vertDelimiter<span class="p">,</span> <span class="s1">&#39;$^&#39;</span><span class="p">),</span> <span class="m">1</span><span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>elements<span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span>
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> elements <span class="p">=</span> split<span class="p">(</span><span class="k">a</span>:line<span class="p">,</span> escape<span class="p">(</span><span class="k">b</span>:tablify_headerDelimiter<span class="p">,</span> <span class="s1">&#39;$^&#39;</span><span class="p">),</span> <span class="m">1</span><span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>elements<span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span>
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">return</span> <span class="m">0</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; returns 1 if line in in inner table row format</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableInnerRow<span class="p">(</span>line<span class="p">)</span>
+    <span class="k">if</span> <span class="k">a</span>:line <span class="p">==</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="m">0</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> lineLength <span class="p">=</span> len<span class="p">(</span><span class="k">a</span>:line<span class="p">)</span>
+
+    <span class="k">if</span> <span class="k">a</span>:line[<span class="m">0</span>] <span class="p">==</span> <span class="k">b</span>:tablify_divideDelimiter &amp;&amp; <span class="k">a</span>:line[lineLength <span class="p">-</span> <span class="m">1</span>] <span class="p">==</span> <span class="k">b</span>:tablify_divideDelimiter
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> <span class="k">a</span>:line[<span class="m">0</span>] <span class="p">==</span> <span class="k">b</span>:tablify_horHeaderDelimiter &amp;&amp; <span class="k">a</span>:line[lineLength <span class="p">-</span> <span class="m">1</span>] <span class="p">==</span> <span class="k">b</span>:tablify_horHeaderDelimiter
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">return</span> <span class="m">0</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Get table lines (start, end)</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableLines<span class="p">()</span>
+    <span class="k">let</span> firstline <span class="p">=</span> <span class="m">0</span>
+    <span class="k">let</span> lastline <span class="p">=</span> <span class="m">0</span>
+
+    <span class="k">let</span> storedLine <span class="p">=</span> line<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+    <span class="k">let</span> linenum <span class="p">=</span> storedLine
+    <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+
+    <span class="k">if</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableRow<span class="p">(</span>line<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">while</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableRow<span class="p">(</span>line<span class="p">)</span> <span class="p">==</span> <span class="m">1</span>
+        <span class="k">let</span> linenum <span class="p">-=</span> <span class="m">1</span>
+        <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+    <span class="k">endwhile</span>
+
+    <span class="k">let</span> firstline <span class="p">=</span> linenum <span class="p">+</span> <span class="m">1</span>
+
+    <span class="k">let</span> linenum <span class="p">=</span> storedLine
+    <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+    <span class="k">while</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableRow<span class="p">(</span>line<span class="p">)</span> <span class="p">==</span> <span class="m">1</span>
+        <span class="k">let</span> linenum <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>linenum<span class="p">)</span>
+    <span class="k">endwhile</span>
+    <span class="k">let</span> lastline <span class="p">=</span> linenum <span class="p">-</span> <span class="m">1</span>
+
+    <span class="k">return</span> {
+        \<span class="s1">&#39;firstline&#39;</span>: firstline<span class="p">,</span>
+        \<span class="s1">&#39;lastline&#39;</span>: lastline}
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Selects the table if the cursor is in it</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Select<span class="p">()</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+
+    <span class="k">let</span> tableLines <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableLines<span class="p">()</span>
+    <span class="k">let</span> linesCnt <span class="p">=</span> <span class="p">(</span>tableLines[<span class="s1">&#39;lastline&#39;</span>] <span class="p">-</span> tableLines[<span class="s1">&#39;firstline&#39;</span>]<span class="p">)</span>
+
+    exec <span class="s2">&quot;normal &quot;</span> . tableLines[<span class="s1">&#39;firstline&#39;</span>] . <span class="s2">&quot;GV&quot;</span> . linesCnt . <span class="s2">&quot;j&quot;</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Moves lines of the table up/down</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MoveRow<span class="p">(</span>direction<span class="p">)</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+    <span class="k">let</span> tableLines <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableLines<span class="p">()</span>
+    <span class="k">let</span> firstline <span class="p">=</span> tableLines[<span class="s1">&#39;firstline&#39;</span>]
+    <span class="k">let</span> lastline <span class="p">=</span> tableLines[<span class="s1">&#39;lastline&#39;</span>]
+
+    <span class="k">let</span> data <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span>firstline<span class="p">,</span> lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span> {}
+    <span class="k">endif</span>
+
+    <span class="k">let</span> pos <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCursorPos<span class="p">()</span>
+    <span class="k">if</span> len<span class="p">(</span>pos<span class="p">)</span> <span class="p">==</span> <span class="m">0</span> <span class="p">||</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">!=</span> <span class="s1">&#39;up&#39;</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">!=</span> <span class="s1">&#39;down&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> tableRows <span class="p">=</span> len<span class="p">(</span>data[<span class="s1">&#39;data&#39;</span>]<span class="p">)</span>
+    <span class="k">let</span> isHeader <span class="p">=</span> len<span class="p">(</span>data[<span class="s1">&#39;header&#39;</span>]<span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span>
+    <span class="k">if</span> isHeader
+        <span class="k">let</span> tableRows <span class="p">+=</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> <span class="p">(</span>pos[<span class="s1">&#39;row&#39;</span>] <span class="p">==</span> <span class="m">0</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;up&#39;</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span>pos[<span class="s1">&#39;row&#39;</span>] <span class="p">==</span> <span class="p">(</span>tableRows <span class="p">-</span> <span class="m">1</span><span class="p">)</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;down&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> <span class="p">(</span>pos[<span class="s1">&#39;row&#39;</span>] <span class="p">==</span> <span class="m">1</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;up&#39;</span> &amp;&amp; isHeader<span class="p">)</span> <span class="p">||</span> <span class="p">(</span>pos[<span class="s1">&#39;row&#39;</span>] <span class="p">==</span> <span class="m">0</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;down&#39;</span> &amp;&amp; isHeader<span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> fromRow <span class="p">=</span> pos[<span class="s1">&#39;row&#39;</span>]
+
+    <span class="k">let</span> tableData <span class="p">=</span> copy<span class="p">(</span>data<span class="p">)</span>
+    <span class="k">let</span> newData <span class="p">=</span> tableData[<span class="s1">&#39;data&#39;</span>]
+
+    <span class="k">let</span> toRow <span class="p">=</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;up&#39;</span><span class="p">)</span> ? fromRow <span class="p">-</span> <span class="m">1</span> : fromRow <span class="p">+</span> <span class="m">1</span>
+    <span class="k">let</span> linesCnt <span class="p">=</span> tableData[<span class="s1">&#39;rowLinesCnt&#39;</span>][fromRow]
+    <span class="k">let</span> tableData[<span class="s1">&#39;rowLinesCnt&#39;</span>][fromRow] <span class="p">=</span> tableData[<span class="s1">&#39;rowLinesCnt&#39;</span>][toRow]
+    <span class="k">let</span> tableData[<span class="s1">&#39;rowLinesCnt&#39;</span>][toRow] <span class="p">=</span> linesCnt
+
+    <span class="k">let</span> lineRowsCnt <span class="p">=</span> tableData[<span class="s1">&#39;rowLinesCnt&#39;</span>][fromRow]
+
+    <span class="k">if</span> isHeader
+        <span class="k">let</span> fromRow <span class="p">-=</span> <span class="m">1</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> toRow <span class="p">=</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;up&#39;</span><span class="p">)</span> ? fromRow <span class="p">-</span> <span class="m">1</span> : fromRow <span class="p">+</span> <span class="m">1</span>
+    <span class="k">if</span> fromRow <span class="p">&lt;</span> <span class="m">0</span> <span class="p">||</span> toRow <span class="p">&gt;=</span> len<span class="p">(</span>newData<span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> line <span class="p">=</span> newData[fromRow]
+    <span class="k">let</span> newData[fromRow] <span class="p">=</span> newData[toRow]
+    <span class="k">let</span> newData[toRow] <span class="p">=</span> line
+
+    <span class="k">let</span> cursorPos <span class="p">=</span> getpos<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">let</span> cursorPos[<span class="m">1</span>] <span class="p">+=</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;up&#39;</span><span class="p">)</span> ? <span class="p">-</span>lineRowsCnt <span class="p">-</span> <span class="m">1</span> : lineRowsCnt <span class="p">+</span> <span class="m">1</span>
+
+    exec <span class="s2">&quot;normal &quot;</span> . firstline . <span class="s1">&#39;GV&#39;</span> . <span class="p">(</span>lastline <span class="p">-</span> firstline<span class="p">)</span> . <span class="s1">&#39;jd&#39;</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintTable<span class="p">(</span>tableData<span class="p">,</span> firstline<span class="p">)</span>
+
+    <span class="k">call</span> setpos<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> cursorPos<span class="p">)</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Moves columns of the table left/right</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>MoveCol<span class="p">(</span>direction<span class="p">)</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+    <span class="k">let</span> tableLines <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableLines<span class="p">()</span>
+    <span class="k">let</span> firstline <span class="p">=</span> tableLines[<span class="s1">&#39;firstline&#39;</span>]
+    <span class="k">let</span> lastline <span class="p">=</span> tableLines[<span class="s1">&#39;lastline&#39;</span>]
+
+    <span class="k">let</span> data <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span>firstline<span class="p">,</span> lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span> {}
+    <span class="k">endif</span>
+
+    <span class="k">let</span> pos <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCursorPos<span class="p">()</span>
+    <span class="k">if</span> len<span class="p">(</span>pos<span class="p">)</span> <span class="p">==</span> <span class="m">0</span> <span class="p">||</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">!=</span> <span class="s1">&#39;left&#39;</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">!=</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> tableCols <span class="p">=</span> len<span class="p">(</span>data[<span class="s1">&#39;widths&#39;</span>]<span class="p">)</span>
+
+    <span class="k">if</span> pos[<span class="s1">&#39;col&#39;</span>] <span class="p">&gt;=</span> tableCols
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> <span class="p">(</span>pos[<span class="s1">&#39;col&#39;</span>] <span class="p">==</span> <span class="m">0</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span> <span class="p">||</span> <span class="p">(</span>pos[<span class="s1">&#39;col&#39;</span>] <span class="p">==</span> <span class="p">(</span>tableCols <span class="p">-</span> <span class="m">1</span><span class="p">)</span> &amp;&amp; <span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;right&#39;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">let</span> fromCol <span class="p">=</span> pos[<span class="s1">&#39;col&#39;</span>]
+
+    <span class="k">let</span> toCol <span class="p">=</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span> ? fromCol <span class="p">-</span> <span class="m">1</span> : fromCol <span class="p">+</span> <span class="m">1</span>
+    <span class="k">let</span> colWidth <span class="p">=</span> data[<span class="s1">&#39;widths&#39;</span>][toCol] <span class="p">+</span> <span class="k">b</span>:tablify_cellLeftPadding <span class="p">+</span> <span class="k">b</span>:tablify_cellRightPadding <span class="p">+</span> <span class="m">1</span>
+    <span class="k">let</span> tableData <span class="p">=</span> copy<span class="p">(</span>data<span class="p">)</span>
+    <span class="k">let</span> newData <span class="p">=</span> tableData[<span class="s1">&#39;data&#39;</span>]
+
+    <span class="k">if</span> len<span class="p">(</span>tableData[<span class="s1">&#39;header&#39;</span>]<span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span>
+        <span class="k">let</span> value <span class="p">=</span> tableData[<span class="s1">&#39;header&#39;</span>][fromCol]
+        <span class="k">let</span> tableData[<span class="s1">&#39;header&#39;</span>][fromCol] <span class="p">=</span> tableData[<span class="s1">&#39;header&#39;</span>][toCol]
+        <span class="k">let</span> tableData[<span class="s1">&#39;header&#39;</span>][toCol] <span class="p">=</span> value
+    <span class="k">endif</span>
+
+    <span class="k">for</span> line <span class="k">in</span> newData
+        <span class="k">let</span> value <span class="p">=</span> line[fromCol]
+        <span class="k">let</span> line[fromCol] <span class="p">=</span> line[toCol]
+        <span class="k">let</span> line[toCol] <span class="p">=</span> value
+    <span class="k">endfor</span>
+
+    <span class="k">let</span> width <span class="p">=</span> tableData[<span class="s1">&#39;widths&#39;</span>][fromCol]
+    <span class="k">let</span> tableData[<span class="s1">&#39;widths&#39;</span>][fromCol] <span class="p">=</span> tableData[<span class="s1">&#39;widths&#39;</span>][toCol]
+    <span class="k">let</span> tableData[<span class="s1">&#39;widths&#39;</span>][toCol] <span class="p">=</span> width
+
+    <span class="k">let</span> cursorPos <span class="p">=</span> getpos<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">let</span> cursorPos[<span class="m">2</span>] <span class="p">+=</span> <span class="p">(</span><span class="k">a</span>:direction <span class="p">==</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span> ? <span class="p">-</span>colWidth : colWidth
+
+    exec <span class="s2">&quot;normal &quot;</span> . firstline . <span class="s1">&#39;GV&#39;</span> . <span class="p">(</span>lastline <span class="p">-</span> firstline<span class="p">)</span> . <span class="s1">&#39;jd&#39;</span>
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>PrintTable<span class="p">(</span>tableData<span class="p">,</span> firstline<span class="p">)</span>
+
+    <span class="k">call</span> setpos<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> cursorPos<span class="p">)</span>
+<span class="k">endfunction</span>
+
+<span class="c">&quot; Determines cursor position in table, returns dictionary with row and col</span>
+<span class="k">function</span><span class="p">!</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetCursorPos<span class="p">()</span> range
+    <span class="k">call</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>Reconfigure<span class="p">()</span>
+
+    <span class="k">let</span> tableLines <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableLines<span class="p">()</span>
+    <span class="k">let</span> firstline <span class="p">=</span> tableLines[<span class="s1">&#39;firstline&#39;</span>]
+    <span class="k">let</span> lastline <span class="p">=</span> tableLines[<span class="s1">&#39;lastline&#39;</span>]
+
+    <span class="k">let</span> data <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>GetTableData<span class="p">(</span>firstline<span class="p">,</span> lastline<span class="p">)</span>
+    <span class="k">if</span> len<span class="p">(</span>data<span class="p">)</span> <span class="p">==</span> <span class="m">0</span>
+        <span class="k">return</span> {}
+    <span class="k">endif</span>
+
+    <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">let</span> isTableRow <span class="p">=</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableInnerRow<span class="p">(</span>line<span class="p">)</span>
+    <span class="k">if</span> isTableRow <span class="p">==</span> <span class="m">1</span>
+        <span class="k">return</span> {}
+    <span class="k">endif</span>
+
+    <span class="k">let</span> cursorPos <span class="p">=</span> getpos<span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> cursorPos[<span class="m">1</span>]
+    <span class="k">let</span> rowIndex <span class="p">=</span> <span class="m">0</span>
+    <span class="k">while</span> <span class="k">i</span> <span class="p">&gt;=</span> firstline
+        <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span><span class="k">i</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">&lt;</span>SID<span class="p">&gt;</span>isTableInnerRow<span class="p">(</span>line<span class="p">)</span>
+            <span class="k">let</span> rowIndex <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endif</span>
+        <span class="k">let</span> <span class="k">i</span> <span class="p">-=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+    <span class="k">let</span> rowIndex <span class="p">-=</span> <span class="m">1</span>
+
+    <span class="k">let</span> colIndex <span class="p">=</span> <span class="m">0</span>
+    <span class="k">let</span> <span class="k">i</span> <span class="p">=</span> cursorPos[<span class="m">2</span>] <span class="p">-</span> <span class="m">1</span>
+    <span class="k">let</span> line <span class="p">=</span> getline<span class="p">(</span>cursorPos[<span class="m">1</span>]<span class="p">)</span>
+
+    <span class="k">while</span> <span class="k">i</span> <span class="p">&gt;=</span> <span class="m">0</span>
+        <span class="k">if</span> line[<span class="k">i</span>] <span class="p">==</span> <span class="k">b</span>:tablify_delimiter
+            <span class="k">let</span> colIndex <span class="p">+=</span> <span class="m">1</span>
+        <span class="k">endif</span>
+        <span class="k">let</span> <span class="k">i</span> <span class="p">-=</span> <span class="m">1</span>
+    <span class="k">endwhile</span>
+    <span class="k">let</span> colIndex <span class="p">-=</span> <span class="m">1</span>
+
+    <span class="k">let</span> pos <span class="p">=</span> {
+        \<span class="s1">&#39;row&#39;</span>: rowIndex<span class="p">,</span>
+        \<span class="s1">&#39;col&#39;</span>: colIndex}
+    <span class="k">return</span> pos
+<span class="k">endfunction</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

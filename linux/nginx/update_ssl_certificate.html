@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nginx自动更新ssl证书 &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/linux/nginx/update_ssl_certificate.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="config cdn" href="config_cdn.html" />
+    <link rel="prev" title="nginx" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">nginx自动更新ssl证书</a><ul>
+<li><a class="reference internal" href="#id1">安装工具</a></li>
+<li><a class="reference internal" href="#id2">生成证书，定时任务</a></li>
+<li><a class="reference internal" href="#https">https配置</a></li>
+<li><a class="reference internal" href="#http">http配置</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: nginx"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; nginx</span>
+    </a>
+  </li>
+  <li>
+    <a href="config_cdn.html" title="Next Chapter: config cdn"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">config cdn &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="nginxssl">
+<span id="linux-nginx-update-ssl-certificate"></span><h1>nginx自动更新ssl证书<a class="headerlink" href="#nginxssl" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
+<div class="section" id="id1">
+<h2>安装工具<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum install epel-release
+
+wget https://dl.eff.org/certbot-auto --no-check-certificate
+
+chmod +x certbot-auto
+
+./certbot-auto -n
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>生成证书，定时任务<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>第一次生成证书</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./certbot-auto certonly --email my@qq.com --agree-tos --no-eff-email --webroot -w /root/html/ -d www.pydict.com
+</pre></div>
+</div>
+<p>上面命令中的/root/html/路径表示nginx配置中的root目录</p>
+<p>如果有多个域名，命令后面继续加 -d 参数就行</p>
+<ul class="simple">
+<li><p>自动更新证书</p></li>
+</ul>
+<p>证书会有有效期，所以可以弄一个定时任务自动更新证书</p>
+<p>0 3 * * * /root/certbot-auto renew –disable-hook-validation –renew-hook “/usr/sbin/nginx -s reload”</p>
+<p>这里表示每天凌晨3点更新一遍证书，如果证书没有失效，不会起作用</p>
+<p>/usr/sbin/nginx是nginx的实际路径，可以用 which nginx 来定位位置</p>
+</div>
+<div class="section" id="https">
+<h2>https配置<a class="headerlink" href="#https" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
+    listen 443 ssl;
+    server_name pydict.com;
+
+    ssl_certificate /etc/letsencrypt/live/www.pydict.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.pydict.com/privkey.pem;
+
+    ssl_ciphers ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:10m;
+
+    access_log  logs/access.log  main;
+
+    gzip on;
+    gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png application/vnd.ms-fontobject  application/x-font-ttf  font/ttf     font/opentype font/x-woff  image/svg+xml;
+
+    error_page  404 /404.html;
+    error_page  500 502 503 504 /50x.html;
+
+    client_max_body_size 75M;
+
+    root    /root/html/otfsenter.github.io;
+    location / {
+        index index.html;
+    }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="http">
+<h2>http配置<a class="headerlink" href="#http" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
+    listen  80;
+    server_name pydict.com;
+
+    access_log  /var/log/nginx/access.log;
+    error_log   /var/log/nginx/error.log;
+
+    charset utf-8;
+
+    error_page  404 /404.html;
+    error_page  500 502 503 504 /50x.html;
+
+    client_max_body_size 75M;
+
+    location / {
+        return 301 https://www.pydict.com$request_uri;
+    }
+}
+</pre></div>
+</div>
+<p><strong>这个http的配置中，配置了一个301，这样就算访问http也会重定向到https</strong></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

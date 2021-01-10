@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自动美化中英文排版 &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/vim/pangu.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tablify" href="tablify.html" />
+    <link rel="prev" title="Vim" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">自动美化中英文排版</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Vim"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Vim</span>
+    </a>
+  </li>
+  <li>
+    <a href="tablify.html" title="Next Chapter: tablify"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">tablify &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="vim">
+<span id="id1"></span><h1>自动美化中英文排版<a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="c">&quot; @see [全角和半角 - wikipedia](http://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2)</span>
+<span class="c">&quot; @see [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines)</span>
+
+<span class="k">if</span> exists<span class="p">(</span><span class="s2">&quot;load_pangu_space&quot;</span><span class="p">)</span>
+<span class="k">finish</span>
+<span class="k">endif</span>
+<span class="k">let</span> load_pangu_space<span class="p">=</span><span class="m">1</span>
+
+<span class="k">let</span> <span class="k">g</span>:pangu_enabled<span class="p">=</span><span class="m">1</span>
+
+<span class="k">function</span><span class="p">!</span> PanGuSpacingCore<span class="p">()</span>
+    <span class="k">let</span> ignore <span class="p">=</span> search<span class="p">(</span><span class="s2">&quot;PANGU_DISABLE&quot;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span>ignore <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+    <span class="k">return</span>
+    <span class="k">endif</span>
+
+    <span class="k">if</span> &amp;<span class="nb">ft</span> <span class="p">!=</span> <span class="s2">&quot;diff&quot;</span>
+        <span class="k">let</span> <span class="k">b</span>:curcol <span class="p">=</span> <span class="k">col</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+        <span class="k">let</span> <span class="k">b</span>:curline <span class="p">=</span> line<span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+
+<span class="c">        &quot; 汉字后的标点符号，转成全角符号。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)\.\($\|\s\+\)/</span>\<span class="m">1</span>。/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\),\s*/</span>\<span class="m">1</span>，/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\);\s*/</span>\<span class="m">1</span>；/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)!\s*/</span>\<span class="m">1</span>！/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\):\s*/</span>\<span class="m">1</span>：/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)?\s*/</span>\<span class="m">1</span>？/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)\\\s*/</span>\<span class="m">1</span>、/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/(\([\u4e00-\u9fa5\u3040-\u30FF]\)/</span>（\<span class="m">1</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\))/</span>\<span class="m">1</span>）/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\[\([\u4e00-\u9fa5\u3040-\u30FF]\)/</span>『\<span class="m">1</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)\]/</span>\<span class="m">1</span>』/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/&lt;\([\u4e00-\u9fa5\u3040-\u30FF]\)/</span>《\<span class="m">1</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)&gt;/</span>\<span class="m">1</span>》/<span class="k">g</span>
+<span class="c">        &quot; TODO: 半角单双引号无法有效判断起始和结束，以正确替换成全角单双引号。</span>
+<span class="c">        &quot; 可以考虑通过标识符号提醒。</span>
+
+<span class="c">        &quot; 连续的句号转成省略号</span>
+<span class="c">        &quot; - `……`</span>
+<span class="c">        &quot; - `⋯⋯`</span>
+<span class="c">        &quot; - `......`</span>
+<span class="c">        &quot; - `······`</span>
+<span class="c">        &quot; @see [中文省略号应该垂直居中还是沉底？](https://www.zhihu.com/question/19593470)</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/。\{3,}/</span>....../<span class="k">g</span>
+
+<span class="c">        &quot; #11: 根据《标点符号用法》，重复的感叹号、问号不允许超过 3 个。</span>
+<span class="c">        &quot; [标点符号用法 GB/T 15834 2011](http://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091548267.pdf)</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([！？]\)\1\{3,}/</span>\<span class="m">1</span>\<span class="m">1</span>\<span class="m">1</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([。，；：、“”『』〖〗《》]\)\1\{1,}/</span>\<span class="m">1</span>/<span class="k">g</span>
+
+<span class="c">        &quot; 全角数字。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/０/</span><span class="m">0</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/１/</span><span class="m">1</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/２/</span><span class="m">2</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/３/</span><span class="m">3</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/４/</span><span class="m">4</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/５/</span><span class="m">5</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/６/</span><span class="m">6</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/７/</span><span class="m">7</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/８/</span><span class="m">8</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/９/</span><span class="m">9</span>/<span class="k">g</span>
+
+<span class="c">        &quot; 全角英文字符。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ａ/</span>A/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｂ/</span>B/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｃ/</span>C/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｄ/</span>D/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｅ/</span>E/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｆ/</span>F/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｇ/</span>G/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｈ/</span>H/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｉ/</span>I/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｊ/</span>J/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｋ/</span>K/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｌ/</span>L/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｍ/</span>M/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｎ/</span>N/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｏ/</span>O/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｐ/</span>P/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｑ/</span>Q/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｒ/</span>R/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｓ/</span>S/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｔ/</span>T/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｕ/</span>U/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｖ/</span>V/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｗ/</span>W/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｘ/</span>X/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｙ/</span>Y/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/Ｚ/</span>Z/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ａ/</span><span class="k">a</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｂ/</span><span class="k">b</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｃ/</span><span class="k">c</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｄ/</span><span class="k">d</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｅ/</span><span class="k">e</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｆ/</span><span class="k">f</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｇ/</span><span class="k">g</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｈ/</span><span class="k">h</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｉ/</span><span class="k">i</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｊ/</span><span class="k">j</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｋ/</span><span class="k">k</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｌ/</span><span class="k">l</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｍ/</span><span class="k">m</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｎ/</span><span class="k">n</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｏ/</span><span class="k">o</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｐ/</span><span class="k">p</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｑ/</span><span class="k">q</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｒ/</span><span class="k">r</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｓ/</span>s/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｔ/</span><span class="k">t</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｕ/</span><span class="k">u</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｖ/</span><span class="k">v</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｗ/</span><span class="k">w</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｘ/</span><span class="k">x</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｙ/</span><span class="k">y</span>/<span class="k">g</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/ｚ/</span>z/<span class="k">g</span>
+
+<span class="c">        &quot; 全角英文标点。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/＠/</span>@/<span class="k">g</span>
+
+<span class="c">        &quot; 汉字与其前后的英文字符、英文标点、数字间增加空白。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([\u4e00-\u9fa5\u3040-\u30FF]\)\([a-zA-Z0-9@&amp;=\[\$\%\^\-\+(\/\\]\)/</span>\<span class="m">1</span> \<span class="m">2</span>/<span class="k">g</span> <span class="c">&quot; 汉字在前。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\([a-zA-Z0-9!&amp;;=\]\,\.\:\?\$\%\^\-\+\)\/\\]\)\([\u4e00-\u9fa5\u3040-\u30FF]\)/</span>\<span class="m">1</span> \<span class="m">2</span>/<span class="k">g</span> <span class="c">&quot; 汉字在后。</span>
+
+<span class="c">        &quot; 修复 markdown 链接所使用的标点。</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/[『\[]\([^』\]]\+\)[』\]][『\[]\([^』\]]\+\)[』\]]/</span>[\<span class="m">1</span>][\<span class="m">2</span>]/<span class="k">g</span> <span class="c">&quot; 参考链接</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/[『\[]\([^』\]]\+\)[』\]][（(]\([^』)]\+\)[）)]/</span>[\<span class="m">1</span>]<span class="p">(</span>\<span class="m">2</span><span class="p">)</span>/<span class="k">g</span> <span class="c">&quot; 内联链接</span>
+<span class="c">        &quot; WiKi 链接： [『中文条目』] -&gt; [[中文条目]]</span>
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\[『\([^』\]]\+\)』\]/</span>[[\<span class="m">1</span>]]/<span class="k">g</span>
+
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/^ \[/</span>[/
+        <span class="k">silent</span><span class="p">!</span> %s<span class="sr">/\s\+$/</span>/
+
+        <span class="k">call</span> cursor<span class="p">(</span><span class="k">b</span>:curline<span class="p">,</span> <span class="k">b</span>:curcol<span class="p">)</span>
+    <span class="k">endif</span>
+<span class="k">endfunction</span>
+
+<span class="k">function</span><span class="p">!</span> PanGuSpacing<span class="p">()</span>
+<span class="k">if</span> <span class="k">g</span>:pangu_enabled <span class="p">==</span> <span class="m">1</span>
+    <span class="k">call</span> PanGuSpacingCore<span class="p">()</span>
+<span class="k">endif</span>
+<span class="k">endfunction</span>
+
+command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span>* Pangu <span class="k">call</span> PanGuSpacingCore<span class="p">()</span>
+command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span><span class="m">0</span> PanguDisable <span class="k">let</span> <span class="k">g</span>:pangu_enabled<span class="p">=</span><span class="m">0</span>
+command<span class="p">!</span> <span class="p">-</span>nargs<span class="p">=</span><span class="m">0</span> PanguEnable <span class="k">let</span> <span class="k">g</span>:pangu_enabled<span class="p">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

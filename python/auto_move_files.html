@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自动归档文件 &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/python/auto_move_files.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="自动重命名电影名字" href="auto_rename_files.html" />
+    <link rel="prev" title="用Python自动获取排班人员" href="auto_get_schedule.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">自动归档文件</a><ul>
+<li><a class="reference internal" href="#id2">步骤</a></li>
+<li><a class="reference internal" href="#config-json">规则配置文件 config.json</a></li>
+<li><a class="reference internal" href="#id3">具体的代码</a></li>
+<li><a class="reference internal" href="#python-auto-move-files-config-file">配置文件</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="auto_get_schedule.html" title="Previous Chapter: 用Python自动获取排班人员"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 用Python自动获取排班人员</span>
+    </a>
+  </li>
+  <li>
+    <a href="auto_rename_files.html" title="Next Chapter: 自动重命名电影名字"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">自动重命名电影名字 &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="python-auto-move-files">
+<span id="id1"></span><h1>自动归档文件<a class="headerlink" href="#python-auto-move-files" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
+<p>一共三种文件：电影、图片、小说，</p>
+<p>想要实现的效果是：当这些文件从浏览器下载到一个固定文件夹下面时，脚本能及时识别 并 自动归档到相应的电影、图片、小说的文件夹下面。</p>
+<ul class="simple">
+<li><p>监视文件夹变化需要用到 <cite>watchdog</cite> 模块</p></li>
+<li><p>移动文件需要用到 <cite>shutil</cite> 模块</p></li>
+</ul>
+<div class="section" id="id2">
+<h2>步骤<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>监视 downloads 文件夹的文件变化情况，类名：MyHandler, 继承自 watchdog.events.FileSystemEventHandler</p></li>
+<li><p>根据规则判断得到目标路径，函数名：get_des_folder, 参数是 filename(文件名)</p></li>
+<li><p>移动文件，函数名： move_multiple_times，参数是 file_src(原路径), file_des(目标路径)</p></li>
+</ol>
+</div>
+<div class="section" id="config-json">
+<span id="python-auto-move-files-config-json"></span><h2>规则配置文件 config.json<a class="headerlink" href="#config-json" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>电影的关键字，前缀、后缀的列表、文件夹名字</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;movie&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;movie&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;suffix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;mp4&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mkv&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rmvb&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;folder&quot;</span><span class="p">:</span> <span class="s2">&quot;movie&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>keywords 中有前缀、后缀，逐一判断这些关键字，如果匹配，</p>
+<p>取 folder 对应的 movie 来作为文件夹的名字，</p>
+<p>图片、小说同理，具体的配置放在了最后面的 <a class="reference internal" href="#python-auto-move-files-config-file"><span class="std std-ref">配置文件</span></a></p>
+</div>
+<div class="section" id="id3">
+<h2>具体的代码<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">custom</span> <span class="kn">import</span> <span class="n">file</span>
+<span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="n">FileSystemEventHandler</span>
+<span class="kn">from</span> <span class="nn">watchdog.observers</span> <span class="kn">import</span> <span class="n">Observer</span>
+
+<span class="c1"># 根目录</span>
+<span class="n">path_root</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\PycharmProjects\move_files&#39;</span>
+
+<span class="c1"># 被监视的文件夹</span>
+<span class="n">folder_to_track</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\PycharmProjects\move_files\downloads&#39;</span>
+
+<span class="c1"># 规则配置文件</span>
+<span class="n">file_json</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\PycharmProjects\move_files\config.json&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">get_des_folder</span><span class="p">(</span><span class="n">filname</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    根据文件名判断出目标文件的绝对路径</span>
+<span class="sd">    :param filname: 文件名</span>
+<span class="sd">    :return: 目标文件的绝对路径</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data_dict</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">file_json</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">keywords_folder_dict</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">keywords_dict</span> <span class="o">=</span> <span class="n">keywords_folder_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;keywords&#39;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">prefix_list</span> <span class="o">=</span> <span class="n">keywords_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;prefix&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">suffix_list</span> <span class="o">=</span> <span class="n">keywords_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;suffix&#39;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">folder</span> <span class="o">=</span> <span class="n">keywords_folder_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">keywords_dict</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">folder</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">prefix_list</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">suffix_list</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># 根据文件名前缀判断</span>
+        <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">prefix_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">filname</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+                <span class="n">folder_des</span> <span class="o">=</span> <span class="n">folder</span>
+
+        <span class="c1"># 根据文件名后缀判断</span>
+        <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">suffix_list</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">filname</span><span class="p">)</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">suffix</span><span class="p">):</span>
+                <span class="n">folder_des</span> <span class="o">=</span> <span class="n">folder</span>
+
+    <span class="c1"># 如果前面都没有判断出目的文件的路径，默认放在 other 文件夹下</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">folder_des</span>
+    <span class="k">except</span> <span class="ne">UnboundLocalError</span><span class="p">:</span>
+        <span class="n">folder_des</span> <span class="o">=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;other&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;folder&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">folder_des</span>
+
+
+<span class="k">def</span> <span class="nf">move_multiple_times</span><span class="p">(</span><span class="n">file_src</span><span class="p">,</span> <span class="n">file_des</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    文件刚刚被复制到 downloads 文件夹下面的时候，几秒之内可能被进程占用，</span>
+<span class="sd">    导致无法剪切到其他目录，</span>
+<span class="sd">    所以这里根据 PermissionError 使用递归重复剪切 直至移动文件成功，</span>
+<span class="sd">    time.sleep(1)必须要，否则会继续报错, 另会报 RecursionError 错误。</span>
+<span class="sd">    :param file_src: 文件原来所在的绝对路径</span>
+<span class="sd">    :param file_des: 文件所要移动到的 目的 的绝对路径</span>
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">file_src</span><span class="p">,</span> <span class="n">file_des</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">PermissionError</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">move_multiple_times</span><span class="p">(</span><span class="n">file_src</span><span class="p">,</span> <span class="n">file_des</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">MyHandler</span><span class="p">(</span><span class="n">FileSystemEventHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">on_any_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder_to_track</span><span class="p">):</span>
+            <span class="n">file_src</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_to_track</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+            <span class="n">folder</span> <span class="o">=</span> <span class="n">get_des_folder</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">file_des</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_root</span><span class="p">,</span> <span class="n">folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+            <span class="n">move_multiple_times</span><span class="p">(</span><span class="n">file_src</span><span class="p">,</span> <span class="n">file_des</span><span class="p">)</span>
+
+
+<span class="c1"># 利用 Observer 注册一个监视器，时刻监视 downloads 文件夹的变化</span>
+<span class="n">event_handler</span> <span class="o">=</span> <span class="n">MyHandler</span><span class="p">()</span>
+<span class="n">observer</span> <span class="o">=</span> <span class="n">Observer</span><span class="p">()</span>
+<span class="n">observer</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">event_handler</span><span class="p">,</span> <span class="n">folder_to_track</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># 启动监视器</span>
+<span class="n">observer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="c1"># 监视器保持运行，直到按下 Ctrl + C 结束脚本</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">KeyboardInterrupt</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">observer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+    <span class="n">observer</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-auto-move-files-config-file">
+<span id="id4"></span><h2>配置文件<a class="headerlink" href="#python-auto-move-files-config-file" title="Permalink to this headline">¶</a></h2>
+<p>回到 <a class="reference internal" href="#python-auto-move-files-config-json"><span class="std std-ref">规则配置文件 config.json</span></a> 标题</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;movie&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;movie&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;suffix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;mp4&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mkv&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;rmvb&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;folder&quot;</span><span class="p">:</span> <span class="s2">&quot;movie&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;picture&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;pic&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;suffix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;png&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;jpg&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;folder&quot;</span><span class="p">:</span> <span class="s2">&quot;pic&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;novel&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;prefix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;novel&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;suffix&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;txt&quot;</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;folder&quot;</span><span class="p">:</span> <span class="s2">&quot;novel&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;other&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;folder&quot;</span><span class="p">:</span> <span class="s2">&quot;other&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

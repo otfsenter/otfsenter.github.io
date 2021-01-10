@@ -1,0 +1,12 @@
+.. _python-i18n:
+
+******
+国际化
+******
+
+.. code-block::
+
+    msgfmt --statistics -cv foo.po
+
+    msgmerge –no-wrap -U foo.po foo.po # 不要半路换行，和自己适应（也就是不去做适应）
+    msgmerge -w 79 -U zh_CN.po drunk.pot # 最大宽度 79 列，自动换行，适应到 drunk.pot

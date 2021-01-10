@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python3中复制图片到系统剪贴板 &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/python/copy_image_to_clipboard_python3.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Django" href="django/index.html" />
+    <link rel="prev" title="自动重命名电影名字" href="auto_rename_files.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Python3中复制图片到系统剪贴板</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="auto_rename_files.html" title="Previous Chapter: 自动重命名电影名字"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 自动重命名电影名字</span>
+    </a>
+  </li>
+  <li>
+    <a href="django/index.html" title="Next Chapter: Django"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Django &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="python3">
+<span id="copy-image-to-clipboard-python3"></span><h1>Python3中复制图片到系统剪贴板<a class="headerlink" href="#python3" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+
+<span class="c1"># pip install pillow, 用Image模块操作图片文件</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># BytesIO是操作二进制数据的模块</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+
+<span class="c1"># pip install pywin32, win32clipboard是操作剪贴板的模块</span>
+<span class="kn">import</span> <span class="nn">win32clipboard</span>
+
+
+<span class="c1"># 图片路径，如果是当前路径，直接写文件名</span>
+<span class="c1"># windows路径要注意是 \，例：&#39;D:\\t.jpg&#39;</span>
+<span class="c1"># linux是 /，例: &#39;~/t.jpg&#39;</span>
+<span class="n">file_image</span> <span class="o">=</span> <span class="s1">&#39;t.jpg&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">send_msg_to_clip</span><span class="p">(</span><span class="n">type_data</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    操作剪贴板分四步：</span>
+<span class="sd">    1. 打开剪贴板：OpenClipboard()</span>
+<span class="sd">    2. 清空剪贴板，新的数据才好写进去：EmptyClipboard()</span>
+<span class="sd">    3. 往剪贴板写入数据：SetClipboardData()</span>
+<span class="sd">    4. 关闭剪贴板：CloseClipboard()</span>
+
+<span class="sd">    :param type_data: 数据的格式，</span>
+<span class="sd">    unicode字符通常是传 win32con.CF_UNICODETEXT</span>
+<span class="sd">    :param msg: 要写入剪贴板的数据</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">OpenClipboard</span><span class="p">()</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">EmptyClipboard</span><span class="p">()</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">SetClipboardData</span><span class="p">(</span><span class="n">type_data</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">CloseClipboard</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">paste_img</span><span class="p">(</span><span class="n">file_img</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    图片转换成二进制字符串，然后以位图的格式写入剪贴板</span>
+
+<span class="sd">    主要思路是用Image模块打开图片，</span>
+<span class="sd">    用BytesIO存储图片转换之后的二进制字符串</span>
+
+<span class="sd">    :param file_img: 图片的路径</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 把图片写入image变量中</span>
+    <span class="c1"># 用open函数处理后，图像对象的模式都是 RGB</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_img</span><span class="p">)</span>
+
+    <span class="c1"># 声明output字节对象</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+
+    <span class="c1"># 用BMP (Bitmap) 格式存储</span>
+    <span class="c1"># 这里是位图，然后用output字节对象来存储</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">&#39;BMP&#39;</span><span class="p">)</span>
+
+    <span class="c1"># BMP图片有14字节的header，需要额外去除</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()[</span><span class="mi">14</span><span class="p">:]</span>
+
+    <span class="c1"># 关闭</span>
+    <span class="n">output</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># DIB: 设备无关位图(device-independent bitmap)，名如其意</span>
+    <span class="c1"># BMP的图片有时也会以.DIB和.RLE作扩展名</span>
+    <span class="c1"># 设置好剪贴板的数据格式，再传入对应格式的数据，才能正确向剪贴板写入数据</span>
+    <span class="n">send_msg_to_clip</span><span class="p">(</span><span class="n">win32clipboard</span><span class="o">.</span><span class="n">CF_DIB</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">paste_img</span><span class="p">(</span><span class="n">file_image</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

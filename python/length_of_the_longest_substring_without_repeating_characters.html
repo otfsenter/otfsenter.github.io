@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>没有重复字母的最长子字符串的计算 &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/python/length_of_the_longest_substring_without_repeating_characters.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="合并多行" href="merge_lines_with_regular.html" />
+    <link rel="prev" title="robotframework里面的插件系统" href="plugin_in_in_robot_framework.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">没有重复字母的最长子字符串的计算</a><ul>
+<li><a class="reference internal" href="#id2">代码</a></li>
+<li><a class="reference internal" href="#id3">如何算最大的长度</a></li>
+<li><a class="reference internal" href="#end">end怎么来的</a></li>
+<li><a class="reference internal" href="#start">start怎么来</a></li>
+<li><a class="reference internal" href="#startmax">为什么start也要max</a></li>
+<li><a class="reference internal" href="#maximum-lengthmax">为什么maximum_length也要用max</a></li>
+<li><a class="reference internal" href="#startend">start为什么不直接用end</a></li>
+<li><a class="reference internal" href="#start-1">为什么start用的是上一次的值+1</a></li>
+<li><a class="reference internal" href="#id4">解耦</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="plugin_in_in_robot_framework.html" title="Previous Chapter: robotframework里面的插件系统"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; robotframework里面的插件系统</span>
+    </a>
+  </li>
+  <li>
+    <a href="merge_lines_with_regular.html" title="Next Chapter: 合并多行"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">合并多行 &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="python-length-of-the-longest-substring-without-repeating-characters">
+<span id="id1"></span><h1>没有重复字母的最长子字符串的计算<a class="headerlink" href="#python-length-of-the-longest-substring-without-repeating-characters" title="Permalink to this headline">¶</a></h1>
+<p>length of the longest substring without repeating characters</p>
+<div class="section" id="id2">
+<h2>代码<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>时间复杂度：O(n+d) ，其中n为输入字符串的长度，d为输入字符串字母表的字符数。</p>
+<p>例如，如果字符串由小写英文字符组成，那么d的值是26。</p>
+<p>空间复杂度：O(d) 。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here, we are planning to implement a simple sliding window methodology</span>
+
+<span class="k">def</span> <span class="nf">longestUniqueSubsttr</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+
+    <span class="c1"># Creating a set to store the last positions of occurrence</span>
+    <span class="n">seen</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">maximum_length</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># starting the inital point of window to index 0</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">end</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)):</span>
+
+        <span class="c1"># Checking if we have already seen the element or not</span>
+        <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="n">end</span><span class="p">]</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+
+            <span class="c1"># If we have seen the number, move the start pointer</span>
+            <span class="c1"># to position after the last occurrence</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">seen</span><span class="p">[</span><span class="n">string</span><span class="p">[</span><span class="n">end</span><span class="p">]]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="c1"># Updating the last seen value of the character</span>
+        <span class="n">seen</span><span class="p">[</span><span class="n">string</span><span class="p">[</span><span class="n">end</span><span class="p">]]</span> <span class="o">=</span> <span class="n">end</span>
+        <span class="n">maximum_length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">maximum_length</span><span class="p">,</span> <span class="n">end</span><span class="o">-</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">maximum_length</span>
+
+<span class="c1"># Driver Code</span>
+<span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;geeksforgeeks&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The input string is&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+<span class="n">length</span> <span class="o">=</span> <span class="n">longestUniqueSubsttr</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The length of the longest non-repeating character substring is&quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>如何算最大的长度<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>子字符串长度 = 末尾的索引 - 开始的索引 + 1</p>
+<p>末尾的索引：end</p>
+<p>开始的索引：start</p>
+<p>这样只要遍历不重复的字符串长度，然后用max保存最大的值就行</p>
+<p>maximum_length=max(maximum_length, end - start + 1)</p>
+</div>
+<div class="section" id="end">
+<h2>end怎么来的<a class="headerlink" href="#end" title="Permalink to this headline">¶</a></h2>
+<p>每次遍历的索引值就是end</p>
+</div>
+<div class="section" id="start">
+<h2>start怎么来<a class="headerlink" href="#start" title="Permalink to this headline">¶</a></h2>
+<p>弄一个字典，记录每个字母对应索引，如果重复了，就更新字母对应的索引位置</p>
+</div>
+<div class="section" id="startmax">
+<h2>为什么start也要max<a class="headerlink" href="#startmax" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>g</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>k</p></th>
+<th class="head"><p>s</p></th>
+<th class="head"><p>f</p></th>
+<th class="head"><p>o</p></th>
+<th class="head"><p>r</p></th>
+<th class="head"><p>g</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>k</p></th>
+<th class="head"><p>s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>11</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+<p>当第二次g出现的时候，start=0+1=1，</p>
+<p>但其实e已经出现了两次，start=2了，</p>
+<p>这样会从第一个e开始算，导致出现问题</p>
+</div>
+<div class="section" id="maximum-lengthmax">
+<h2>为什么maximum_length也要用max<a class="headerlink" href="#maximum-lengthmax" title="Permalink to this headline">¶</a></h2>
+<p>为了保存最大值</p>
+</div>
+<div class="section" id="startend">
+<h2>start为什么不直接用end<a class="headerlink" href="#startend" title="Permalink to this headline">¶</a></h2>
+<p>用了end之后start，end值的变化如下：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>g</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>k</p></th>
+<th class="head"><p>s</p></th>
+<th class="head"><p>f</p></th>
+<th class="head"><p>o</p></th>
+<th class="head"><p>r</p></th>
+<th class="head"><p>g</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>k</p></th>
+<th class="head"><p>s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>11</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>字母</p></th>
+<th class="head"><p>第一次</p></th>
+<th class="head"><p>第二次</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>g</p></td>
+<td><p>0</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>start，end</p></td>
+<td><p>start=0，end=0</p></td>
+<td><p>start=8，end=8</p></td>
+</tr>
+<tr class="row-even"><td><p>e</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>start，end</p></td>
+<td><p>start=0，end=1</p></td>
+<td><p>start=2，end=2</p></td>
+</tr>
+</tbody>
+</table>
+<p>第二个g，</p>
+<p>到g的时候，上次start=2，end=7，最大长度就是6，</p>
+<p>一旦到g，start=8，end=8，其实这里第二个e到第二个g，最大长度是7，这样就出现了问题，少算了第二个g，导致少了1位。</p>
+</div>
+<div class="section" id="start-1">
+<h2>为什么start用的是上一次的值+1<a class="headerlink" href="#start-1" title="Permalink to this headline">¶</a></h2>
+<p>这就相当于如果后面有重复，就去掉第一个重复的值，从第二个开始，</p>
+<p>比如gekga</p>
+<p>就相当于去掉第一个g，从ekga计算</p>
+<p>start，end值的变化如下：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>g</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>k</p></th>
+<th class="head"><p>s</p></th>
+<th class="head"><p>f</p></th>
+<th class="head"><p>o</p></th>
+<th class="head"><p>r</p></th>
+<th class="head"><p>g</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>e</p></th>
+<th class="head"><p>k</p></th>
+<th class="head"><p>s</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>11</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+<p>g第一次出现是0，第二次出现, 在第一次出现的基础上+1，start=1，但其实这里包含了两个重复的e,</p>
+<p>但是e已经出现了两次，start=2，</p>
+<p>取最大值，start=2，</p>
+<p>end是8，算出来最大值8-2+1=7</p>
+</div>
+<div class="section" id="id4">
+<h2>解耦<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>得先解决一个特定的问题，循环中的一个例子</p></li>
+<li><p>每个阶段一个py文件，一个日志文件，最好是csv文件，方便整理成任何想要的格式，或者“｜｜”分隔，也方便整理，方便分阶段调试</p></li>
+<li><p>每个阶段通过输出的文件连接，方便解耦</p></li>
+<li><p>每个功能一个函数</p></li>
+<li><p>最后输出到文件里面，一定要有日志，方便随时断开，随时从有问题的地方开始</p></li>
+<li><p>最后整理的配置文件一定是从日志生成，不能依赖程序执行完生成配置文件</p></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

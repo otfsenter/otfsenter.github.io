@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自动发布文章到微信公众号-doing &#8212; 首页  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="canonical" href="http://www.idlepig.cn/python/website2wechat_byclick.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="获取远程服务器上面的输出" href="get_output_from_remote_server.html" />
+    <link rel="prev" title="用Python发送邮件" href="smtplib.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          首页</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english.html">english</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">自动发布文章到微信公众号-doing</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="smtplib.html" title="Previous Chapter: 用Python发送邮件"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 用Python发送邮件</span>
+    </a>
+  </li>
+  <li>
+    <a href="get_output_from_remote_server.html" title="Next Chapter: 获取远程服务器上面的输出"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">获取远程服务器上面的输出 &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="doing">
+<span id="website2wechage-by-click"></span><h1>自动发布文章到微信公众号-doing<a class="headerlink" href="#doing" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
+<ul class="simple">
+<li><p>还没完成的列表</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>序号</p></th>
+<th class="head"><p>项</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>send png auto</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>声明原创</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>自动添加文章列表</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">from</span> <span class="nn">pymouse</span> <span class="kn">import</span> <span class="n">PyMouse</span>
+<span class="kn">from</span> <span class="nn">pykeyboard</span> <span class="kn">import</span> <span class="n">PyKeyboard</span>
+<span class="kn">import</span> <span class="nn">win32clipboard</span>
+<span class="kn">import</span> <span class="nn">win32con</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">PyMouse</span><span class="p">()</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">PyKeyboard</span><span class="p">()</span>
+
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;otfsenter&#39;</span>
+<span class="n">position_title_end</span> <span class="o">=</span> <span class="p">[</span><span class="mi">732</span><span class="p">,</span> <span class="mi">239</span><span class="p">]</span>
+<span class="n">position_article_end</span> <span class="o">=</span> <span class="p">[</span><span class="mi">416</span><span class="p">,</span> <span class="mi">858</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">send_to_clip</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">OpenClipboard</span><span class="p">()</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">EmptyClipboard</span><span class="p">()</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">SetClipboardData</span><span class="p">(</span><span class="n">win32con</span><span class="o">.</span><span class="n">CF_UNICODETEXT</span><span class="p">,</span> <span class="n">input_string</span><span class="p">)</span>
+    <span class="n">win32clipboard</span><span class="o">.</span><span class="n">CloseClipboard</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">click_first_page</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="mi">146</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">click_second_page</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="mi">369</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">click_second_page_article</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="mi">330</span><span class="p">,</span> <span class="mi">485</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">click_second_page_title</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="mi">203</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">click_second_page_author</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="mi">226</span><span class="p">,</span> <span class="mi">345</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">press_title_start</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="mi">349</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">move_title_end</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">move</span><span class="p">(</span>
+        <span class="n">position_title_end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">position_title_end</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">release_title_end</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">release</span><span class="p">(</span>
+        <span class="n">position_title_end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">position_title_end</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">press_article_start</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="mi">353</span><span class="p">,</span> <span class="mi">288</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">move_article_end</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">move</span><span class="p">(</span>
+        <span class="n">position_article_end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">position_article_end</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">release_article_end</span><span class="p">():</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">release</span><span class="p">(</span>
+        <span class="n">position_article_end</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">position_article_end</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ctrl_c</span><span class="p">():</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">press_keys</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">control_l_key</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ctrl_a</span><span class="p">():</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">press_keys</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">control_l_key</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">])</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ctrl_v</span><span class="p">():</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">press_keys</span><span class="p">([</span><span class="n">k</span><span class="o">.</span><span class="n">control_l_key</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">])</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">input_author</span><span class="p">():</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">type_string</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="n">k</span><span class="o">.</span><span class="n">press_key</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">backspace_key</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="c1"># copy title</span>
+    <span class="n">click_first_page</span><span class="p">()</span>
+    <span class="n">press_title_start</span><span class="p">()</span>
+    <span class="n">move_title_end</span><span class="p">()</span>
+    <span class="n">release_title_end</span><span class="p">()</span>
+    <span class="n">ctrl_c</span><span class="p">()</span>
+    <span class="n">click_second_page</span><span class="p">()</span>
+    <span class="n">click_second_page_title</span><span class="p">()</span>
+    <span class="n">ctrl_a</span><span class="p">()</span>
+    <span class="n">ctrl_v</span><span class="p">()</span>
+
+    <span class="c1"># copy author</span>
+    <span class="n">click_second_page_author</span><span class="p">()</span>
+    <span class="n">ctrl_a</span><span class="p">()</span>
+    <span class="n">delete</span><span class="p">()</span>
+    <span class="n">input_author</span><span class="p">()</span>
+
+    <span class="c1"># copy article</span>
+    <span class="n">click_first_page</span><span class="p">()</span>
+    <span class="n">press_article_start</span><span class="p">()</span>
+    <span class="n">move_article_end</span><span class="p">()</span>
+    <span class="n">release_article_end</span><span class="p">()</span>
+    <span class="n">ctrl_c</span><span class="p">()</span>
+    <span class="n">click_second_page</span><span class="p">()</span>
+    <span class="n">click_second_page_article</span><span class="p">()</span>
+    <span class="n">ctrl_a</span><span class="p">()</span>
+    <span class="n">ctrl_v</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">run</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, IdlePig.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
