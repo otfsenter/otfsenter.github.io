@@ -8,4 +8,5 @@ Sphinx文档
 .. toctree::
     
     attention
+    locale
     

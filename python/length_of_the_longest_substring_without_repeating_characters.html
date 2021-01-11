@@ -1,66 +1,123 @@
+
+
 <!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>没有重复字母的最长子字符串的计算 &mdash; IdlePig  文档</title>
+  
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>没有重复字母的最长子字符串的计算 &#8212; 首页  documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="canonical" href="http://www.idlepig.cn/python/length_of_the_longest_substring_without_repeating_characters.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="合并多行" href="merge_lines_with_regular.html" />
-    <link rel="prev" title="robotframework里面的插件系统" href="plugin_in_in_robot_framework.html" />
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
-<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+    <link rel="prev" title="robotframework里面的插件系统" href="plugin_in_in_robot_framework.html" /> 
+</head>
 
-  </head><body>
+<body class="wy-body-for-nav">
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          首页</a>
-        <span class="navbar-text navbar-version pull-left"><b></b></span>
-      </div>
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
 
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
+          
+            <a href="../index.html" class="icon icon-home"> IdlePig
+          
+
+          
+          </a>
+
+          
             
             
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a></li>
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="auto_get_schedule.html">用Python自动获取排班人员</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_move_files.html">自动归档文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_rename_files.html">自动重命名电影名字</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copy_image_to_clipboard_python3.html">Python3中复制图片到系统剪贴板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="django/index.html">Django</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_position.html">获取鼠标的实时坐标</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_module_dynamic.html">Python脚本动态导入模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smtplib.html">用Python发送邮件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="website2wechat_byclick.html">自动发布文章到微信公众号-doing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_output_from_remote_server.html">获取远程服务器上面的输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin_in_in_robot_framework.html">robotframework里面的插件系统</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">没有重复字母的最长子字符串的计算</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">代码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">如何算最大的长度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#end">end怎么来的</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start">start怎么来</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#startmax">为什么start也要max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximum-lengthmax">为什么maximum_length也要用max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#startend">start为什么不直接用end</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-1">为什么start用的是上一次的值+1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">解耦</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="merge_lines_with_regular.html">合并多行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="i18n.html">国际化</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../english/index.html">English</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
@@ -71,79 +128,81 @@
 <li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zhihu/index.html">zhihu</a></li>
 </ul>
-</ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">没有重复字母的最长子字符串的计算</a><ul>
-<li><a class="reference internal" href="#id2">代码</a></li>
-<li><a class="reference internal" href="#id3">如何算最大的长度</a></li>
-<li><a class="reference internal" href="#end">end怎么来的</a></li>
-<li><a class="reference internal" href="#start">start怎么来</a></li>
-<li><a class="reference internal" href="#startmax">为什么start也要max</a></li>
-<li><a class="reference internal" href="#maximum-lengthmax">为什么maximum_length也要用max</a></li>
-<li><a class="reference internal" href="#startend">start为什么不直接用end</a></li>
-<li><a class="reference internal" href="#start-1">为什么start用的是上一次的值+1</a></li>
-<li><a class="reference internal" href="#id4">解耦</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-              
-                
-  <li>
-    <a href="plugin_in_in_robot_framework.html" title="Previous Chapter: robotframework里面的插件系统"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; robotframework里面的插件系统</span>
-    </a>
-  </li>
-  <li>
-    <a href="merge_lines_with_regular.html" title="Next Chapter: 合并多行"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">合并多行 &raquo;</span>
-    </a>
-  </li>
-              
-            
-            
-            
-            
-              <li class="hidden-sm"></li>
-            
-          </ul>
 
-          
             
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
           
         </div>
-    </div>
-  </div>
+        
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row">
-    <div class="body col-md-12 content" role="main">
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
       
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IdlePig</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Python</a> &raquo;</li>
+        
+      <li>没有重复字母的最长子字符串的计算</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/python/length_of_the_longest_substring_without_repeating_characters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="python-length-of-the-longest-substring-without-repeating-characters">
-<span id="id1"></span><h1>没有重复字母的最长子字符串的计算<a class="headerlink" href="#python-length-of-the-longest-substring-without-repeating-characters" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>没有重复字母的最长子字符串的计算<a class="headerlink" href="#python-length-of-the-longest-substring-without-repeating-characters" title="永久链接至标题">¶</a></h1>
 <p>length of the longest substring without repeating characters</p>
 <div class="section" id="id2">
-<h2>代码<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>时间复杂度：O(n+d) ，其中n为输入字符串的长度，d为输入字符串字母表的字符数。</p>
 <p>例如，如果字符串由小写英文字符组成，那么d的值是26。</p>
 <p>空间复杂度：O(d) 。</p>
@@ -181,7 +240,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>如何算最大的长度<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>如何算最大的长度<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>子字符串长度 = 末尾的索引 - 开始的索引 + 1</p>
 <p>末尾的索引：end</p>
 <p>开始的索引：start</p>
@@ -189,15 +248,15 @@
 <p>maximum_length=max(maximum_length, end - start + 1)</p>
 </div>
 <div class="section" id="end">
-<h2>end怎么来的<a class="headerlink" href="#end" title="Permalink to this headline">¶</a></h2>
+<h2>end怎么来的<a class="headerlink" href="#end" title="永久链接至标题">¶</a></h2>
 <p>每次遍历的索引值就是end</p>
 </div>
 <div class="section" id="start">
-<h2>start怎么来<a class="headerlink" href="#start" title="Permalink to this headline">¶</a></h2>
+<h2>start怎么来<a class="headerlink" href="#start" title="永久链接至标题">¶</a></h2>
 <p>弄一个字典，记录每个字母对应索引，如果重复了，就更新字母对应的索引位置</p>
 </div>
 <div class="section" id="startmax">
-<h2>为什么start也要max<a class="headerlink" href="#startmax" title="Permalink to this headline">¶</a></h2>
+<h2>为什么start也要max<a class="headerlink" href="#startmax" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -252,11 +311,11 @@
 <p>这样会从第一个e开始算，导致出现问题</p>
 </div>
 <div class="section" id="maximum-lengthmax">
-<h2>为什么maximum_length也要用max<a class="headerlink" href="#maximum-lengthmax" title="Permalink to this headline">¶</a></h2>
+<h2>为什么maximum_length也要用max<a class="headerlink" href="#maximum-lengthmax" title="永久链接至标题">¶</a></h2>
 <p>为了保存最大值</p>
 </div>
 <div class="section" id="startend">
-<h2>start为什么不直接用end<a class="headerlink" href="#startend" title="Permalink to this headline">¶</a></h2>
+<h2>start为什么不直接用end<a class="headerlink" href="#startend" title="永久链接至标题">¶</a></h2>
 <p>用了end之后start，end值的变化如下：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -358,7 +417,7 @@
 <p>一旦到g，start=8，end=8，其实这里第二个e到第二个g，最大长度是7，这样就出现了问题，少算了第二个g，导致少了1位。</p>
 </div>
 <div class="section" id="start-1">
-<h2>为什么start用的是上一次的值+1<a class="headerlink" href="#start-1" title="Permalink to this headline">¶</a></h2>
+<h2>为什么start用的是上一次的值+1<a class="headerlink" href="#start-1" title="永久链接至标题">¶</a></h2>
 <p>这就相当于如果后面有重复，就去掉第一个重复的值，从第二个开始，</p>
 <p>比如gekga</p>
 <p>就相当于去掉第一个g，从ekga计算</p>
@@ -433,7 +492,7 @@
 <p>end是8，算出来最大值8-2+1=7</p>
 </div>
 <div class="section" id="id4">
-<h2>解耦<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>解耦<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>得先解决一个特定的问题，循环中的一个例子</p></li>
 <li><p>每个阶段一个py文件，一个日志文件，最好是csv文件，方便整理成任何想要的格式，或者“｜｜”分隔，也方便整理，方便分阶段调试</p></li>
@@ -446,21 +505,51 @@
 </div>
 
 
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="merge_lines_with_regular.html" class="btn btn-neutral float-right" title="合并多行" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="plugin_in_in_robot_framework.html" class="btn btn-neutral float-left" title="robotframework里面的插件系统" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-      
-  </div>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
+
+  <hr/>
+
+  <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, IdlePig.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+        &#169; 版权所有 2021, IdlePig.
+
     </p>
   </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
-  </body>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
