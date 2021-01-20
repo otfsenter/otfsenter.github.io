@@ -29,7 +29,7 @@ custom python compiler
 .. code-block:: python
 
     if exists("current_compiler")
-    finish
+        finish
     endif
     let current_compiler = "python"
 
@@ -39,7 +39,12 @@ custom python compiler
     CompilerSet errorformat=
         \%*\\sFile\ \"%f\"\\,\ line\ %l\\,\ %m,
         \%*\\sFile\ \"%f\"\\,\ line\ %l,
-    CompilerSet makeprg=python3\ %
+
+    if g:iswindows
+        CompilerSet makeprg=python\ %
+    else
+        CompilerSet makeprg=python3\ %
+    endif
 
     let &cpo = s:cpo_save
     unlet s:cpo_save

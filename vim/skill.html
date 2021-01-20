@@ -216,7 +216,7 @@
 <li><p>python.vim code</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="s2">&quot;current_compiler&quot;</span><span class="p">)</span>
-<span class="n">finish</span>
+    <span class="n">finish</span>
 <span class="n">endif</span>
 <span class="n">let</span> <span class="n">current_compiler</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
 
@@ -226,7 +226,12 @@
 <span class="n">CompilerSet</span> <span class="n">errorformat</span><span class="o">=</span>
     \<span class="o">%*</span>\\<span class="n">sFile</span>\ \<span class="s2">&quot;</span><span class="si">%f</span><span class="se">\&quot;\\</span><span class="s2">,\ line\ %l</span><span class="se">\\</span><span class="s2">,\ %m,</span>
     \<span class="o">%*</span>\\<span class="n">sFile</span>\ \<span class="s2">&quot;</span><span class="si">%f</span><span class="se">\&quot;\\</span><span class="s2">,\ line\ %l,</span>
-<span class="n">CompilerSet</span> <span class="n">makeprg</span><span class="o">=</span><span class="n">python3</span>\ <span class="o">%</span>
+
+<span class="k">if</span> <span class="n">g</span><span class="p">:</span><span class="n">iswindows</span>
+    <span class="n">CompilerSet</span> <span class="n">makeprg</span><span class="o">=</span><span class="n">python</span>\ <span class="o">%</span>
+<span class="k">else</span>
+    <span class="n">CompilerSet</span> <span class="n">makeprg</span><span class="o">=</span><span class="n">python3</span>\ <span class="o">%</span>
+<span class="n">endif</span>
 
 <span class="n">let</span> <span class="o">&amp;</span><span class="n">cpo</span> <span class="o">=</span> <span class="n">s</span><span class="p">:</span><span class="n">cpo_save</span>
 <span class="n">unlet</span> <span class="n">s</span><span class="p">:</span><span class="n">cpo_save</span>
