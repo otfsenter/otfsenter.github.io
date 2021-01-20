@@ -7,11 +7,51 @@ skill
 settings for find python error automatically
 ================================================
 
+environment settings
+--------------------
+
+
 .. code::
 
     export LC_CTYPE="en_US.UTF-8"
     export LANG="en_US.UTF-8"
 
+custom python compiler
+----------------------
+
+* python.vim path
+
+    ~/.vim/compiler/python.vim
+
+
+* python.vim code
+
+.. code-block:: python
+
+    if exists("current_compiler")
+    finish
+    endif
+    let current_compiler = "python"
+
+    let s:cpo_save = &cpo
+    set cpo&vim
+
+    CompilerSet errorformat=
+        \%*\\sFile\ \"%f\"\\,\ line\ %l\\,\ %m,
+        \%*\\sFile\ \"%f\"\\,\ line\ %l,
+    CompilerSet makeprg=python3\ %
+
+    let &cpo = s:cpo_save
+    unlet s:cpo_save
+
+vimrc config
+------------
+
+.. code::
+
+    " F5 run python scripts
+    set makeprg=python3\ %
+    autocmd filetype python nmap <F5> :w!<CR>:compiler python<CR>:make <bar> copen<CR>
 
 
 fold keymap

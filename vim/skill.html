@@ -93,7 +93,12 @@
 <li class="toctree-l2"><a class="reference internal" href="pangu.html">自动美化中英文排版</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tablify.html">tablify</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">skill</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#settings-for-find-python-error-automatically">settings for find python error automatically</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#settings-for-find-python-error-automatically">settings for find python error automatically</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#environment-settings">environment settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-python-compiler">custom python compiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vimrc-config">vimrc config</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#fold-keymap">fold keymap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">打印出匹配的行</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">全局替换单词</a></li>
@@ -193,9 +198,48 @@
 <span id="vim-skill"></span><h1>skill<a class="headerlink" href="#skill" title="永久链接至标题">¶</a></h1>
 <div class="section" id="settings-for-find-python-error-automatically">
 <h2>settings for find python error automatically<a class="headerlink" href="#settings-for-find-python-error-automatically" title="永久链接至标题">¶</a></h2>
+<div class="section" id="environment-settings">
+<h3>environment settings<a class="headerlink" href="#environment-settings" title="永久链接至标题">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">LC_CTYPE</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
 <span class="n">export</span> <span class="n">LANG</span><span class="o">=</span><span class="s2">&quot;en_US.UTF-8&quot;</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="custom-python-compiler">
+<h3>custom python compiler<a class="headerlink" href="#custom-python-compiler" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>python.vim path</p>
+<blockquote>
+<div><p>~/.vim/compiler/python.vim</p>
+</div></blockquote>
+</li>
+<li><p>python.vim code</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">exists</span><span class="p">(</span><span class="s2">&quot;current_compiler&quot;</span><span class="p">)</span>
+<span class="n">finish</span>
+<span class="n">endif</span>
+<span class="n">let</span> <span class="n">current_compiler</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
+
+<span class="n">let</span> <span class="n">s</span><span class="p">:</span><span class="n">cpo_save</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">cpo</span>
+<span class="nb">set</span> <span class="n">cpo</span><span class="o">&amp;</span><span class="n">vim</span>
+
+<span class="n">CompilerSet</span> <span class="n">errorformat</span><span class="o">=</span>
+    \<span class="o">%*</span>\\<span class="n">sFile</span>\ \<span class="s2">&quot;</span><span class="si">%f</span><span class="se">\&quot;\\</span><span class="s2">,\ line\ %l</span><span class="se">\\</span><span class="s2">,\ %m,</span>
+    \<span class="o">%*</span>\\<span class="n">sFile</span>\ \<span class="s2">&quot;</span><span class="si">%f</span><span class="se">\&quot;\\</span><span class="s2">,\ line\ %l,</span>
+<span class="n">CompilerSet</span> <span class="n">makeprg</span><span class="o">=</span><span class="n">python3</span>\ <span class="o">%</span>
+
+<span class="n">let</span> <span class="o">&amp;</span><span class="n">cpo</span> <span class="o">=</span> <span class="n">s</span><span class="p">:</span><span class="n">cpo_save</span>
+<span class="n">unlet</span> <span class="n">s</span><span class="p">:</span><span class="n">cpo_save</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vimrc-config">
+<h3>vimrc config<a class="headerlink" href="#vimrc-config" title="永久链接至标题">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot; F5 run python scripts
+set makeprg=python3\ %
+autocmd filetype python nmap &lt;F5&gt; :w!&lt;CR&gt;:compiler python&lt;CR&gt;:make &lt;bar&gt; copen&lt;CR&gt;
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="fold-keymap">
