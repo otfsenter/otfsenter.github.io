@@ -30,3 +30,16 @@ defaults write com.apple.sidecar.display hasShownPref -bool true
 
 https://www.apple.com.cn/shop/product/MK122CH/A
 
+
+调整鼠标速度
+==================
+
+defaults write -g com.apple.mouse.scaling 18
+
+terminal输入然后重启，已爽死，嫌快的调小数值就行
+
+还有滚轮速度
+
+defaults write -g com.apple.scrollwheel.scaling 1.2
+
+

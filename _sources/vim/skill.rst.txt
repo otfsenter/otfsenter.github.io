@@ -3,6 +3,20 @@
 skill
 ============
 
+fold keymap
+-----------
+
+.. csv-table::
+    :header: keymap, meaning
+
+    za,toggle
+    zc,close
+    zo,open
+    zf,fold
+    zM,fold all
+    zR,unfold all
+
+
 打印出匹配的行
 ----------------
 
