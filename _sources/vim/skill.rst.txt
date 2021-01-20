@@ -23,6 +23,10 @@ custom python compiler
 
     ~/.vim/compiler/python.vim
 
+* windows python vim path
+
+    D:\Vim\vim82\compiler\python.vim
+
 
 * python.vim code
 
