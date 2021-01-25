@@ -14,6 +14,7 @@ Linux
     work
     zabbix/index
     telnet_multi_ip_port
+    prometheus/index
 
 
 
