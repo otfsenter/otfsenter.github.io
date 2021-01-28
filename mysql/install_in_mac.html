@@ -211,6 +211,9 @@
 <span class="o">--</span><span class="n">basedir</span><span class="o">=</span><span class="s2">&quot;$(brew --prefix mysql)&quot;</span><span class="o">--</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">mysql</span> <span class="o">--</span><span class="n">tmpdir</span><span class="o">=/</span><span class="n">tmp</span>
 </pre></div>
 </div>
+<p>unset auth</p>
+<p>update mysql.user set authentication_string=null where User=’tag’;</p>
+<p>ALTER USER <a class="reference external" href="mailto:'tag'&#37;&#52;&#48;'localhost">‘tag’<span>&#64;</span>’localhost</a>’ IDENTIFIED WITH caching_sha2_password BY ‘ms88888888’;</p>
 </div>
 
 

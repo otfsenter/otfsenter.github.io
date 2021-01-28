@@ -59,3 +59,8 @@ if error happened
     --basedir="$(brew --prefix mysql)"--datadir=/usr/local/var/mysql --tmpdir=/tmp
 
 
+unset auth
+
+update mysql.user set authentication_string=null where User='tag';
+
+ALTER USER 'tag'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'ms88888888';
