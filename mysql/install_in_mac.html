@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>修改MySQL数据库的编码 &mdash; IdlePig  文档</title>
+  <title>install mysql in mac &mdash; IdlePig  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="install mysql in mac" href="install_in_mac.html" />
-    <link rel="prev" title="MySQL" href="index.html" /> 
+    <link rel="next" title="柯南主线剧情" href="../kenan.html" />
+    <link rel="prev" title="修改MySQL数据库的编码" href="alter_character_set.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,8 +93,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../english/index.html">English</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">MySQL</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">修改MySQL数据库的编码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_in_mac.html">install mysql in mac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alter_character_set.html">修改MySQL数据库的编码</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">install mysql in mac</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
@@ -156,13 +156,13 @@
         
           <li><a href="index.html">MySQL</a> &raquo;</li>
         
-      <li>修改MySQL数据库的编码</li>
+      <li>install mysql in mac</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/mysql/alter_character_set.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/mysql/install_in_mac.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,9 +175,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mysql">
-<span id="alter-character-set"></span><h1>修改MySQL数据库的编码<a class="headerlink" href="#mysql" title="永久链接至标题">¶</a></h1>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>alter database blog character <span class="nb">set</span> utf8 collate utf8_general_ci<span class="p">;</span>
+  <div class="section" id="install-mysql-in-mac">
+<span id="mysql-install-in-mac"></span><h1>install mysql in mac<a class="headerlink" href="#install-mysql-in-mac" title="永久链接至标题">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">-</span><span class="n">connector</span><span class="o">-</span><span class="n">c</span>
+
+<span class="n">brew</span> <span class="n">install</span> <span class="n">mysql</span>
+</pre></div>
+</div>
+<p>To connect run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql</span> <span class="o">-</span><span class="n">uroot</span>
+</pre></div>
+</div>
+<p>To have launchd start mysql now and restart at login:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">services</span> <span class="n">start</span> <span class="n">mysql</span>
+</pre></div>
+</div>
+<p>Or, if you don’t want/need a background service you can just run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql</span><span class="o">.</span><span class="n">server</span> <span class="n">start</span>
 </pre></div>
 </div>
 </div>
@@ -188,8 +202,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="install_in_mac.html" class="btn btn-neutral float-right" title="install mysql in mac" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="index.html" class="btn btn-neutral float-left" title="MySQL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kenan.html" class="btn btn-neutral float-right" title="柯南主线剧情" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="alter_character_set.html" class="btn btn-neutral float-left" title="修改MySQL数据库的编码" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
