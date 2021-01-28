@@ -32,3 +32,30 @@ Or, if you don't want/need a background service you can just run:
 
 
 
+modify password
+
+
+.. code::
+
+    SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');
+
+
+if mysql installed
+
+
+.. code::
+
+    brew link --overwrite mysql
+
+if error happened
+
+.. code::
+
+    sudo chown -R '${username}' /usr/local
+
+    unset TMPDIR
+
+    bash mysql_install_db --verbose --user=root
+    --basedir="$(brew --prefix mysql)"--datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+

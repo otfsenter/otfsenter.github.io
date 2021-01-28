@@ -194,6 +194,23 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql</span><span class="o">.</span><span class="n">server</span> <span class="n">start</span>
 </pre></div>
 </div>
+<p>modify password</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET</span> <span class="n">PASSWORD</span> <span class="n">FOR</span> <span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span> <span class="o">=</span> <span class="n">PASSWORD</span><span class="p">(</span><span class="s1">&#39;newpass&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>if mysql installed</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">link</span> <span class="o">--</span><span class="n">overwrite</span> <span class="n">mysql</span>
+</pre></div>
+</div>
+<p>if error happened</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="s1">&#39;$</span><span class="si">{username}</span><span class="s1">&#39;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
+
+<span class="n">unset</span> <span class="n">TMPDIR</span>
+
+<span class="n">bash</span> <span class="n">mysql_install_db</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">user</span><span class="o">=</span><span class="n">root</span>
+<span class="o">--</span><span class="n">basedir</span><span class="o">=</span><span class="s2">&quot;$(brew --prefix mysql)&quot;</span><span class="o">--</span><span class="n">datadir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">mysql</span> <span class="o">--</span><span class="n">tmpdir</span><span class="o">=/</span><span class="n">tmp</span>
+</pre></div>
+</div>
 </div>
 
 
