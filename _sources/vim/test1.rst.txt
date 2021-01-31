@@ -5,4 +5,4 @@ vim test1
 *********
 
 
-.. include:: test.md
+.. mdinclude:: test.md
