@@ -33,18 +33,17 @@ directives
 ignore
 ==========
 
-in index.st
+in index.rst
 
 .. code::
 
     .. toctree::
         :hidden:
 
-        test.md
+        test1.md
 
 demo
 =======
 
-source/vim/test1.rst
 
-source/vim/test.md
+source/vim/test1.md
