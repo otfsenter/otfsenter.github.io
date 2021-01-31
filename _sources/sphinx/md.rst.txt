@@ -8,7 +8,9 @@ include markdown
 module
 =========
 
-pip3 install m2r2
+.. code::
+
+    pip3 install m2r2
 
 
 config
@@ -24,7 +26,9 @@ config
 directives
 =============
 
-.. mdinclude:: t.md
+.. code::
+
+    .. mdinclude:: t.md
 
 ignore
 ==========
