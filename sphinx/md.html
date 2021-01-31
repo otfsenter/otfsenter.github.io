@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>locale &mdash; IdlePig  文档</title>
+  <title>include markdown &mdash; IdlePig  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="include markdown" href="md.html" />
-    <link rel="prev" title="需要注意的地方" href="attention.html" /> 
+    <link rel="next" title="网站相关的信息" href="../website/website.html" />
+    <link rel="prev" title="locale" href="locale.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,16 +96,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Sphinx文档</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="attention.html">需要注意的地方</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">locale</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#build-different-language">build different language</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#readthedocs">在readthedocs上面设置中英文</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">先手动导入英文版本</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">再导入中文版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locale.html">locale</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">include markdown</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module">module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directives">directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ignore">ignore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo">demo</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="md.html">include markdown</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
@@ -165,13 +164,13 @@
         
           <li><a href="index.html">Sphinx文档</a> &raquo;</li>
         
-      <li>locale</li>
+      <li>include markdown</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/sphinx/locale.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/sphinx/md.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,40 +183,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="locale">
-<span id="sphinx-locale"></span><h1>locale<a class="headerlink" href="#locale" title="永久链接至标题">¶</a></h1>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">gettext</span> <span class="o">.</span> <span class="n">locale</span>
-<span class="n">sphinx</span><span class="o">-</span><span class="n">intl</span> <span class="n">update</span> <span class="o">-</span><span class="n">p</span> <span class="n">locale</span> <span class="o">-</span><span class="n">l</span> <span class="n">zh_CN</span>
+  <div class="section" id="include-markdown">
+<span id="sphinx-md"></span><h1>include markdown<a class="headerlink" href="#include-markdown" title="永久链接至标题">¶</a></h1>
+<div class="section" id="module">
+<h2>module<a class="headerlink" href="#module" title="永久链接至标题">¶</a></h2>
+<p>pip3 install m2r2</p>
+</div>
+<div class="section" id="config">
+<h2>config<a class="headerlink" href="#config" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;m2r2&#39;</span><span class="p">]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rst&#39;</span><span class="p">,</span> <span class="s1">&#39;md&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>官方链接</p>
-<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/advanced/intl.html">https://www.sphinx-doc.org/en/master/usage/advanced/intl.html</a></p>
-<p><a class="reference external" href="https://docs.readthedocs.io/en/stable/localization.html">https://docs.readthedocs.io/en/stable/localization.html</a></p>
-<div class="section" id="build-different-language">
-<h2>build different language<a class="headerlink" href="#build-different-language" title="永久链接至标题">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="o">-</span><span class="n">e</span> <span class="n">SPHINXOPTS</span><span class="o">=</span><span class="s2">&quot;-D language=&#39;zh_CN&#39;&quot;</span> <span class="n">html</span>
-<span class="n">make</span> <span class="o">-</span><span class="n">e</span> <span class="n">SPHINXOPTS</span><span class="o">=</span><span class="s2">&quot;-D language=&#39;en&#39;&quot;</span> <span class="n">html</span>
+</div>
+<div class="section" id="directives">
+<h2>directives<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="ignore">
+<h2>ignore<a class="headerlink" href="#ignore" title="永久链接至标题">¶</a></h2>
+<p>in index.st</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+    <span class="p">:</span><span class="n">hidden</span><span class="p">:</span>
+
+    <span class="n">test</span><span class="o">.</span><span class="n">md</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="readthedocs">
-<h2>在readthedocs上面设置中英文<a class="headerlink" href="#readthedocs" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id1">
-<h3>先手动导入英文版本<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
-<p>项目名称：idlepig</p>
-<p>语言：英语</p>
-<p>branch：main</p>
-</div>
-<div class="section" id="id2">
-<h3>再导入中文版本<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
-<p>项目名称：idlepig_zh-CN</p>
-<p>语言：简体中文</p>
-<p>branch：main</p>
-<p>然后两个一起build</p>
-<p>分别看一下两个文档是否正常</p>
-<p>然后在英文文档项目里面设置翻译项：选择简体中文的版本</p>
-<p><strong>这样最后只能在中文文档里面看到翻译选项，英文的看不到</strong></p>
-</div>
+<div class="section" id="demo">
+<h2>demo<a class="headerlink" href="#demo" title="永久链接至标题">¶</a></h2>
+<p>source/vim/test1.rst</p>
+<p>source/vim/test.md</p>
 </div>
 </div>
 
@@ -227,8 +223,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="md.html" class="btn btn-neutral float-right" title="include markdown" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="attention.html" class="btn btn-neutral float-left" title="需要注意的地方" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../website/website.html" class="btn btn-neutral float-right" title="网站相关的信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="locale.html" class="btn btn-neutral float-left" title="locale" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
