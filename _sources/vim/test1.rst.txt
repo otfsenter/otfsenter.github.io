@@ -1,8 +1,8 @@
-.. _vim-test:
+.. _vim-test1:
 
-********
-vim test
-********
+*********
+vim test1
+*********
 
 
-.. mdinclude:: test.md
+.. include:: test.md
