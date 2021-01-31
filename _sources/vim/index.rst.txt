@@ -9,5 +9,5 @@ Vim
     pangu
     tablify
     skill
-    test1
+    test2
 
