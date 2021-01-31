@@ -9,5 +9,10 @@ Vim
     pangu
     tablify
     skill
-    test2
+
+.. toctree::
+    :hidden:
+
+    test1.md
+    test2.md
 
