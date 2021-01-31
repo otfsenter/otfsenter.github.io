@@ -9,4 +9,3 @@ Vim
     pangu
     tablify
     skill
-    test1
