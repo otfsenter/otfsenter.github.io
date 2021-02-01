@@ -243,8 +243,9 @@
   mod_dev -&gt; module_mgr [label=&quot;安装...&quot;, color=&quot;yellowgreen&quot;, arrowhead=&quot;none&quot;];
   mod_dm -&gt; module_mgr [label=&quot;安装...&quot;, color=&quot;yellowgreen&quot;, arrowhead=&quot;none&quot;];
 }</p></object></div>
-<div class="graphviz"><object data="../_images/graphviz-43aa8d094ae4c10b6f6547963ee78bf984f8d875.svg" type="image/svg+xml" class="graphviz">
+<div class="graphviz"><object data="../_images/graphviz-1538bd9e3820b1f2b2109fd96fcf336262936ee7.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">digraph idp_modules{
+  compound=true;
   fontname = &quot;Microsoft YaHei&quot;;
   rankdir = TB;
   fontsize = 12;
@@ -275,7 +276,7 @@
   mod_dp -&gt; mod_dev [label=&quot;依赖...&quot;];
   mod_dp -&gt; mod_dm [label=&quot;依赖...&quot;];
   mod_dev -&gt; mod_dm [label=&quot;依赖...&quot;];
-  cluster_md -&gt; cluster_sl [label=&quot;安装...&quot;, color=&quot;yellowgreen&quot;, arrowhead=&quot;none&quot;];
+  mod_dm -&gt; module_mgr [label=&quot;install...&quot;, color=&quot;yellowgreen&quot;, ltail=cluster_sl, lhead=cluster_md];
 }</p></object></div>
 </div>
 </div>

@@ -63,6 +63,7 @@ vim test1 rst
 .. graphviz::
    
    digraph idp_modules{
+     compound=true;
      fontname = "Microsoft YaHei";
      rankdir = TB;
      fontsize = 12;
@@ -93,5 +94,5 @@ vim test1 rst
      mod_dp -> mod_dev [label="依赖..."];
      mod_dp -> mod_dm [label="依赖..."];
      mod_dev -> mod_dm [label="依赖..."];
-     cluster_md -> cluster_sl [label="安装...", color="yellowgreen", arrowhead="none"];
+     mod_dm -> module_mgr [label="install...", color="yellowgreen", ltail=cluster_sl, lhead=cluster_md];
    }
