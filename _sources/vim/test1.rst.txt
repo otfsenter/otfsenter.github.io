@@ -63,13 +63,13 @@ vim test1 rst
 .. graphviz::
    
    digraph idp_modules{
-     compound=true;
      fontname = "Microsoft YaHei";
      rankdir = TB;
      fontsize = 12;
      
      node [fontname = "Microsoft YaHei", fontsize = 12, shape = "record" ];
      edge [fontname = "Microsoft YaHei", fontsize = 12 ];
+     graph [compound=true];
      
          subgraph cluster_sl{
              label="IDP支持层";
@@ -94,5 +94,5 @@ vim test1 rst
      mod_dp -> mod_dev [label="依赖..."];
      mod_dp -> mod_dm [label="依赖..."];
      mod_dev -> mod_dm [label="依赖..."];
-     mod_dm -> module_mgr [label="install...", color="yellowgreen", ltail=cluster_sl, lhead=cluster_md];
+     mod_dm -> module_mgr [label="install...", ltail=cluster_sl, lhead=cluster_md];
    }
