@@ -94,5 +94,5 @@ vim test1 rst
      mod_dp -> mod_dev [label="依赖..."];
      mod_dp -> mod_dm [label="依赖..."];
      mod_dev -> mod_dm [label="依赖..."];
-     mod_dm -> module_mgr [label="install...", ltail=cluster_sl, lhead=cluster_md];
+     mod_dm -> module_mgr [lhead=cluster_md, ltail=cluster_sl];
    }
