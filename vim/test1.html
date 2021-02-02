@@ -13,7 +13,6 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
@@ -196,88 +195,6 @@
 <div class="section" id="test1-title-level-2-ef">
 <h3>test1 title level 2 ef<a class="headerlink" href="#test1-title-level-2-ef" title="永久链接至标题">¶</a></h3>
 <p>bcd</p>
-<div class="graphviz"><object data="../_images/graphviz-a704fa2fcad9c19be55fa68b7f8a569c577381c0.svg" type="image/svg+xml" class="graphviz">
-<p class="warning">digraph abc{
-    a;
-    b;
-    c;
-    d;
-
-    a -&gt; b;
-    b -&gt; d;
-    c -&gt; d;
-}</p></object></div>
-<div class="graphviz"><object data="../_images/graphviz-9f87ddc5b174d5058c3a06bdce6dc734b138686c.svg" type="image/svg+xml" class="graphviz">
-<p class="warning">digraph idp_modules{
-  fontname = &quot;Microsoft YaHei&quot;;
-  rankdir = TB;
-  fontsize = 12;
-
-  node [fontname = &quot;Microsoft YaHei&quot;, fontsize = 12, shape = &quot;record&quot; ];
-  edge [fontname = &quot;Microsoft YaHei&quot;, fontsize = 12 ];
-
-      subgraph cluster_sl{
-          label=&quot;IDP支持层&quot;;
-          bgcolor=&quot;mintcream&quot;;
-          node [shape=&quot;Mrecord&quot;, color=&quot;skyblue&quot;, style=&quot;filled&quot;];
-          network_mgr [label=&quot;网络管理器&quot;];
-          log_mgr [label=&quot;日志管理器&quot;];
-          module_mgr [label=&quot;模块管理器&quot;];
-          conf_mgr [label=&quot;配置管理器&quot;];
-          db_mgr [label=&quot;数据库管理器&quot;];
-      };
-
-      subgraph cluster_md{
-          label=&quot;可插拔模块集&quot;;
-          bgcolor=&quot;lightcyan&quot;;
-          node [color=&quot;chartreuse2&quot;, style=&quot;filled&quot;];
-          mod_dev [label=&quot;开发支持模块&quot;];
-          mod_dm [label=&quot;数据建模模块&quot;];
-          mod_dp [label=&quot;部署发布模块&quot;];
-      };
-
-  mod_dp -&gt; mod_dev [label=&quot;依赖...&quot;];
-  mod_dp -&gt; mod_dm [label=&quot;依赖...&quot;];
-  mod_dp -&gt; module_mgr [label=&quot;安装...&quot;, color=&quot;yellowgreen&quot;, arrowhead=&quot;none&quot;];
-  mod_dev -&gt; mod_dm [label=&quot;依赖...&quot;];
-  mod_dev -&gt; module_mgr [label=&quot;安装...&quot;, color=&quot;yellowgreen&quot;, arrowhead=&quot;none&quot;];
-  mod_dm -&gt; module_mgr [label=&quot;安装...&quot;, color=&quot;yellowgreen&quot;, arrowhead=&quot;none&quot;];
-}</p></object></div>
-<div class="graphviz"><object data="../_images/graphviz-fd00c6a59449c52a72040f56cc6d76a0b017060f.svg" type="image/svg+xml" class="graphviz">
-<p class="warning">digraph idp_modules{
-  fontname = &quot;Microsoft YaHei&quot;;
-  rankdir = TB;
-  fontsize = 12;
-
-  node [fontname = &quot;Microsoft YaHei&quot;, fontsize = 12, shape = &quot;record&quot; ];
-  edge [fontname = &quot;Microsoft YaHei&quot;, fontsize = 12 ];
-  graph [compound=true];
-
-      subgraph cluster_sl{
-          label=&quot;IDP支持层&quot;;
-          bgcolor=&quot;mintcream&quot;;
-          node [shape=&quot;Mrecord&quot;, color=&quot;skyblue&quot;, style=&quot;filled&quot;];
-          network_mgr [label=&quot;网络管理器&quot;];
-          log_mgr [label=&quot;日志管理器&quot;];
-          module_mgr [label=&quot;模块管理器&quot;];
-          conf_mgr [label=&quot;配置管理器&quot;];
-          db_mgr [label=&quot;数据库管理器&quot;];
-      };
-
-      subgraph cluster_md{
-          label=&quot;可插拔模块集&quot;;
-          bgcolor=&quot;lightcyan&quot;;
-          node [color=&quot;chartreuse2&quot;, style=&quot;filled&quot;];
-          mod_dev [label=&quot;开发支持模块&quot;];
-          mod_dm [label=&quot;数据建模模块&quot;];
-          mod_dp [label=&quot;部署发布模块&quot;];
-      };
-
-  mod_dp -&gt; mod_dev [label=&quot;依赖...&quot;];
-  mod_dp -&gt; mod_dm [label=&quot;依赖...&quot;];
-  mod_dev -&gt; mod_dm [label=&quot;依赖...&quot;];
-  mod_dm -&gt; module_mgr [lhead=cluster_md, ltail=cluster_sl];
-}</p></object></div>
 </div>
 </div>
 </div>
