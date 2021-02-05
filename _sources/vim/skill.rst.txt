@@ -4,6 +4,16 @@
 skill
 *****
 
+rstcheck ignore notice 
+===============================
+
+vi ~/.rstcheck.cfg
+
+.. code::
+
+    [rstcheck]
+    report=warning
+
 settings for find python error automatically
 ================================================
 
