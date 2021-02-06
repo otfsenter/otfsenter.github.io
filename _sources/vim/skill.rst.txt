@@ -4,7 +4,7 @@
 skill
 *****
 
-rstcheck ignore notice 
+rstcheck ignore notice
 ===============================
 
 vi ~/.rstcheck.cfg
@@ -26,6 +26,7 @@ environment settings
     export LC_CTYPE="en_US.UTF-8"
     export LANG="en_US.UTF-8"
 
+
 custom python compiler
 ----------------------
 
@@ -35,7 +36,7 @@ custom python compiler
 
 * windows python vim path
 
-    D:\Vim\vim82\compiler\python.vim
+    D:\\Vim\vim82\\compiler\\python.vim
 
 
 * python.vim code
@@ -184,7 +185,3 @@ set spellcapcheck=
     zg, 添加到词典
     zw, 从词典删除
     zug, 撤销zg或zw的动作
-
-
-
-
