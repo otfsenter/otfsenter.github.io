@@ -56,6 +56,6 @@ simple
 
 稍微复杂一点的
 
-.. code:;
+.. code::
 
    pandoc -o c.docx -f rst+east_asian_line_breaks -s c.rst
