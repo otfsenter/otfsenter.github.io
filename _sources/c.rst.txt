@@ -43,7 +43,6 @@ stl容器
 下标访问越界就会崩溃，根本没机会产生野指针
 
 
-.. image:: /Users/zhouxinzheng/images/2021-02-11/3-2021-02-11.png
 
 ``Linux`` install ``git`` 向来
 **仅需要一行命令**
