@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>国际化 &mdash; IdlePig  文档</title>
+  <title>SRE &mdash; IdlePig  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Linux" href="../linux/index.html" />
-    <link rel="prev" title="合并多行" href="merge_lines_with_regular.html" /> 
+    <link rel="next" title="架构" href="structure.html" />
+    <link rel="prev" title="c and c++" href="../c.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,23 +86,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="auto_get_schedule.html">用Python自动获取排班人员</a></li>
-<li class="toctree-l2"><a class="reference internal" href="auto_move_files.html">自动归档文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="auto_rename_files.html">自动重命名电影名字</a></li>
-<li class="toctree-l2"><a class="reference internal" href="copy_image_to_clipboard_python3.html">Python3中复制图片到系统剪贴板</a></li>
-<li class="toctree-l2"><a class="reference internal" href="django/index.html">Django</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_position.html">获取鼠标的实时坐标</a></li>
-<li class="toctree-l2"><a class="reference internal" href="import_module_dynamic.html">Python脚本动态导入模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="smtplib.html">用Python发送邮件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="website2wechat_byclick.html">自动发布文章到微信公众号-doing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_output_from_remote_server.html">获取远程服务器上面的输出</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin_in_in_robot_framework.html">robotframework里面的插件系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="length_of_the_longest_substring_without_repeating_characters.html">没有重复字母的最长子字符串的计算</a></li>
-<li class="toctree-l2"><a class="reference internal" href="merge_lines_with_regular.html">合并多行</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">国际化</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
@@ -115,7 +99,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sre/index.html">SRE</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SRE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">架构</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../zhihu/index.html">知乎</a></li>
@@ -168,15 +155,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index.html">Python</a> &raquo;</li>
-        
-      <li>国际化</li>
+      <li>SRE</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/python/i18n.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/sre/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -189,13 +174,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="python-i18n">
-<span id="id1"></span><h1>国际化<a class="headerlink" href="#python-i18n" title="永久链接至标题">¶</a></h1>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>msgfmt --statistics -cv foo.po
-
-msgmerge –no-wrap -U foo.po foo.po # 不要半路换行，和自己适应（也就是不去做适应）
-msgmerge -w 79 -U zh_CN.po drunk.pot # 最大宽度 79 列，自动换行，适应到 drunk.pot
-</pre></div>
+  <div class="section" id="sre">
+<span id="sre-index"></span><h1>SRE<a class="headerlink" href="#sre" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">架构</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id2">双云架构</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -205,8 +192,8 @@ msgmerge -w 79 -U zh_CN.po drunk.pot # 最大宽度 79 列，自动换行，适�
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../linux/index.html" class="btn btn-neutral float-right" title="Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="merge_lines_with_regular.html" class="btn btn-neutral float-left" title="合并多行" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structure.html" class="btn btn-neutral float-right" title="架构" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../c.html" class="btn btn-neutral float-left" title="c and c++" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -53,7 +53,7 @@
     def run():
         # 值班人员列表初始化
         on_call_list = []
-        
+
         # 遍历值班时间的表
         for k, v in schedule_dict.items():
 
@@ -69,7 +69,7 @@
             # 值班结束的时间
             time_end = datetime(year=now_year, month=now_month, day=now_day,
                                 hour=hour_end, minute=minute_end)
-            
+
             # 现在的时间
             time_now = datetime.now()
 
@@ -95,4 +95,3 @@
 
     if __name__ == '__main__':
         main()
-

@@ -37,6 +37,7 @@ Python、Linux运维、自动化
     game/bns
     books
     c
+    sre/index
     windows
     apple
     zhihu/index
