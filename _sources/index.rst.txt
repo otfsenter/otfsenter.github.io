@@ -25,24 +25,25 @@ Python、Linux运维、自动化
     :maxdepth: 2
 
     0-todo
-    python/index
-    linux/index
-    wechat/index
-    vim/index
-    jetbrains/index
-    english/index
-    mysql/index
-    kenan
-    sphinx/index
-    website/website
-    game/bns
+    apple
     books
     c
-    sre/index
-    windows
-    apple
-    zhihu/index
+    economy
+    english/index
+    game/bns
     interview
+    jetbrains/index
+    kenan
+    linux/index
+    mysql/index
+    python/index
+    sphinx/index
+    sre/index
+    vim/index
+    website/website
+    wechat/index
+    windows
+    zhihu/index
 
 
 
