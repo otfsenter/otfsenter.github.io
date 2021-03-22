@@ -44,7 +44,7 @@ SLB
         C [ label = "public IP for backup ELB", shape = roundedbox];
         D [ label = "the same servers of SLB"];
         E [ label = "the same servers of SLB"];
-        G [ label = "az1 group(main group)", stacked];
+        G [ label = "az1 group", stacked];
         F [ label = "gray group", stacked];
         H [ label = "az2 group", stacked];
 
