@@ -39,14 +39,14 @@ SLB
 
         orientation = portrait
 
-        A [ label = "dns", shape = cloud];
-        B [ label = "public IP for az1 ELB", shape = roundedbox];
-        C [ label = "public IP for az2 ELB", shape = roundedbox];
+        A [ label = "dns name", shape = cloud];
+        B [ label = "public IP for main ELB", shape = roundedbox];
+        C [ label = "public IP for backup ELB", shape = roundedbox];
         D [ label = "the same servers of SLB"];
         E [ label = "the same servers of SLB"];
-        G [ label = "az1", stacked];
-        F [ label = "gray", stacked];
-        H [ label = "az2", stacked];
+        G [ label = "az1 group(main group)", stacked];
+        F [ label = "gray group", stacked];
+        H [ label = "az2 group", stacked];
 
         A -> B;
         A -> C;
@@ -79,6 +79,7 @@ SLB
 
 
    }
+
 
 
 域名到ELB，比如 idlepig.cn 这个域名后端配置两个A记录，分别对应的是两个ELB的公网IP，端口是443端口，对应的协议是https，证书也是绑定在ELB上面，这样用户访问域名的时候，流量会转发到两个IP上面。
