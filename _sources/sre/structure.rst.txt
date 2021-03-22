@@ -39,23 +39,23 @@ SLB
 
         orientation = portrait
 
-        A [ label = "域名", shape = cloud];
-        B [ label = "主ELB的公网IP", shape = roundedbox];
-        C [ label = "备ELB的公网IP", shape = roundedbox];
-        D [ label = "同样的SLB服务器"];
-        E [ label = "同样的SLB服务器"];
-        G [ label = "服务器，微服务现网主集群，部署在主机房", stacked];
-        F [ label = "微服务灰度集群", stacked];
-        H [ label = "微服务现网备集群，部署在备机房", stacked];
+        A [ label = "dns", shape = cloud];
+        B [ label = "public IP for az1 ELB", shape = roundedbox];
+        C [ label = "public IP for az2 ELB", shape = roundedbox];
+        D [ label = "the same servers of SLB"];
+        E [ label = "the same servers of SLB"];
+        G [ label = "az1", stacked];
+        F [ label = "gray", stacked];
+        H [ label = "az2", stacked];
 
         A -> B;
         A -> C;
         B -> D;
         C -> E;
-        D -> G [ label = "主" ];
+        D -> G [ label = "az1" ];
         E -> G;
-        D -> F [ style = dashed , label = "灰度"];
-        D -> H [ style = dashed , label = "备"];
+        D -> F [ style = dashed , label = "gray"];
+        D -> H [ style = dashed , label = "az2"];
 
         group elb {
         B; C;
@@ -116,10 +116,10 @@ todo, 具体的SLB配置
         A -> C;
         B -> D;
         C -> E;
-        D -> G [ label = "主" ];
+        D -> G [ label = "az1" ];
         E -> G;
-        D -> F [ style = dashed , label = "灰度"];
-        D -> H [ style = dashed , label = "备"];
+        D -> F [ style = dashed , label = "gray"];
+        D -> H [ style = dashed , label = "az2"];
 
         group elb {
         B; C;
@@ -141,6 +141,7 @@ todo, 具体的SLB配置
         }
 
    }
+
 
 
 
