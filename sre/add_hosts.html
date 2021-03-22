@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>test1 &mdash; IdlePig  文档</title>
+  <title>业务迁移、扩容机器注意事项 &mdash; IdlePig  文档</title>
   
 
   
@@ -98,8 +98,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sre/index.html">SRE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">SRE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
@@ -152,13 +152,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>test1</li>
+      <li>业务迁移、扩容机器注意事项</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/vim/test.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/sre/add_hosts.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,16 +171,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="test1">
-<span id="vim-test-md"></span><h1>test1<a class="headerlink" href="#test1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="test1-title-level-2-abc">
-<h2>test1 title level 2 abc<a class="headerlink" href="#test1-title-level-2-abc" title="永久链接至标题">¶</a></h2>
-<p>hello</p>
-</div>
-<div class="section" id="test1-title-level-2-ef">
-<h2>test1 title level 2 ef<a class="headerlink" href="#test1-title-level-2-ef" title="永久链接至标题">¶</a></h2>
-<p>bcd</p>
-</div>
+  <div class="section" id="id1">
+<h1>业务迁移、扩容机器注意事项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p>检查是否有公网权限，若不需要【去除】</p></li>
+<li><p>检查规格，磁盘，所属用户是否一致</p></li>
+<li><p>RASP【nuwa已集成】、wiseapm【调用链】、flume【日志采集】、添加软链接：workdir、nginxdir、applogs、logdir</p></li>
+<li><p>安装SLB、刷新hosts、部署业务、</p></li>
+<li><p>如果有使用ELB，需要把机器IP添加到内网或者公网ELB里面</p></li>
+<li><p>如果是部署在新子网，需要给数据库加业务用户白名单</p></li>
+<li><p>如果该模块有单独再其他领域添加白名单，需要联系开发将新机器IP给对应领域放通白名单</p></li>
+<li><p>安装Datapush</p></li>
+<li><p>检查业务是否具备开机自启</p></li>
+<li><p>更新台账：跳板机、svn台账、云眼集群管理、云眼资源管理等</p></li>
+</ul>
 </div>
 
 
