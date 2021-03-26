@@ -33,6 +33,7 @@ Python、Linux运维、自动化
     game/bns
     interview
     jetbrains/index
+    java/index
     kenan
     linux/index
     mysql/index
