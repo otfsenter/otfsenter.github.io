@@ -26,6 +26,7 @@ Python、Linux运维、自动化
 
     0-todo
     apple
+    ansible/index
     books
     c
     economy

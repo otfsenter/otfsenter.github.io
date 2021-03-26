@@ -2,6 +2,6 @@
 
 *******
 java
-******
+*******
 
 .. mdinclude:: java.md

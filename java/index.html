@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>java基础 &mdash; IdlePig  文档</title>
+  <title>java &mdash; IdlePig  文档</title>
   
 
   
@@ -88,6 +88,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ansible/index.html">ansible</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../economy.html">Economy</a></li>
@@ -95,205 +96,52 @@
 <li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interview.html">interview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">java基础</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">第一阶段：建立编程思想</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">java概述</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">如何快速学习java技术</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">java历史</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">java特点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sublime">sublime</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">java运行机制</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jdk"><code class="docutils literal notranslate"><span class="pre">jdk</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">转义字符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8"><code class="docutils literal notranslate"><span class="pre">java开发规范</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#java-api">java api</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">java</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">java基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">第一阶段：建立编程思想</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">java概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">运算符</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">控制结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id26">数组、排序、查找</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">面向对象编程（基础）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id37">面向对象编程（中级）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id44">项目&amp;学以致用，编程之乐</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id9">变量</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id10"><code class="docutils literal notranslate"><span class="pre">数据类型</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id11">变量基本使用</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">数据类型转换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">第二阶段：提升编程能力</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id51">面向对象编程（高级）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id58">枚举和注解</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exception">Exception</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id67">常用类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id69">集合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id71">泛型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id78">线程（基础）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#io">IO流</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id87">坦克大战</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">运算符</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id14">运算符介绍</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">算数运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">关系运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id17">逻辑运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">赋值运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">三元运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id20">优先级</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id21"><code class="docutils literal notranslate"><span class="pre">二进制</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id22">位运算符</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id23">控制结构</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id24">顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#if-else-switch">分支（if else switch）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#forwhiledo-while"><code class="docutils literal notranslate"><span class="pre">循环（for、while、do</span> <span class="pre">while）</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#break">break</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#continue">continue</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#return">return</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id25">数组、排序、查找</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id26"><code class="docutils literal notranslate"><span class="pre">数组</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id27">排序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id28">查找</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id29">面向对象编程（基础）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id30">类与对象</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id31"><code class="docutils literal notranslate"><span class="pre">成员方法</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id32"><code class="docutils literal notranslate"><span class="pre">成员方法传参机制</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#overload">overload</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id33">可变参数</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id34">作用域</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id35">构造器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#this">this</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">面向对象编程（中级）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id37">包</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id38">访问修饰符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id39"><code class="docutils literal notranslate"><span class="pre">封装</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id40"><code class="docutils literal notranslate"><span class="pre">继承</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id41"><code class="docutils literal notranslate"><span class="pre">多态</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#super">super</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#overwrite">overwrite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#object">object类详解</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id42">断点调试</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id43">项目&amp;学以致用，编程之乐</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id44">零钱通</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id45">房屋出租系统</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id46">迷宫问题</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id47">八皇后问题</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id48">汉诺塔问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id88">第三阶段：分析需求，代码实现能力</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id89">网络编程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mysql">mysql基础</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#jdbc">JDBC和连接池</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id101">正则表达式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#java-8-java11">java 8 java11 新特性</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id49">第二阶段：提升编程能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id50">面向对象编程（高级）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id51"><code class="docutils literal notranslate"><span class="pre">类变量和类方法</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#main">理解main方法语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id52">代码块</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id53">单例设计模式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#final">final关键字</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id54">抽象类</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id55"><code class="docutils literal notranslate"><span class="pre">接口</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id56"><code class="docutils literal notranslate"><span class="pre">内部类</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id105">java高级</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java-web">java web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id106">主流的框架和项目管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id107">分布式、微服务、并行架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#devops-ci-cd">DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id108">大数据技术</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id109">项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id110">大厂的高频面试题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id111">底层源码、内核研究</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id57">枚举和注解</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id58">自定义类实现枚举</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enum">enum关键字实现枚举</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id59">JDK内置的基本注解类型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id60">元注解：对注解进行注解</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#exception">Exception</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id61">异常的概念</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id62"><code class="docutils literal notranslate"><span class="pre">异常体系图</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id63">常见的异常</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id64"><code class="docutils literal notranslate"><span class="pre">异常处理</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id65">自定义异常</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#throwthrows">throw和throws的对比</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id66">常用类</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id67">包装类</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#string"><code class="docutils literal notranslate"><span class="pre">String</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stringbuffer"><code class="docutils literal notranslate"><span class="pre">StringBuffer</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stringbuilder"><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#math">Math</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#datecalendarlocaldate">Date、Calendar、LocalDate…</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#system">System</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arrays">Arrays</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#biginteger-bigdecimal">BigInteger BigDecimal</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id68">集合</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id69"><code class="docutils literal notranslate"><span class="pre">集合框架体系</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#collection">Collection</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#collections">Collections</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id70">泛型</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id71">泛型语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id72">自定义泛型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id76">泛型继承和通配符</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id77">线程（基础）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id78">线程介绍</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id79"><code class="docutils literal notranslate"><span class="pre">线程使用</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id80">线程方法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id81">线程生命周期</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#synchronized"><code class="docutils literal notranslate"><span class="pre">Synchronized</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id82"><code class="docutils literal notranslate"><span class="pre">互斥锁</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id83">死锁</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#io">IO流</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id84">文件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id85"><code class="docutils literal notranslate"><span class="pre">输出流</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#properties">Properties类</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id86">坦克大战</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id87">第三阶段：分析需求，代码实现能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id88">网络编程</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id89">网络基础</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inetaddress">InetAddress</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#socket">Socket</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tcp"><code class="docutils literal notranslate"><span class="pre">TCP编程</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#mysql">mysql基础</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id90">mysql安装和配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id91">数据库</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id92">表</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id93"><code class="docutils literal notranslate"><span class="pre">函数</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id94">内连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id95">外连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id96">约束</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id97">事务</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#jdbc">JDBC和连接池</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id98">JDBC概述</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id99">JDBC快速入门</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#jdbc-api"><code class="docutils literal notranslate"><span class="pre">JDBC</span> <span class="pre">API</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id100">正则表达式</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id101">快速入门</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id102">正则表达式基本语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id103"><code class="docutils literal notranslate"><span class="pre">三个常用类</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#java-8-java11">java 8 java11 新特性</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#java8">java8新特性</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#id104">java高级</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#java-web">java web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id105">主流的框架和项目管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id106">分布式、微服务、并行架构</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#devops-ci-cd">DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id107">大数据技术</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id108">项目</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id109">大厂的高频面试题</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id110">底层源码、内核研究</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
@@ -353,7 +201,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>java基础</li>
+      <li>java</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -372,7 +220,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>5个问题</p>
+  <div class="section" id="java">
+<span id="java-index"></span><h1>java<a class="headerlink" href="#java" title="永久链接至标题">¶</a></h1>
+<p>5个问题</p>
 <ul class="simple">
 <li><p>没有体系，像无头苍蝇</p></li>
 <li><p>学习动力不够，学的知识点不知道应用场景，没有乐趣</p></li>
@@ -381,295 +231,295 @@
 <li><p>没有建立正确的编程思维，不知道对不懂的问题下手，要建立自己的思维体系，从不懂一直到找到入口，有自己的一套思维体系。</p></li>
 </ul>
 <p>Java后端技术体系</p>
-<div class="section" id="java">
-<h1>java基础<a class="headerlink" href="#java" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>第一阶段：建立编程思想<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>java基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id2">
-<h3>java概述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<h3>第一阶段：建立编程思想<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id3">
-<h4><code class="docutils literal notranslate"><span class="pre">如何快速学习java技术</span></code><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
-</div>
+<h4>java概述<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id4">
-<h4>java历史<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">如何快速学习java技术</span></code><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id5">
-<h4>java特点<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="sublime">
-<h4>sublime<a class="headerlink" href="#sublime" title="永久链接至标题">¶</a></h4>
+<h5>java历史<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id6">
-<h4><code class="docutils literal notranslate"><span class="pre">java运行机制</span></code><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<h5>java特点<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h5>
 </div>
-<div class="section" id="jdk">
-<h4><code class="docutils literal notranslate"><span class="pre">jdk</span></code><a class="headerlink" href="#jdk" title="永久链接至标题">¶</a></h4>
+<div class="section" id="sublime">
+<h5>sublime<a class="headerlink" href="#sublime" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id7">
-<h4>转义字符<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">java运行机制</span></code><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="jdk">
+<h5><code class="docutils literal notranslate"><span class="pre">jdk</span></code><a class="headerlink" href="#jdk" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id8">
-<h4><code class="docutils literal notranslate"><span class="pre">java开发规范</span></code><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="java-api">
-<h4>java api<a class="headerlink" href="#java-api" title="永久链接至标题">¶</a></h4>
-</div>
+<h5>转义字符<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id9">
-<h3>变量<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id10">
-<h4><code class="docutils literal notranslate"><span class="pre">数据类型</span></code><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">java开发规范</span></code><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h5>
 </div>
+<div class="section" id="java-api">
+<h5>java api<a class="headerlink" href="#java-api" title="永久链接至标题">¶</a></h5>
+</div>
+</div>
+<div class="section" id="id10">
+<h4>变量<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id11">
-<h4>变量基本使用<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">数据类型</span></code><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id12">
-<h4>数据类型转换<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h4>
-</div>
+<h5>变量基本使用<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id13">
-<h3>运算符<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id14">
-<h4>运算符介绍<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
+<h5>数据类型转换<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h5>
 </div>
+</div>
+<div class="section" id="id14">
+<h4>运算符<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id15">
-<h4>算数运算符<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h4>
+<h5>运算符介绍<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id16">
-<h4>关系运算符<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h4>
+<h5>算数运算符<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id17">
-<h4>逻辑运算符<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h4>
+<h5>关系运算符<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id18">
-<h4>赋值运算符<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h4>
+<h5>逻辑运算符<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id19">
-<h4>三元运算符<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h4>
+<h5>赋值运算符<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id20">
-<h4>优先级<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h4>
+<h5>三元运算符<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id21">
-<h4><code class="docutils literal notranslate"><span class="pre">二进制</span></code><a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h4>
+<h5>优先级<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id22">
-<h4>位运算符<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h4>
-</div>
+<h5><code class="docutils literal notranslate"><span class="pre">二进制</span></code><a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id23">
-<h3>控制结构<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<h5>位运算符<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h5>
+</div>
+</div>
 <div class="section" id="id24">
-<h4>顺序<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h4>
+<h4>控制结构<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id25">
+<h5>顺序<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="if-else-switch">
-<h4>分支（if else switch）<a class="headerlink" href="#if-else-switch" title="永久链接至标题">¶</a></h4>
+<h5>分支（if else switch）<a class="headerlink" href="#if-else-switch" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="forwhiledo-while">
-<h4><code class="docutils literal notranslate"><span class="pre">循环（for、while、do</span> <span class="pre">while）</span></code><a class="headerlink" href="#forwhiledo-while" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">循环（for、while、do</span> <span class="pre">while）</span></code><a class="headerlink" href="#forwhiledo-while" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="break">
-<h4>break<a class="headerlink" href="#break" title="永久链接至标题">¶</a></h4>
+<h5>break<a class="headerlink" href="#break" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="continue">
-<h4>continue<a class="headerlink" href="#continue" title="永久链接至标题">¶</a></h4>
+<h5>continue<a class="headerlink" href="#continue" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="return">
-<h4>return<a class="headerlink" href="#return" title="永久链接至标题">¶</a></h4>
+<h5>return<a class="headerlink" href="#return" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
-<div class="section" id="id25">
-<h3>数组、排序、查找<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id26">
-<h4><code class="docutils literal notranslate"><span class="pre">数组</span></code><a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h4>
-</div>
+<h4>数组、排序、查找<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id27">
-<h4>排序<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">数组</span></code><a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id28">
-<h4>查找<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h4>
-</div>
+<h5>排序<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id29">
-<h3>面向对象编程（基础）<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id30">
-<h4>类与对象<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h4>
+<h5>查找<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h5>
 </div>
+</div>
+<div class="section" id="id30">
+<h4>面向对象编程（基础）<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id31">
-<h4><code class="docutils literal notranslate"><span class="pre">成员方法</span></code><a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h4>
+<h5>类与对象<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id32">
-<h4><code class="docutils literal notranslate"><span class="pre">成员方法传参机制</span></code><a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="overload">
-<h4>overload<a class="headerlink" href="#overload" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">成员方法</span></code><a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id33">
-<h4>可变参数<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">成员方法传参机制</span></code><a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="overload">
+<h5>overload<a class="headerlink" href="#overload" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id34">
-<h4>作用域<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h4>
+<h5>可变参数<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id35">
-<h4>构造器<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="this">
-<h4>this<a class="headerlink" href="#this" title="永久链接至标题">¶</a></h4>
-</div>
+<h5>作用域<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id36">
-<h3>面向对象编程（中级）<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id37">
-<h4>包<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h4>
+<h5>构造器<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h5>
 </div>
+<div class="section" id="this">
+<h5>this<a class="headerlink" href="#this" title="永久链接至标题">¶</a></h5>
+</div>
+</div>
+<div class="section" id="id37">
+<h4>面向对象编程（中级）<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id38">
-<h4>访问修饰符<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h4>
+<h5>包<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id39">
-<h4><code class="docutils literal notranslate"><span class="pre">封装</span></code><a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h4>
+<h5>访问修饰符<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id40">
-<h4><code class="docutils literal notranslate"><span class="pre">继承</span></code><a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">封装</span></code><a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id41">
-<h4><code class="docutils literal notranslate"><span class="pre">多态</span></code><a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="super">
-<h4>super<a class="headerlink" href="#super" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="overwrite">
-<h4>overwrite<a class="headerlink" href="#overwrite" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="object">
-<h4>object类详解<a class="headerlink" href="#object" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">继承</span></code><a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id42">
-<h4>断点调试<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">多态</span></code><a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h5>
 </div>
+<div class="section" id="super">
+<h5>super<a class="headerlink" href="#super" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="overwrite">
+<h5>overwrite<a class="headerlink" href="#overwrite" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="object">
+<h5>object类详解<a class="headerlink" href="#object" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id43">
-<h3>项目&amp;学以致用，编程之乐<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id44">
-<h4>零钱通<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h4>
+<h5>断点调试<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h5>
 </div>
+</div>
+<div class="section" id="id44">
+<h4>项目&amp;学以致用，编程之乐<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id45">
-<h4>房屋出租系统<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h4>
+<h5>零钱通<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id46">
-<h4>迷宫问题<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h4>
+<h5>房屋出租系统<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id47">
-<h4>八皇后问题<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h4>
+<h5>迷宫问题<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id48">
-<h4>汉诺塔问题<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h4>
-</div>
-</div>
+<h5>八皇后问题<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id49">
-<h2>第二阶段：提升编程能力<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+<h5>汉诺塔问题<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h5>
+</div>
+</div>
+</div>
 <div class="section" id="id50">
-<h3>面向对象编程（高级）<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
+<h3>第二阶段：提升编程能力<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id51">
-<h4><code class="docutils literal notranslate"><span class="pre">类变量和类方法</span></code><a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h4>
+<h4>面向对象编程（高级）<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id52">
+<h5><code class="docutils literal notranslate"><span class="pre">类变量和类方法</span></code><a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="main">
-<h4>理解main方法语法<a class="headerlink" href="#main" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="id52">
-<h4>代码块<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h4>
+<h5>理解main方法语法<a class="headerlink" href="#main" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id53">
-<h4>单例设计模式<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="final">
-<h4>final关键字<a class="headerlink" href="#final" title="永久链接至标题">¶</a></h4>
+<h5>代码块<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id54">
-<h4>抽象类<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h4>
+<h5>单例设计模式<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="final">
+<h5>final关键字<a class="headerlink" href="#final" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id55">
-<h4><code class="docutils literal notranslate"><span class="pre">接口</span></code><a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h4>
+<h5>抽象类<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id56">
-<h4><code class="docutils literal notranslate"><span class="pre">内部类</span></code><a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h4>
-</div>
+<h5><code class="docutils literal notranslate"><span class="pre">接口</span></code><a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id57">
-<h3>枚举和注解<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<h5><code class="docutils literal notranslate"><span class="pre">内部类</span></code><a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h5>
+</div>
+</div>
 <div class="section" id="id58">
-<h4>自定义类实现枚举<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h4>
+<h4>枚举和注解<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id59">
+<h5>自定义类实现枚举<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="enum">
-<h4>enum关键字实现枚举<a class="headerlink" href="#enum" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="id59">
-<h4>JDK内置的基本注解类型<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h4>
+<h5>enum关键字实现枚举<a class="headerlink" href="#enum" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id60">
-<h4>元注解：对注解进行注解<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h4>
+<h5>JDK内置的基本注解类型<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id61">
+<h5>元注解：对注解进行注解<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
 <div class="section" id="exception">
-<h3>Exception<a class="headerlink" href="#exception" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id61">
-<h4>异常的概念<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h4>
-</div>
+<h4>Exception<a class="headerlink" href="#exception" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id62">
-<h4><code class="docutils literal notranslate"><span class="pre">异常体系图</span></code><a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h4>
+<h5>异常的概念<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id63">
-<h4>常见的异常<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">异常体系图</span></code><a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id64">
-<h4><code class="docutils literal notranslate"><span class="pre">异常处理</span></code><a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h4>
+<h5>常见的异常<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id65">
-<h4>自定义异常<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="throwthrows">
-<h4>throw和throws的对比<a class="headerlink" href="#throwthrows" title="永久链接至标题">¶</a></h4>
-</div>
+<h5><code class="docutils literal notranslate"><span class="pre">异常处理</span></code><a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id66">
-<h3>常用类<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<h5>自定义异常<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="throwthrows">
+<h5>throw和throws的对比<a class="headerlink" href="#throwthrows" title="永久链接至标题">¶</a></h5>
+</div>
+</div>
 <div class="section" id="id67">
-<h4>包装类<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h4>
+<h4>常用类<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id68">
+<h5>包装类<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="string">
-<h4><code class="docutils literal notranslate"><span class="pre">String</span></code><a class="headerlink" href="#string" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">String</span></code><a class="headerlink" href="#string" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="stringbuffer">
-<h4><code class="docutils literal notranslate"><span class="pre">StringBuffer</span></code><a class="headerlink" href="#stringbuffer" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">StringBuffer</span></code><a class="headerlink" href="#stringbuffer" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="stringbuilder">
-<h4><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code><a class="headerlink" href="#stringbuilder" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">StringBuilder</span></code><a class="headerlink" href="#stringbuilder" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="math">
-<h4>Math<a class="headerlink" href="#math" title="永久链接至标题">¶</a></h4>
+<h5>Math<a class="headerlink" href="#math" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="datecalendarlocaldate">
-<h4>Date、Calendar、LocalDate…<a class="headerlink" href="#datecalendarlocaldate" title="永久链接至标题">¶</a></h4>
+<h5>Date、Calendar、LocalDate…<a class="headerlink" href="#datecalendarlocaldate" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="system">
-<h4>System<a class="headerlink" href="#system" title="永久链接至标题">¶</a></h4>
+<h5>System<a class="headerlink" href="#system" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="arrays">
-<h4>Arrays<a class="headerlink" href="#arrays" title="永久链接至标题">¶</a></h4>
+<h5>Arrays<a class="headerlink" href="#arrays" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="biginteger-bigdecimal">
-<h4>BigInteger BigDecimal<a class="headerlink" href="#biginteger-bigdecimal" title="永久链接至标题">¶</a></h4>
+<h5>BigInteger BigDecimal<a class="headerlink" href="#biginteger-bigdecimal" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
-<div class="section" id="id68">
-<h3>集合<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id69">
-<h4><code class="docutils literal notranslate"><span class="pre">集合框架体系</span></code><a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h4>
+<h4>集合<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id70">
+<h5><code class="docutils literal notranslate"><span class="pre">集合框架体系</span></code><a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="collection">
-<h4>Collection<a class="headerlink" href="#collection" title="永久链接至标题">¶</a></h4>
+<h5>Collection<a class="headerlink" href="#collection" title="永久链接至标题">¶</a></h5>
 <div class="section" id="list">
-<h5>List<a class="headerlink" href="#list" title="永久链接至标题">¶</a></h5>
+<h6>List<a class="headerlink" href="#list" title="永久链接至标题">¶</a></h6>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ArrayList</span></code></p></li>
 <li><p>LinkedList</p></li>
@@ -688,62 +538,62 @@
 </div>
 </div>
 <div class="section" id="collections">
-<h4>Collections<a class="headerlink" href="#collections" title="永久链接至标题">¶</a></h4>
+<h5>Collections<a class="headerlink" href="#collections" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
-<div class="section" id="id70">
-<h3>泛型<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id71">
-<h4>泛型语法<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h4>
-</div>
+<h4>泛型<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id72">
-<h4>自定义泛型<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h4>
-<div class="section" id="id73">
-<h5>泛型类<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h5>
+<h5>泛型语法<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h5>
 </div>
+<div class="section" id="id73">
+<h5>自定义泛型<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h5>
 <div class="section" id="id74">
-<h5>泛型接口<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h5>
+<h6>泛型类<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h6>
 </div>
 <div class="section" id="id75">
-<h5>泛型方法<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h5>
-</div>
+<h6>泛型接口<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h6>
 </div>
 <div class="section" id="id76">
-<h4>泛型继承和通配符<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h4>
+<h6>泛型方法<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h6>
 </div>
 </div>
 <div class="section" id="id77">
-<h3>线程（基础）<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id78">
-<h4>线程介绍<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h4>
+<h5>泛型继承和通配符<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h5>
 </div>
+</div>
+<div class="section" id="id78">
+<h4>线程（基础）<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id79">
-<h4><code class="docutils literal notranslate"><span class="pre">线程使用</span></code><a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h4>
+<h5>线程介绍<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id80">
+<h5><code class="docutils literal notranslate"><span class="pre">线程使用</span></code><a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>继承Thread</p></li>
 <li><p>实现Runnable</p></li>
 </ul>
 </div>
-<div class="section" id="id80">
-<h4>线程方法<a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h4>
-</div>
 <div class="section" id="id81">
-<h4>线程生命周期<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h4>
-</div>
-<div class="section" id="synchronized">
-<h4><code class="docutils literal notranslate"><span class="pre">Synchronized</span></code><a class="headerlink" href="#synchronized" title="永久链接至标题">¶</a></h4>
+<h5>线程方法<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id82">
-<h4><code class="docutils literal notranslate"><span class="pre">互斥锁</span></code><a class="headerlink" href="#id82" title="永久链接至标题">¶</a></h4>
+<h5>线程生命周期<a class="headerlink" href="#id82" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="synchronized">
+<h5><code class="docutils literal notranslate"><span class="pre">Synchronized</span></code><a class="headerlink" href="#synchronized" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id83">
-<h4>死锁<a class="headerlink" href="#id83" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">互斥锁</span></code><a class="headerlink" href="#id83" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id84">
+<h5>死锁<a class="headerlink" href="#id84" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
 <div class="section" id="io">
-<h3>IO流<a class="headerlink" href="#io" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id84">
-<h4>文件<a class="headerlink" href="#id84" title="永久链接至标题">¶</a></h4>
+<h4>IO流<a class="headerlink" href="#io" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id85">
+<h5>文件<a class="headerlink" href="#id85" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>概念</p></li>
 <li><p>常用操作
@@ -756,7 +606,7 @@
 <li><p>ObjectInputStream</p></li>
 </ul>
 <div class="section" id="reader">
-<h5>Reader<a class="headerlink" href="#reader" title="永久链接至标题">¶</a></h5>
+<h6>Reader<a class="headerlink" href="#reader" title="永久链接至标题">¶</a></h6>
 <ul class="simple">
 <li><p>FileReader</p></li>
 <li><p>BufferedReader</p></li>
@@ -764,10 +614,10 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id85">
-<h4><code class="docutils literal notranslate"><span class="pre">输出流</span></code><a class="headerlink" href="#id85" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id86">
+<h5><code class="docutils literal notranslate"><span class="pre">输出流</span></code><a class="headerlink" href="#id86" title="永久链接至标题">¶</a></h5>
 <div class="section" id="outputstream">
-<h5>OutputStream<a class="headerlink" href="#outputstream" title="永久链接至标题">¶</a></h5>
+<h6>OutputStream<a class="headerlink" href="#outputstream" title="永久链接至标题">¶</a></h6>
 <ul class="simple">
 <li><p>FileOutputStream</p></li>
 <li><p>BufferedOutputStream</p></li>
@@ -775,7 +625,7 @@
 </ul>
 </div>
 <div class="section" id="writer">
-<h5>Writer<a class="headerlink" href="#writer" title="永久链接至标题">¶</a></h5>
+<h6>Writer<a class="headerlink" href="#writer" title="永久链接至标题">¶</a></h6>
 <ul class="simple">
 <li><p>FileWriter</p></li>
 <li><p>BufferedWriter</p></li>
@@ -784,28 +634,28 @@
 </div>
 </div>
 <div class="section" id="properties">
-<h4>Properties类<a class="headerlink" href="#properties" title="永久链接至标题">¶</a></h4>
-</div>
-</div>
-<div class="section" id="id86">
-<h3>坦克大战<a class="headerlink" href="#id86" title="永久链接至标题">¶</a></h3>
+<h5>Properties类<a class="headerlink" href="#properties" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
 <div class="section" id="id87">
-<h2>第三阶段：分析需求，代码实现能力<a class="headerlink" href="#id87" title="永久链接至标题">¶</a></h2>
+<h4>坦克大战<a class="headerlink" href="#id87" title="永久链接至标题">¶</a></h4>
+</div>
+</div>
 <div class="section" id="id88">
-<h3>网络编程<a class="headerlink" href="#id88" title="永久链接至标题">¶</a></h3>
+<h3>第三阶段：分析需求，代码实现能力<a class="headerlink" href="#id88" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id89">
-<h4>网络基础<a class="headerlink" href="#id89" title="永久链接至标题">¶</a></h4>
+<h4>网络编程<a class="headerlink" href="#id89" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id90">
+<h5>网络基础<a class="headerlink" href="#id90" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="inetaddress">
-<h4>InetAddress<a class="headerlink" href="#inetaddress" title="永久链接至标题">¶</a></h4>
+<h5>InetAddress<a class="headerlink" href="#inetaddress" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="socket">
-<h4>Socket<a class="headerlink" href="#socket" title="永久链接至标题">¶</a></h4>
+<h5>Socket<a class="headerlink" href="#socket" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="tcp">
-<h4><code class="docutils literal notranslate"><span class="pre">TCP编程</span></code><a class="headerlink" href="#tcp" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">TCP编程</span></code><a class="headerlink" href="#tcp" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>字节流</p></li>
 <li><p>字符流
@@ -825,21 +675,21 @@
 </div>
 </div>
 <div class="section" id="mysql">
-<h3>mysql基础<a class="headerlink" href="#mysql" title="永久链接至标题">¶</a></h3>
+<h4>mysql基础<a class="headerlink" href="#mysql" title="永久链接至标题">¶</a></h4>
 <p>后面讲高级篇（优化、集群和项目实战）</p>
-<div class="section" id="id90">
-<h4>mysql安装和配置<a class="headerlink" href="#id90" title="永久链接至标题">¶</a></h4>
-</div>
 <div class="section" id="id91">
-<h4>数据库<a class="headerlink" href="#id91" title="永久链接至标题">¶</a></h4>
+<h5>mysql安装和配置<a class="headerlink" href="#id91" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id92">
+<h5>数据库<a class="headerlink" href="#id92" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>创建</p></li>
 <li><p>查看、删除数据库</p></li>
 <li><p>备份恢复数据库</p></li>
 </ul>
 </div>
-<div class="section" id="id92">
-<h4>表<a class="headerlink" href="#id92" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id93">
+<h5>表<a class="headerlink" href="#id93" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>创建</p></li>
 <li><p>删除</p></li>
@@ -854,8 +704,8 @@
 <li><p>多表</p></li>
 </ul>
 </div>
-<div class="section" id="id93">
-<h4><code class="docutils literal notranslate"><span class="pre">函数</span></code><a class="headerlink" href="#id93" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id94">
+<h5><code class="docutils literal notranslate"><span class="pre">函数</span></code><a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>统计函数</p></li>
 <li><p>时间日期</p></li>
@@ -864,14 +714,14 @@
 <li><p>流程控制</p></li>
 </ul>
 </div>
-<div class="section" id="id94">
-<h4>内连接<a class="headerlink" href="#id94" title="永久链接至标题">¶</a></h4>
-</div>
 <div class="section" id="id95">
-<h4>外连接<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h4>
+<h5>内连接<a class="headerlink" href="#id95" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id96">
-<h4>约束<a class="headerlink" href="#id96" title="永久链接至标题">¶</a></h4>
+<h5>外连接<a class="headerlink" href="#id96" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id97">
+<h5>约束<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>not null</p></li>
 <li><p>primary key</p></li>
@@ -886,20 +736,20 @@
 <li><p>全文索引</p></li>
 </ul>
 </div>
-<div class="section" id="id97">
-<h4>事务<a class="headerlink" href="#id97" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id98">
+<h5>事务<a class="headerlink" href="#id98" title="永久链接至标题">¶</a></h5>
 </div>
 </div>
 <div class="section" id="jdbc">
-<h3>JDBC和连接池<a class="headerlink" href="#jdbc" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id98">
-<h4>JDBC概述<a class="headerlink" href="#id98" title="永久链接至标题">¶</a></h4>
-</div>
+<h4>JDBC和连接池<a class="headerlink" href="#jdbc" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id99">
-<h4>JDBC快速入门<a class="headerlink" href="#id99" title="永久链接至标题">¶</a></h4>
+<h5>JDBC概述<a class="headerlink" href="#id99" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id100">
+<h5>JDBC快速入门<a class="headerlink" href="#id100" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="jdbc-api">
-<h4><code class="docutils literal notranslate"><span class="pre">JDBC</span> <span class="pre">API</span></code><a class="headerlink" href="#jdbc-api" title="永久链接至标题">¶</a></h4>
+<h5><code class="docutils literal notranslate"><span class="pre">JDBC</span> <span class="pre">API</span></code><a class="headerlink" href="#jdbc-api" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>PreparedStatement</p></li>
 <li><p>DriverManager</p></li>
@@ -920,16 +770,16 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id100">
-<h3>正则表达式<a class="headerlink" href="#id100" title="永久链接至标题">¶</a></h3>
 <div class="section" id="id101">
-<h4>快速入门<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h4>
-</div>
+<h4>正则表达式<a class="headerlink" href="#id101" title="永久链接至标题">¶</a></h4>
 <div class="section" id="id102">
-<h4>正则表达式基本语法<a class="headerlink" href="#id102" title="永久链接至标题">¶</a></h4>
+<h5>快速入门<a class="headerlink" href="#id102" title="永久链接至标题">¶</a></h5>
 </div>
 <div class="section" id="id103">
-<h4><code class="docutils literal notranslate"><span class="pre">三个常用类</span></code><a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h4>
+<h5>正则表达式基本语法<a class="headerlink" href="#id103" title="永久链接至标题">¶</a></h5>
+</div>
+<div class="section" id="id104">
+<h5><code class="docutils literal notranslate"><span class="pre">三个常用类</span></code><a class="headerlink" href="#id104" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p>Pattern</p></li>
 <li><p>Matcher</p></li>
@@ -947,9 +797,9 @@
 </div>
 </div>
 <div class="section" id="java-8-java11">
-<h3>java 8 java11 新特性<a class="headerlink" href="#java-8-java11" title="永久链接至标题">¶</a></h3>
+<h4>java 8 java11 新特性<a class="headerlink" href="#java-8-java11" title="永久链接至标题">¶</a></h4>
 <div class="section" id="java8">
-<h4>java8新特性<a class="headerlink" href="#java8" title="永久链接至标题">¶</a></h4>
+<h5>java8新特性<a class="headerlink" href="#java8" title="永久链接至标题">¶</a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">lambda</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">函数式接口</span></code></p></li>
@@ -994,32 +844,33 @@
 </div>
 </div>
 </div>
-<div class="section" id="id104">
-<h1>java高级<a class="headerlink" href="#id104" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id105">
+<h2>java高级<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="java-web">
-<h1>java web<a class="headerlink" href="#java-web" title="永久链接至标题">¶</a></h1>
-</div>
-<div class="section" id="id105">
-<h1>主流的框架和项目管理<a class="headerlink" href="#id105" title="永久链接至标题">¶</a></h1>
+<h2>java web<a class="headerlink" href="#java-web" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="id106">
-<h1>分布式、微服务、并行架构<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h1>
-</div>
-<div class="section" id="devops-ci-cd">
-<h1>DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD<a class="headerlink" href="#devops-ci-cd" title="永久链接至标题">¶</a></h1>
+<h2>主流的框架和项目管理<a class="headerlink" href="#id106" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="id107">
-<h1>大数据技术<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h1>
+<h2>分布式、微服务、并行架构<a class="headerlink" href="#id107" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="devops-ci-cd">
+<h2>DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD<a class="headerlink" href="#devops-ci-cd" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="id108">
-<h1>项目<a class="headerlink" href="#id108" title="永久链接至标题">¶</a></h1>
+<h2>大数据技术<a class="headerlink" href="#id108" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="id109">
-<h1>大厂的高频面试题<a class="headerlink" href="#id109" title="永久链接至标题">¶</a></h1>
+<h2>项目<a class="headerlink" href="#id109" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="id110">
-<h1>底层源码、内核研究<a class="headerlink" href="#id110" title="永久链接至标题">¶</a></h1>
+<h2>大厂的高频面试题<a class="headerlink" href="#id110" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id111">
+<h2>底层源码、内核研究<a class="headerlink" href="#id111" title="永久链接至标题">¶</a></h2>
+</div>
 </div>
 
 
