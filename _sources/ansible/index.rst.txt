@@ -4,6 +4,3 @@
 ansible
 ************
 
-.. toctree::
-
-    app_install/index
