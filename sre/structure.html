@@ -38,7 +38,9 @@
 
     
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" /> 
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Vim" href="../vim/index.html" />
+    <link rel="prev" title="SRE" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,64 +85,87 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">架构</a><ul>
-<li><a class="reference internal" href="#id2">双云架构</a><ul>
-<li><a class="reference internal" href="#id3">名词解释</a></li>
-<li><a class="reference internal" href="#id4">架构图</a></li>
-<li><a class="reference internal" href="#todo-slb">todo, 具体的SLB配置</a></li>
-<li><a class="reference internal" href="#id5">具体配置：上面描述对应的结构图</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ansible/index.html">ansible</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../english/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../interview.html">interview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/index.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">SRE</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">架构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">双云架构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">名词解释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">架构图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#todo-slb">todo, 具体的SLB配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">具体配置：上面描述对应的结构图</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">大数据监控</a></li>
-<li><a class="reference internal" href="#id7">自动化运维平台-模块</a></li>
-<li><a class="reference internal" href="#id8">内部的3大流程</a><ul>
-<li><a class="reference internal" href="#sd">SD</a></li>
-<li><a class="reference internal" href="#itr">ITR</a></li>
-<li><a class="reference internal" href="#bcm">BCM</a></li>
-<li><a class="reference internal" href="#eap">EAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">大数据监控</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">自动化运维平台-模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">内部的3大流程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sd">SD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#itr">ITR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bcm">BCM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eap">EAP</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id9">内部-功能模块</a><ul>
-<li><a class="reference internal" href="#id10">权限管理</a></li>
-<li><a class="reference internal" href="#cmdb">CMDB</a></li>
-<li><a class="reference internal" href="#id11">配置管理</a></li>
-<li><a class="reference internal" href="#id12">部署</a></li>
-<li><a class="reference internal" href="#id13">作业平台</a></li>
-<li><a class="reference internal" href="#id14">EAP</a></li>
-<li><a class="reference internal" href="#id15">告警系统</a></li>
-<li><a class="reference internal" href="#id16">业务监控</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">内部-功能模块</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">权限管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cmdb">CMDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">配置管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">部署</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">作业平台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">EAP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">告警系统</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">业务监控</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#github-spug">github-spug</a><ul>
-<li><a class="reference internal" href="#id17">主机管理</a></li>
-<li><a class="reference internal" href="#id18">主机批量执行</a></li>
-<li><a class="reference internal" href="#id19">主机在线终端</a></li>
-<li><a class="reference internal" href="#id20">文件在线上传下载</a></li>
-<li><a class="reference internal" href="#id21">应用发布部署</a></li>
-<li><a class="reference internal" href="#id22">在线任务计划</a></li>
-<li><a class="reference internal" href="#id23">配置中心</a></li>
-<li><a class="reference internal" href="#id24">监控</a></li>
-<li><a class="reference internal" href="#id25">报警</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-spug">github-spug</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">主机管理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">主机批量执行</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">主机在线终端</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">文件在线上传下载</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">应用发布部署</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">在线任务计划</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">配置中心</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">监控</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">报警</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#github-codo">github-CODO</a><ul>
-<li><a class="reference internal" href="#codo-admin">codo-admin</a></li>
-<li><a class="reference internal" href="#codo-cron">codo-cron</a></li>
-<li><a class="reference internal" href="#codo-task">codo-task</a></li>
-<li><a class="reference internal" href="#codo-cmdb">codo-cmdb</a></li>
-<li><a class="reference internal" href="#codo-kerrigan">codo-kerrigan</a></li>
-<li><a class="reference internal" href="#codo-tools">codo-tools</a></li>
-<li><a class="reference internal" href="#codo-dns">codo-dns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#github-codo">github-CODO</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#codo-admin">codo-admin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codo-cron">codo-cron</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codo-task">codo-task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codo-cmdb">codo-cmdb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codo-kerrigan">codo-kerrigan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codo-tools">codo-tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#codo-dns">codo-dns</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id27">自动化运维平台-集群扩容</a></li>
-<li><a class="reference internal" href="#id28">业务迁移、扩容机器注意事项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">自动化运维平台-集群扩容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">业务迁移、扩容机器注意事项</a></li>
 </ul>
 </li>
 </ul>
-</div>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zhihu/index.html">知乎</a></li>
+</ul>
+
             
           
         </div>
@@ -186,6 +211,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">SRE</a> &raquo;</li>
         
       <li>架构</li>
     
@@ -663,6 +690,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../vim/index.html" class="btn btn-neutral float-right" title="Vim" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="SRE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
