@@ -67,21 +67,21 @@ keywords 中有前缀、后缀，逐一判断这些关键字，如果匹配，
     from watchdog.events import FileSystemEventHandler
     from watchdog.observers import Observer
 
-    # 根目录
+    # root path
     path_root = r'C:\PycharmProjects\move_files'
 
-    # 被监视的文件夹
+    # folder monitored
     folder_to_track = r'C:\PycharmProjects\move_files\downloads'
 
-    # 规则配置文件
+    # configuration
     file_json = r'C:\PycharmProjects\move_files\config.json'
 
 
     def get_des_folder(filname):
         """
-        根据文件名判断出目标文件的绝对路径
-        :param filname: 文件名
-        :return: 目标文件的绝对路径
+        get destination absolute path from file name
+        :param file name
+        :return: absolute path of destination file
         """
         data_dict = file.read_json(file_json)
         for category, keywords_folder_dict in data_dict.items():
@@ -100,17 +100,17 @@ keywords 中有前缀、后缀，逐一判断这些关键字，如果匹配，
             if not suffix_list:
                 continue
 
-            # 根据文件名前缀判断
+            # judge file name from prefix of file name
             for prefix in prefix_list:
                 if str(filname).startswith(prefix):
                     folder_des = folder
 
-            # 根据文件名后缀判断
+            # judge file name from suffix of file name
             for suffix in suffix_list:
                 if str(filname).endswith(suffix):
                     folder_des = folder
 
-        # 如果前面都没有判断出目的文件的路径，默认放在 other 文件夹下
+        # move to other folder by default if not hit any conditions
         try:
             return folder_des
         except UnboundLocalError:
@@ -120,13 +120,15 @@ keywords 中有前缀、后缀，逐一判断这些关键字，如果匹配，
 
     def move_multiple_times(file_src, file_des):
         """
-        文件刚刚被复制到 downloads 文件夹下面的时候，几秒之内可能被进程占用，
-        导致无法剪切到其他目录，
-        所以这里根据 PermissionError 使用递归重复剪切 直至移动文件成功，
-        time.sleep(1)必须要，否则会继续报错, 另会报 RecursionError 错误。
-        :param file_src: 文件原来所在的绝对路径
-        :param file_des: 文件所要移动到的 目的 的绝对路径
-        :return: 
+        file locked by download process when copy to download folder,
+        then can not cut to other folder,
+        move file by recursive using try except PermissionError util successfully,
+        it is necessary to set `time.sleep(1)`, otherwise report error continuously,
+        PS: except RecursionError will occur.
+
+        :param file_src: absolute path of source file
+        :param file_des: absolute of destination to move
+        :return:
         """
         try:
             shutil.move(file_src, file_des)
@@ -146,15 +148,14 @@ keywords 中有前缀、后缀，逐一判断这些关键字，如果匹配，
                 move_multiple_times(file_src, file_des)
 
 
-    # 利用 Observer 注册一个监视器，时刻监视 downloads 文件夹的变化
+    # monitor downloads folder every one seconds by monitor registered by `Observer`
     event_handler = MyHandler()
     observer = Observer()
     observer.schedule(event_handler, folder_to_track, recursive=True)
 
-    # 启动监视器
     observer.start()
 
-    # 监视器保持运行，直到按下 Ctrl + C 结束脚本
+    # keep monitor running, until end up scripts with `Ctrl + C`
     try:
         while True:
             time.sleep(1)

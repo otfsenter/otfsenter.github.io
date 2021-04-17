@@ -252,21 +252,21 @@
 <span class="kn">from</span> <span class="nn">watchdog.events</span> <span class="kn">import</span> <span class="n">FileSystemEventHandler</span>
 <span class="kn">from</span> <span class="nn">watchdog.observers</span> <span class="kn">import</span> <span class="n">Observer</span>
 
-<span class="c1"># 根目录</span>
+<span class="c1"># root path</span>
 <span class="n">path_root</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\PycharmProjects\move_files&#39;</span>
 
-<span class="c1"># 被监视的文件夹</span>
+<span class="c1"># folder monitored</span>
 <span class="n">folder_to_track</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\PycharmProjects\move_files\downloads&#39;</span>
 
-<span class="c1"># 规则配置文件</span>
+<span class="c1"># configuration</span>
 <span class="n">file_json</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\PycharmProjects\move_files\config.json&#39;</span>
 
 
 <span class="k">def</span> <span class="nf">get_des_folder</span><span class="p">(</span><span class="n">filname</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    根据文件名判断出目标文件的绝对路径</span>
-<span class="sd">    :param filname: 文件名</span>
-<span class="sd">    :return: 目标文件的绝对路径</span>
+<span class="sd">    get destination absolute path from file name</span>
+<span class="sd">    :param file name</span>
+<span class="sd">    :return: absolute path of destination file</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">data_dict</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">file_json</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">keywords_folder_dict</span> <span class="ow">in</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -285,17 +285,17 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">suffix_list</span><span class="p">:</span>
             <span class="k">continue</span>
 
-        <span class="c1"># 根据文件名前缀判断</span>
+        <span class="c1"># judge file name from prefix of file name</span>
         <span class="k">for</span> <span class="n">prefix</span> <span class="ow">in</span> <span class="n">prefix_list</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">filname</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
                 <span class="n">folder_des</span> <span class="o">=</span> <span class="n">folder</span>
 
-        <span class="c1"># 根据文件名后缀判断</span>
+        <span class="c1"># judge file name from suffix of file name</span>
         <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">suffix_list</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">filname</span><span class="p">)</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">suffix</span><span class="p">):</span>
                 <span class="n">folder_des</span> <span class="o">=</span> <span class="n">folder</span>
 
-    <span class="c1"># 如果前面都没有判断出目的文件的路径，默认放在 other 文件夹下</span>
+    <span class="c1"># move to other folder by default if not hit any conditions</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">folder_des</span>
     <span class="k">except</span> <span class="ne">UnboundLocalError</span><span class="p">:</span>
@@ -305,12 +305,14 @@
 
 <span class="k">def</span> <span class="nf">move_multiple_times</span><span class="p">(</span><span class="n">file_src</span><span class="p">,</span> <span class="n">file_des</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    文件刚刚被复制到 downloads 文件夹下面的时候，几秒之内可能被进程占用，</span>
-<span class="sd">    导致无法剪切到其他目录，</span>
-<span class="sd">    所以这里根据 PermissionError 使用递归重复剪切 直至移动文件成功，</span>
-<span class="sd">    time.sleep(1)必须要，否则会继续报错, 另会报 RecursionError 错误。</span>
-<span class="sd">    :param file_src: 文件原来所在的绝对路径</span>
-<span class="sd">    :param file_des: 文件所要移动到的 目的 的绝对路径</span>
+<span class="sd">    file locked by download process when copy to download folder,</span>
+<span class="sd">    then can not cut to other folder,</span>
+<span class="sd">    move file by recursive using try except PermissionError util successfully,</span>
+<span class="sd">    it is necessary to set `time.sleep(1)`, otherwise report error continuously,</span>
+<span class="sd">    PS: except RecursionError will occur.</span>
+
+<span class="sd">    :param file_src: absolute path of source file</span>
+<span class="sd">    :param file_des: absolute of destination to move</span>
 <span class="sd">    :return:</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
@@ -331,15 +333,14 @@
             <span class="n">move_multiple_times</span><span class="p">(</span><span class="n">file_src</span><span class="p">,</span> <span class="n">file_des</span><span class="p">)</span>
 
 
-<span class="c1"># 利用 Observer 注册一个监视器，时刻监视 downloads 文件夹的变化</span>
+<span class="c1"># monitor downloads folder every one seconds by monitor registered by `Observer`</span>
 <span class="n">event_handler</span> <span class="o">=</span> <span class="n">MyHandler</span><span class="p">()</span>
 <span class="n">observer</span> <span class="o">=</span> <span class="n">Observer</span><span class="p">()</span>
 <span class="n">observer</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">event_handler</span><span class="p">,</span> <span class="n">folder_to_track</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># 启动监视器</span>
 <span class="n">observer</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<span class="c1"># 监视器保持运行，直到按下 Ctrl + C 结束脚本</span>
+<span class="c1"># keep monitor running, until end up scripts with `Ctrl + C`</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
