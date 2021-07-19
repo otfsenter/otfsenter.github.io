@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>config cdn &mdash; IdlePig  文档</title>
+  <title>default config &mdash; IdlePig  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="default config" href="default.html" />
-    <link rel="prev" title="nginx自动更新ssl证书" href="update_ssl_certificate.html" /> 
+    <link rel="next" title="Send key" href="../send_key/send_key.html" />
+    <link rel="prev" title="config cdn" href="config_cdn.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,15 +103,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../monitor_software.html">Monitor software</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">nginx</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="update_ssl_certificate.html">nginx自动更新ssl证书</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">config cdn</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">生成一个泛域名的加速域名</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">泛域名配置加速域名</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#a">主域名配置A记录</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nginx">nginx配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config_cdn.html">config cdn</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">default config</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nginx">安装nginx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#html">修改html文件目录权限</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#etc-nginx-nginx-conf">修改<code class="docutils literal notranslate"><span class="pre">/etc/nginx/nginx.conf</span></code>文件</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="default.html">default config</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../send_key/send_key.html">Send key</a></li>
@@ -183,13 +181,13 @@
         
           <li><a href="index.html">nginx</a> &raquo;</li>
         
-      <li>config cdn</li>
+      <li>default config</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/linux/nginx/config_cdn.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/linux/nginx/default.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,64 +200,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="config-cdn">
-<span id="linux-nginx-config-cdn"></span><h1>config cdn<a class="headerlink" href="#config-cdn" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
-<h2>生成一个泛域名的加速域名<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>*.idlepig.cn 对应生成一个加速域名: all.idlepig.cn.w.cdngslb.com</p>
-</div>
-<div class="section" id="id2">
-<h2>泛域名配置加速域名<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>idlepig.cn域名解析中，*.idlepig.cn配置cname为all.idlepig.cn.w.cdngslb.com</p>
-</div>
-<div class="section" id="a">
-<h2>主域名配置A记录<a class="headerlink" href="#a" title="永久链接至标题">¶</a></h2>
-<p>&#64;.idlepig.cn主域名配置A记录，放主机IP</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="default-config">
+<h1>default config<a class="headerlink" href="#default-config" title="永久链接至标题">¶</a></h1>
 <div class="section" id="nginx">
-<h2>nginx配置<a class="headerlink" href="#nginx" title="永久链接至标题">¶</a></h2>
-<p>主配置文件：nginx.conf</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">server</span> <span class="p">{</span>
-        <span class="n">listen</span>       <span class="mi">80</span><span class="p">;</span>
-        <span class="n">server_name</span> <span class="n">www</span><span class="o">.</span><span class="n">idlepig</span><span class="o">.</span><span class="n">cn</span><span class="p">;</span>
-
-        <span class="n">add_header</span> <span class="n">Cache</span><span class="o">-</span><span class="n">Control</span> <span class="n">public</span><span class="p">;</span>
-
-        <span class="c1"># root         /root/html/otfsenter.github.io/index.html;</span>
-
-        <span class="c1"># Load configuration files for the default server block.</span>
-        <span class="n">include</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">default</span><span class="o">.</span><span class="n">d</span><span class="o">/*.</span><span class="n">conf</span><span class="p">;</span>
-
-
-        <span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
-            <span class="n">root</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">otfsenter</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="p">;</span>
-            <span class="n">index</span> <span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="p">;</span>
-        <span class="p">}</span>
-
-
-        <span class="n">error_page</span> <span class="mi">404</span> <span class="o">/</span><span class="mf">404.</span><span class="n">html</span><span class="p">;</span>
-        <span class="n">location</span> <span class="o">=</span> <span class="o">/</span><span class="mf">404.</span><span class="n">html</span> <span class="p">{</span>
-        <span class="p">}</span>
-
-        <span class="n">error_page</span> <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span> <span class="o">/</span><span class="mi">50</span><span class="n">x</span><span class="o">.</span><span class="n">html</span><span class="p">;</span>
-        <span class="n">location</span> <span class="o">=</span> <span class="o">/</span><span class="mi">50</span><span class="n">x</span><span class="o">.</span><span class="n">html</span> <span class="p">{</span>
-        <span class="p">}</span>
-
-    <span class="p">}</span>
-</pre></div>
-</div>
-<p>副配置文件：conf.d/pandomain.conf</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
-    listen 80;
-    server_name idlepig.cn;
-    return 301 http://www.idlepig.cn$request_uri;
-}
+<h2>安装nginx<a class="headerlink" href="#nginx" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>结果<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>访问idlepig.cn时，解析出主机，到nginx上的副配置，然后永久重定向到www.idlepig.cn，这个时候因为www.idlepig.cn已经配置了cname，就可以和访问www.idlepig.cn一样，直接进行cdn加速。</p>
+<div class="section" id="html">
+<h2>修改html文件目录权限<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">755</span> <span class="o">/</span><span class="n">root</span>
+<span class="n">chmod</span> <span class="mi">755</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">html</span>
+<span class="n">chmod</span> <span class="mi">644</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">html</span><span class="o">/*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="etc-nginx-nginx-conf">
+<h2>修改<code class="docutils literal notranslate"><span class="pre">/etc/nginx/nginx.conf</span></code>文件<a class="headerlink" href="#etc-nginx-nginx-conf" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>server 80</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">nginx;</span></code>修改成<code class="docutils literal notranslate"><span class="pre">user</span> <span class="pre">root;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">root</span>&#160;&#160;&#160; <span class="pre">/usr/share/nginx/html;</span></code>修改成<code class="docutils literal notranslate"><span class="pre">root</span>&#160;&#160;&#160; <span class="pre">/root/html;</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>修改成</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+    <span class="n">index</span>   <span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>server 443</p></li>
+</ul>
+<p>阿里云上面申请免费的证书，上传服务器，然后修改配置</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssl_certificate</span> <span class="s2">&quot;/root/cert/t.pem&quot;</span><span class="p">;</span>
+<span class="n">ssl_certificate_key</span> <span class="s2">&quot;/root/cert/t.key&quot;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">root</span>&#160;&#160;&#160; <span class="pre">/usr/share/nginx/html;</span></code>修改成<code class="docutils literal notranslate"><span class="pre">root</span>&#160;&#160;&#160; <span class="pre">/root/html;</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>修改成</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">/</span> <span class="p">{</span>
+    <span class="n">index</span>   <span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>如果开启了443</p>
+<p>server 80里面需要修改的如下</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rewrite ^(.*)$  https://$host$1 permanent;
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -269,8 +266,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="default.html" class="btn btn-neutral float-right" title="default config" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="update_ssl_certificate.html" class="btn btn-neutral float-left" title="nginx自动更新ssl证书" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../send_key/send_key.html" class="btn btn-neutral float-right" title="Send key" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="config_cdn.html" class="btn btn-neutral float-left" title="config cdn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
