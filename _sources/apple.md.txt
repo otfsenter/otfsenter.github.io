@@ -22,7 +22,7 @@ defaults write com.apple.sidecar.display hasShownPref -bool true
 初始化的配置
 
 ```
-alias t="ssh root@47.107.233.85"
+alias t="ssh root@idlepig.cn"
 alias ll="ls -l"
 alias idlepig="cd /Users/username/docs/idlepig/source; source /Users/username/code/idlepig/bin/activate"
 
