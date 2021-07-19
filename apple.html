@@ -88,11 +88,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="0-todo.html">TODO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">apple</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">关闭登陆界面多个用户登陆</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">强开随航</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">环境变量配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">苹果 电源适配器延长线缆</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">调整鼠标速度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">关闭登陆界面多个用户登陆</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">强开随航</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">环境变量配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">苹果 电源适配器延长线缆</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">调整鼠标速度</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ansible/index.html">ansible</a></li>
@@ -103,7 +103,17 @@
 <li class="toctree-l1"><a class="reference internal" href="game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interview.html">interview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="java/index.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html">java init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#java">java基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id125">java高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#java-web">java web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id126">主流的框架和项目管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id127">分布式、微服务、并行架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#devops-ci-cd">DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id128">大数据技术</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id129">项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id130">大厂的高频面试题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="java/java.html#id131">底层源码、内核研究</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mysql/index.html">MySQL</a></li>
@@ -169,7 +179,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/apple.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/apple.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,31 +192,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="apple">
-<span id="id1"></span><h1>apple<a class="headerlink" href="#apple" title="永久链接至标题">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="apple">
+<h1>apple<a class="headerlink" href="#apple" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>关闭登陆界面多个用户登陆<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">loginwindow</span> <span class="n">SHOWOTHERUSERS_MANAGED</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">FALSE</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="id2">
-<h2>关闭登陆界面多个用户登陆<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MANAGED -bool FALSE</p>
+<h2>强开随航<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">sidecar</span><span class="o">.</span><span class="n">display</span> <span class="n">AllowAllDevices</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">true</span>
+<span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">sidecar</span><span class="o">.</span><span class="n">display</span> <span class="n">hasShownPref</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">true</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id3">
-<h2>强开随航<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>defaults write com.apple.sidecar.display AllowAllDevices -bool true</p>
-<p>defaults write com.apple.sidecar.display hasShownPref -bool true</p>
+<h2>环境变量配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>因为terminal每次只会加载.zshrc，所以必须要在.zshrc里面写alias和环境变量，才会每次重启终端生效配置</p>
+<p>初始化的配置</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>alias t=&quot;ssh root@47.107.233.85&quot;
+alias ll=&quot;ls -l&quot;
+alias idlepig=&quot;cd /Users/username/docs/idlepig/source; source /Users/username/code/idlepig/bin/activate&quot;
+
+export PATH=/Users/username/code/idlepig/bin:/Users/username/Library/Python/3.8/bin:$PATH
+</pre></div>
+</div>
 </div>
 <div class="section" id="id4">
-<h2>环境变量配置<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>因为terminal每次只会加载.zshrc，所以必须要在.zshrc里面写alias和环境变量，才会每次重启终端生效配置</p>
+<h2>苹果 电源适配器延长线缆<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>https://www.apple.com.cn/shop/product/MK122CH/A</p>
 </div>
 <div class="section" id="id5">
-<h2>苹果 电源适配器延长线缆<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://www.apple.com.cn/shop/product/MK122CH/A">https://www.apple.com.cn/shop/product/MK122CH/A</a></p>
+<h2>调整鼠标速度<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaults</span> <span class="n">write</span> <span class="o">-</span><span class="n">g</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">mouse</span><span class="o">.</span><span class="n">scaling</span> <span class="mi">18</span>
+</pre></div>
 </div>
-<div class="section" id="id6">
-<h2>调整鼠标速度<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>defaults write -g com.apple.mouse.scaling 18</p>
 <p>terminal输入然后重启，已爽死，嫌快的调小数值就行</p>
 <p>还有滚轮速度</p>
-<p>defaults write -g com.apple.scrollwheel.scaling 1.2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaults</span> <span class="n">write</span> <span class="o">-</span><span class="n">g</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">scrollwheel</span><span class="o">.</span><span class="n">scaling</span> <span class="mf">1.2</span>
+</pre></div>
+</div>
 </div>
 </div>
 

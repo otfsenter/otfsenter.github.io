@@ -5,6 +5,7 @@
 *********
 
 
+
 * 双云架构
 * 大数据监控
 * 微服务架构
@@ -29,56 +30,7 @@ SLB
 
 一般架构是域名到两个ELB，两个ELB转发流量到相同的几台SLB服务器，最后由SLB转发到具体的微服务服务器，微服务有3个集群，分别是主、备集群和灰度集群，以形成双云的结构。
 
-架构图
---------------
 
-.. blockdiag::
-
-
-    blockdiag double-cloud {
-
-        orientation = portrait
-
-        A [ label = "dns name", shape = cloud];
-        B [ label = "public IP for main ELB", shape = roundedbox];
-        C [ label = "public IP for backup ELB", shape = roundedbox];
-        D [ label = "the same servers of SLB"];
-        E [ label = "the same servers of SLB"];
-        G [ label = "az1 group", stacked];
-        F [ label = "gray group", stacked];
-        H [ label = "az2 group", stacked];
-
-        A -> B;
-        A -> C;
-        B -> D;
-        C -> E;
-        D -> G [ label = "az1" ];
-        E -> G;
-        D -> F [ style = dashed , label = "gray"];
-        D -> H [ style = dashed , label = "az2"];
-
-        group elb {
-        B; C;
-        label = "E L B";
-        fontsize = 16;
-
-        color = "orange";
-        style = dashed;
-        shape = line;
-        }
-
-        group slb {
-        D; E;
-        label = "S L B";
-        fontsize = 16;
-        color = "lightgreen";
-        style = dashed;
-        shape = line;
-
-        }
-
-
-   }
 
 
 
@@ -94,55 +46,7 @@ todo, 具体的SLB配置
 ----------------------
 
 
-具体配置：上面描述对应的结构图
----------------------------------------
-
-.. blockdiag::
-
-   blockdiag double-cloud-ip {
-
-        orientation = portrait
-
-
-        A [ label = "https://www.idlepig.cn", shape = cloud, width = 220];
-        B [ label = "49.4.1.2:443", shape = roundedbox];
-        C [ label = "49.4.1.3:443", shape = roundedbox];
-        D [ label = "10.3.1.2:8080;\n10.3.1.3:8080;\n10.3.1.4:8080;\n10.3.1.5:8080", height = 60];
-        E [ label = "10.3.1.2:8080;\n10.3.1.3:8080;\n10.3.1.4:8080;\n10.3.1.5:8080", height = 60];
-        G [ label = "10.6.49.9:18080;\n10.6.49.10:18080;\n10.6.49.11:18080", stacked];
-        F [ label = "10.5.23.7:18080;\n10.5.23.8:18080", stacked];
-        H [ label = "10.7.49.9:18080;\n10.7.49.10:18080;\n10.7.49.11:18080", stacked];
-
-        A -> B;
-        A -> C;
-        B -> D;
-        C -> E;
-        D -> G [ label = "az1" ];
-        E -> G;
-        D -> F [ style = dashed , label = "gray"];
-        D -> H [ style = dashed , label = "az2"];
-
-        group elb {
-        B; C;
-        label = "E L B";
-        fontsize = 16;
-        color = "orange";
-        style = dashed;
-        shape = line;
-        }
-
-        group slb {
-        D; E;
-        label = "S L B";
-        fontsize = 16;
-        color = "lightgreen";
-        style = dashed;
-        shape = line;
-
-        }
-
-   }
-
+1
 
 
 
@@ -154,12 +58,4 @@ todo, 具体的SLB配置
 
 业务服务器 - flume - 流kafka - spark - 批kafka - druid - 前端报表
 
-自动化运维平台-模块
-====================================
 
-
-.. mdinclude:: structure_ops_system.md
-
-自动化运维平台-集群扩容
-====================================
-.. mdinclude:: add_hosts.md

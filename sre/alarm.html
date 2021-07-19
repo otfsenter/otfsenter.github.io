@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pandoc &mdash; IdlePig  文档</title>
+  <title>alarm &mdash; IdlePig  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="vscode" href="vscode.html" />
-    <link rel="prev" title="include markdown" href="md.html" /> 
+    <link rel="next" title="Vim" href="../vim/index.html" />
+    <link rel="prev" title="业务迁移、扩容机器注意事项" href="add_hosts.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -111,19 +111,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sphinx文档</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="attention.html">需要注意的地方</a></li>
-<li class="toctree-l2"><a class="reference internal" href="locale.html">locale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="md.html">include markdown</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">pandoc</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#to-pdf">to pdf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#to-docx">to docx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">SRE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure.html">架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html">内部的3大流程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html#id2">内部-功能模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html#github-spug">github-spug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html#github-codo">github-CODO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_hosts.html">业务迁移、扩容机器注意事项</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">alarm</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="vscode.html">vscode</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../sre/index.html">SRE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
@@ -177,15 +175,15 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="index.html">Sphinx文档</a> &raquo;</li>
+          <li><a href="index.html">SRE</a> &raquo;</li>
         
-      <li>pandoc</li>
+      <li>alarm</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/sphinx/pandoc.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/sre/alarm.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,62 +196,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pandoc">
-<span id="sphinx-pandoc"></span><h1>pandoc<a class="headerlink" href="#pandoc" title="永久链接至标题">¶</a></h1>
-<div class="section" id="to-pdf">
-<h2>to pdf<a class="headerlink" href="#to-pdf" title="永久链接至标题">¶</a></h2>
-<p>输出默认模板</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="o">-</span><span class="n">D</span> <span class="n">latex</span> <span class="o">&gt;</span> <span class="n">template</span><span class="o">.</span><span class="n">tex</span>
-</pre></div>
-</div>
-<p>在模板中找到”% if luatex of xetex” 下添加：</p>
-<p>模板,仅供参考，很鸡肋</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\usepackage{fontspec}         % 允許設定字體
-\usepackage{xeCJK}            % 分開設置中英文字型
-\setCJKmainfont{LiHei Pro}    % 設定中文字型
-\setmainfont{Georgia}         % 設定英文字型
-\setromanfont{Georgia}        % 字型
-\setmonofont{Courier New}
-\linespread{1.2}\selectfont   % 行距
-\XeTeXlinebreaklocale &quot;zh&quot;    % 針對中文自動換行
-\XeTeXlinebreakskip = 0pt plus 1pt % 字與字之間加入0pt至1pt的間距，確保左右對整齊
-\parindent 0em                % 段落縮進
-\setlength{\parskip}{20pt}    % 段落之間的距離
-\ifxetex
-  \usepackage{xltxtra,xunicode}
-\fi
-\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-\newcommand{\euro}{€}
-</pre></div>
-</div>
-<p>转换的命令</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="o">-</span><span class="n">V</span> <span class="n">CJKmainfont</span><span class="o">=</span><span class="s2">&quot;Hiragino Sans GB&quot;</span> <span class="n">c</span><span class="o">.</span><span class="n">rst</span> <span class="o">--</span><span class="n">pdf</span><span class="o">-</span><span class="n">engine</span><span class="o">=</span><span class="n">xelatex</span> <span class="o">-</span><span class="n">o</span> <span class="n">c</span><span class="o">.</span><span class="n">pdf</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="to-docx">
-<h2>to docx<a class="headerlink" href="#to-docx" title="永久链接至标题">¶</a></h2>
-<p>simple</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="n">c</span><span class="o">.</span><span class="n">rst</span> <span class="o">-</span><span class="n">o</span> <span class="n">c</span><span class="o">.</span><span class="n">docx</span>
-</pre></div>
-</div>
-<p>稍微复杂一点的</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="o">-</span><span class="n">o</span> <span class="n">c</span><span class="o">.</span><span class="n">docx</span> <span class="o">-</span><span class="n">f</span> <span class="n">rst</span><span class="o">+</span><span class="n">east_asian_line_breaks</span> <span class="o">-</span><span class="n">s</span> <span class="n">c</span><span class="o">.</span><span class="n">rst</span>
-</pre></div>
-</div>
-<p>markdown preview enhanced</p>
-<p>convert markdown to docx by pandoc</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
-<span class="n">title</span><span class="p">:</span> <span class="s2">&quot;0-todo&quot;</span>
-<span class="n">author</span><span class="p">:</span> <span class="n">zhouxinzheng</span>
-<span class="n">date</span><span class="p">:</span> <span class="n">June</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">2021</span>
-<span class="n">output</span><span class="p">:</span>
-  <span class="n">word_document</span><span class="p">:</span>
-    <span class="n">pandoc_args</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;-o&quot;</span><span class="p">,</span> <span class="s2">&quot;0-todo.docx&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="s2">&quot;markdown&quot;</span><span class="p">,</span> <span class="s2">&quot;-s&quot;</span><span class="p">,</span> <span class="s2">&quot;0-todo.md&quot;</span><span class="p">,</span> <span class="s2">&quot;--reference-doc&quot;</span><span class="p">,</span> <span class="s2">&quot;mystyles.docx&quot;</span><span class="p">]</span>
-<span class="o">---</span>
-</pre></div>
-</div>
-</div>
+  <div class="section" id="alarm">
+<span id="sre-alarm"></span><h1>alarm<a class="headerlink" href="#alarm" title="永久链接至标题">¶</a></h1>
+<p>长时间低（高）于阈值线告警
+毛刺告警
+波动性告警           非请求量类指标 指标曲线没有触及阈值线
+突变告警    请求量     指标曲线没有触及阈值线
+长时间掉0告警 请求量类指标</p>
 </div>
 
 
@@ -262,8 +211,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="vscode.html" class="btn btn-neutral float-right" title="vscode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="md.html" class="btn btn-neutral float-left" title="include markdown" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../vim/index.html" class="btn btn-neutral float-right" title="Vim" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="add_hosts.html" class="btn btn-neutral float-left" title="业务迁移、扩容机器注意事项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

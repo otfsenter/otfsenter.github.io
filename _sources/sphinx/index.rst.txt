@@ -11,3 +11,4 @@ Sphinx文档
     locale
     md
     pandoc
+    vscode

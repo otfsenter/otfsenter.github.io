@@ -38,7 +38,9 @@
 
     
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" /> 
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="业务迁移、扩容机器注意事项" href="add_hosts.html" />
+    <link rel="prev" title="架构" href="structure.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,7 +85,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ansible/index.html">ansible</a></li>
@@ -94,13 +96,68 @@
 <li class="toctree-l1"><a class="reference internal" href="../game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interview.html">interview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../java/index.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html">java init</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#java">java基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id125">java高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#java-web">java web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id126">主流的框架和项目管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id127">分布式、微服务、并行架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#devops-ci-cd">DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id128">大数据技术</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id129">项目</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id130">大厂的高频面试题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../java/java.html#id131">底层源码、内核研究</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">SRE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">SRE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure.html">架构</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">内部的3大流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sd">SD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#itr">ITR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bcm">BCM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eap">EAP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">内部-功能模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">权限管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdb">CMDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">配置管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">部署</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">作业平台</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">EAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">告警系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">业务监控</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#github-spug">github-spug</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">主机管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">主机批量执行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">主机在线终端</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">文件在线上传下载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">应用发布部署</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">在线任务计划</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">配置中心</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">监控</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">报警</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#github-codo">github-CODO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#codo-admin">codo-admin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codo-cron">codo-cron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codo-task">codo-task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codo-cmdb">codo-cmdb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codo-kerrigan">codo-kerrigan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codo-tools">codo-tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codo-dns">codo-dns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="add_hosts.html">业务迁移、扩容机器注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alarm.html">alarm</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wechat/index.html">微信公众号</a></li>
@@ -154,6 +211,8 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="index.html">SRE</a> &raquo;</li>
+        
       <li>内部的3大流程</li>
     
     
@@ -173,7 +232,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>内部的3大流程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="section" id="sd">
 <h2>SD<a class="headerlink" href="#sd" title="永久链接至标题">¶</a></h2>
@@ -230,7 +289,7 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id2">
+<div class="tex2jax_ignore mathjax_ignore section" id="id2">
 <h1>内部-功能模块<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id3">
 <h2>权限管理<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
@@ -306,7 +365,7 @@
 </ul>
 </div>
 </div>
-<div class="section" id="github-spug">
+<div class="tex2jax_ignore mathjax_ignore section" id="github-spug">
 <h1>github-spug<a class="headerlink" href="#github-spug" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://github.com/openspug/spug">github地址</a></p>
 <div class="section" id="id10">
@@ -337,54 +396,40 @@
 <h2>报警<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 </div>
 </div>
-<div class="section" id="github-codo">
+<div class="tex2jax_ignore mathjax_ignore section" id="github-codo">
 <h1>github-CODO<a class="headerlink" href="#github-codo" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://github.com/opendevops-cn/opendevops">总体文档地址</a></p>
 <div class="section" id="codo-admin">
 <h2>codo-admin<a class="headerlink" href="#codo-admin" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>基于Tornado实现，提供Restful风格的API，提供基于RBAC的完善权限管理，可对所有用户的操作进行审计</p>
-</div></blockquote>
+<p>基于Tornado实现，提供Restful风格的API，提供基于RBAC的完善权限管理，可对所有用户的操作进行审计</p>
 </div>
 <div class="section" id="codo-cron">
 <h2>codo-cron<a class="headerlink" href="#codo-cron" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>基于Tornado框架实现的一套定时任务系统，完全兼容Linux Crontab支持到秒级</p>
-</div></blockquote>
+<p>基于Tornado框架实现的一套定时任务系统，完全兼容Linux Crontab支持到秒级</p>
 </div>
 <div class="section" id="codo-task">
 <h2>codo-task<a class="headerlink" href="#codo-task" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>基于Tornado实现，系统核心调度，可分布式扩展</p>
-</div></blockquote>
+<p>基于Tornado实现，系统核心调度，可分布式扩展</p>
 </div>
 <div class="section" id="codo-cmdb">
 <h2>codo-cmdb<a class="headerlink" href="#codo-cmdb" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>基于Tornado实现的一套资产管理系统,</p>
+<p>基于Tornado实现的一套资产管理系统,</p>
 <p>支持AWS、阿里云、腾讯云、华为云自动拉取资产信息等</p>
-</div></blockquote>
 </div>
 <div class="section" id="codo-kerrigan">
 <h2>codo-kerrigan<a class="headerlink" href="#codo-kerrigan" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>基于Tornado实现的一套配置中心，</p>
+<p>基于Tornado实现的一套配置中心，</p>
 <p>可基于分项目、环境管理配置，语法高亮、对比历史版本、快速回滚等，并提供Restful风格的API</p>
-</div></blockquote>
 </div>
 <div class="section" id="codo-tools">
 <h2>codo-tools<a class="headerlink" href="#codo-tools" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>CODO运维工具支持：</p>
+<p>CODO运维工具支持：</p>
 <p>告警管理、告警自愈、项目管理、事件管理、加密解密、随机密码、提醒管理等</p>
-</div></blockquote>
 </div>
 <div class="section" id="codo-dns">
 <h2>codo-dns<a class="headerlink" href="#codo-dns" title="永久链接至标题">¶</a></h2>
-<blockquote>
-<div><p>支持多区域智能解析、可视化Bind操作、操作日志记录等。</p>
+<p>支持多区域智能解析、可视化Bind操作、操作日志记录等。</p>
 <p>支持阿里云、腾讯云、DNSPod、GoDaddy等厂商的云解析</p>
-</div></blockquote>
 </div>
 </div>
 
@@ -393,6 +438,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="add_hosts.html" class="btn btn-neutral float-right" title="业务迁移、扩容机器注意事项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structure.html" class="btn btn-neutral float-left" title="架构" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

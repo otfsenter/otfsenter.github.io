@@ -59,3 +59,19 @@ simple
 .. code::
 
    pandoc -o c.docx -f rst+east_asian_line_breaks -s c.rst
+
+
+markdown preview enhanced
+
+convert markdown to docx by pandoc
+
+.. code::
+
+    ---
+    title: "0-todo"
+    author: zhouxinzheng
+    date: June 19, 2021
+    output: 
+      word_document:
+        pandoc_args: ["-o", "0-todo.docx", "-f", "markdown", "-s", "0-todo.md", "--reference-doc", "mystyles.docx"]
+    ---

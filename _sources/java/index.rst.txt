@@ -1,7 +1,5 @@
 .. _java-index:
 
-*******
-java
-*******
+.. toctree::
 
-.. mdinclude:: java.md
+    java
