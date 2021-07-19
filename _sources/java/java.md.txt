@@ -22,23 +22,23 @@ Java后端技术体系
 
 
 
-##### `如何快速学习java技术`
+ `如何快速学习java技术`
 
-##### java历史
+ java历史
 
-##### java特点
+ java特点
 
-##### sublime
+ sublime
 
-##### `java运行机制`
+ `java运行机制`
 
-##### `jdk`
+ `jdk`
 
-##### 转义字符
+ 转义字符
 
-##### `java开发规范`
+ `java开发规范`
 
-##### java api
+ java api
 
 
 
@@ -52,69 +52,69 @@ Java后端技术体系
 
 
 
-##### `数据类型`
-##### 变量基本使用
-##### 数据类型转换
+ `数据类型`
+ 变量基本使用
+ 数据类型转换
 
 #### 运算符
 
 
 
-##### 运算符介绍
-##### 算数运算符
-##### 关系运算符
-##### 逻辑运算符
-##### 赋值运算符
-##### 三元运算符
-##### 优先级
-##### `二进制`
-##### 位运算符
+ 运算符介绍
+ 算数运算符
+ 关系运算符
+ 逻辑运算符
+ 赋值运算符
+ 三元运算符
+ 优先级
+ `二进制`
+ 位运算符
 
 #### 控制结构
 
 
 
-##### 顺序
-##### 分支（if else switch）
-##### `循环（for、while、do while）`
-##### break
-##### continue
-##### return
+ 顺序
+ 分支（if else switch）
+ `循环（for、while、do while）`
+ break
+ continue
+ return
 
 #### 数组、排序、查找
 
 
 
-##### `数组`
-##### 排序
-##### 查找 
+ `数组`
+ 排序
+ 查找 
 
 #### 面向对象编程（基础）
 
 
 
-##### 类与对象
-##### `成员方法`
-##### `成员方法传参机制`
-##### overload
-##### 可变参数
-##### 作用域
-##### 构造器
-##### this
+ 类与对象
+ `成员方法`
+ `成员方法传参机制`
+ overload
+ 可变参数
+ 作用域
+ 构造器
+ this
 
 #### 面向对象编程（中级）
 
 
 
-##### 包
-##### 访问修饰符
-##### `封装`
-##### `继承`
-##### `多态`
-##### super
-##### overwrite
-##### object类详解
-##### 断点调试
+ 包
+ 访问修饰符
+ `封装`
+ `继承`
+ `多态`
+ super
+ overwrite
+ object类详解
+ 断点调试
 
 
 
@@ -122,81 +122,81 @@ Java后端技术体系
 
 
 
-##### 零钱通
+ 零钱通
 
-##### 房屋出租系统
-##### 迷宫问题
-##### 八皇后问题
-##### 汉诺塔问题
+ 房屋出租系统
+ 迷宫问题
+ 八皇后问题
+ 汉诺塔问题
 
 ### 第二阶段：提升编程能力
 #### 面向对象编程（高级）
 
 
 
-##### `类变量和类方法`
-##### 理解main方法语法
-##### 代码块
-##### 单例设计模式
-##### final关键字
-##### 抽象类
-##### `接口`
-##### `内部类`
+ `类变量和类方法`
+ 理解main方法语法
+ 代码块
+ 单例设计模式
+ final关键字
+ 抽象类
+ `接口`
+ `内部类`
 
 #### 枚举和注解
 
 
 
-##### 自定义类实现枚举
-##### enum关键字实现枚举
-##### JDK内置的基本注解类型
-##### 元注解：对注解进行注解
+ 自定义类实现枚举
+ enum关键字实现枚举
+ JDK内置的基本注解类型
+ 元注解：对注解进行注解
 
 #### Exception
 
 
 
-##### 异常的概念
-##### `异常体系图`
-##### 常见的异常
-##### `异常处理`
-##### 自定义异常
-##### throw和throws的对比
+ 异常的概念
+ `异常体系图`
+ 常见的异常
+ `异常处理`
+ 自定义异常
+ throw和throws的对比
 
 #### 常用类
 
 
 
-##### 包装类
-##### `String`
-##### `StringBuffer`
-##### `StringBuilder`
-##### Math
-##### Date、Calendar、LocalDate...
-##### System
-##### Arrays
-##### BigInteger BigDecimal
+ 包装类
+ `String`
+ `StringBuffer`
+ `StringBuilder`
+ Math
+ Date、Calendar、LocalDate...
+ System
+ Arrays
+ BigInteger BigDecimal
 
-###### 集合
+ 集合
 
 
 
-######## `集合框架体系`
-######## Collection
-########## List
+ `集合框架体系`
+ Collection
+ List
 - `ArrayList`
 - LinkedList
 - `Vector`
 
 
-########## Set
+ Set
 
 - `HashSet`
 - LinkedHashSet
 - TreeSet
 
 
-######## Map
+ Map
 
 - `HashMap`
 - Hashtable
@@ -204,121 +204,121 @@ Java后端技术体系
 - TreeMap
 - Properties
 
-######## Collections
+ Collections
 
-###### 泛型
-
-
-
-######## 泛型语法
-######## 自定义泛型
-########## 泛型类
-########## 泛型接口
-########## 泛型方法
-######## 泛型继承和通配符
-
-###### 线程（基础）
+ 泛型
 
 
 
-######## 线程介绍
+ 泛型语法
+ 自定义泛型
+ 泛型类
+ 泛型接口
+ 泛型方法
+ 泛型继承和通配符
 
-######## `线程使用`
+ 线程（基础）
+
+
+
+ 线程介绍
+
+ `线程使用`
 
 - 继承Thread
 - 实现Runnable
 
-######## 线程方法
-######## 线程生命周期
+ 线程方法
+ 线程生命周期
 
-######## `Synchronized`
+ `Synchronized`
 
-######## `互斥锁`
+ `互斥锁`
 
-######## 死锁
+ 死锁
 
-###### IO流
+ IO流
 
 
 
-######## 文件
+ 文件
 
 - 概念
 - 常用操作
 
 
-######## IO流原理及流的分类
+ IO流原理及流的分类
 
-######## 节点流和处理流
+ 节点流和处理流
 
-######## `输入流`
+ `输入流`
 
-########## InputStream
+ InputStream
 
 - FileInputStream
 - BufferedInputStream
 - ObjectInputStream
 
 
-########## Reader
+ Reader
 
 - FileReader
 - BufferedReader
 - InputStreamReader
 
-######## `输出流`
+ `输出流`
 
-########## OutputStream
+ OutputStream
 
 - FileOutputStream
 - BufferedOutputStream
 - ObjectOutputStream
 
 
-########## Writer
+ Writer
 
 - FileWriter
 - BufferedWriter
 - OutputStreamWriter
 
-######## Properties类
+ Properties类
 
 
-###### 坦克大战
+ 坦克大战
 
 
 
 #### 第三阶段：分析需求，代码实现能力
 
-###### 网络编程
+ 网络编程
 
 
 
-######## 网络基础
+ 网络基础
 
-######## InetAddress
+ InetAddress
 
-######## Socket
+ Socket
 
-######## `TCP编程`
+ `TCP编程`
 
 - 字节流
 
 - 字符流
 
-######## UDP编程
+ UDP编程
 
-###### 反射
+ 反射
 
 
 
-######## 反射机制
+ 反射机制
 
-######## Class类
+ Class类
 
-######## 类的加载
+ 类的加载
 
-######## `反射获取类的结构信息`
+ `反射获取类的结构信息`
 
 - Class
 - Field
@@ -327,40 +327,40 @@ Java后端技术体系
 - 访问属性
 - 访问方法
 
-###### mysql基础
+ mysql基础
 
 
 
 后面讲高级篇（优化、集群和项目实战）
 
-######## mysql安装和配置
-######## 数据库
+ mysql安装和配置
+ 数据库
 
 - 创建
 - 查看、删除数据库
 - 备份恢复数据库
 
 
-######## 表
+ 表
 
 - 创建
 - 删除
 - 修改
 
-######## `mysql数据类型`
+ `mysql数据类型`
 
-######## `CRUD`
+ `CRUD`
 
-########## insert
-########## update
-########## delete
-########## select
+ insert
+ update
+ delete
+ select
 
 - 单表
 - 多表
 
 
-######## `函数`
+ `函数`
 
 - 统计函数
 - 时间日期
@@ -368,11 +368,11 @@ Java后端技术体系
 - 数学函数
 - 流程控制
 
-######## 内连接
+ 内连接
 
-######## 外连接
+ 外连接
 
-######## 约束
+ 约束
 
 - not null
 - primary key
@@ -381,37 +381,37 @@ Java后端技术体系
 - check
 - 自增长
 
-######## 索引
+ 索引
 
 - 主键索引
 - 唯一索引（UNIQUE）
 - 普通索引（INDEX）
 - 全文索引
 
-######## 事务
+ 事务
 
-###### JDBC和连接池
+ JDBC和连接池
 
 
 
-######## JDBC概述
+ JDBC概述
 
-######## JDBC快速入门
+ JDBC快速入门
 
-######## `JDBC API`
+ `JDBC API`
 
 - PreparedStatement
 - DriverManager
 - Statement
 - ResultSet
 
-######## JDBCUtils
+ JDBCUtils
 
-######## `事务`
+ `事务`
 
-######## 批处理
+ 批处理
 
-######## `连接池`
+ `连接池`
 
 - DataSource
 - DBCP
@@ -420,27 +420,27 @@ Java后端技术体系
 - BoneCP
 - `Druid`
 
-######## Apache-DBUtils
+ Apache-DBUtils
 
-######## `DAO增删改查-BasicDao`
+ `DAO增删改查-BasicDao`
 
-###### 正则表达式
+ 正则表达式
 
 
 
-######## 快速入门
+ 快速入门
 
-######## 正则表达式基本语法
+ 正则表达式基本语法
 
-######## `三个常用类`
+ `三个常用类`
 
 - Pattern
 - Matcher
 - PatternSyntaxException
 
-######## `分组、捕获、反向引用`
+ `分组、捕获、反向引用`
 
-######## `元字符`
+ `元字符`
 
 - 限定符
 - 选择匹配符
@@ -449,13 +449,13 @@ Java后端技术体系
 - 字符匹配符
 - 定位符
 
-######## 应用实例
+ 应用实例
 
-###### java 8 java11 新特性
+ java 8 java11 新特性
 
 
 
-######## java8新特性
+ java8新特性
 
 - `lambda`
 - `函数式接口`
@@ -469,9 +469,9 @@ Java后端技术体系
 - Optional
 - 新时间日期API
 
-######## java11新特性
+ java11新特性
 
-########## 代码层面新特性
+ 代码层面新特性
 
 - JShell
 - `类型推断`
@@ -482,7 +482,7 @@ Java后端技术体系
 - InputStream增强API
 - 标准Java异步HTTP客户
 
-########## 其他新特性
+ 其他新特性
 
 - 简化的编译运行
 - 支持Unicode 10
@@ -495,17 +495,17 @@ Java后端技术体系
 - 最新HTTPS安全协议TLS 1.3
 - 移除和废弃的内容
 
-###### 项目
+ 项目
 
 
 
-###### 骑士周游问题
+ 骑士周游问题
 
 算法、优化
 
-######## 满汉楼
+ 满汉楼
 
-######## 多用户通信系统
+ 多用户通信系统
 
 推消息、私聊、发文件
 
