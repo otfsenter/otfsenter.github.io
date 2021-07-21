@@ -13,7 +13,7 @@
 * 问题：`https://idlepig.cn`不能重定向到`https://www.idlepig.cn/index.html`
 
 
-~~因为只有`www.idlepig.cn`设置了CDN，而`idlepig.cn`是通过域名解析设置显性URL和@(主机记录)来实现的重定向的，所以`https://idlepig.cn`重定向暂时**没实现**~~
+<s>因为只有`www.idlepig.cn`设置了CDN，而`idlepig.cn`是通过域名解析设置显性URL和@(主机记录)来实现的重定向的，所以`https://idlepig.cn`重定向暂时**没实现**</s>
 
 解决方法：
 
