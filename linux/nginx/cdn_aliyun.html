@@ -113,6 +113,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#html">修改html文件目录权限</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">阿里云全站动态加速</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id3">阿里云域名解析</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">正常重定向的流程</a></li>
 </ul>
 </li>
 </ul>
@@ -220,7 +221,9 @@
 <ul class="simple">
 <li><p>问题：<code class="docutils literal notranslate"><span class="pre">https://idlepig.cn</span></code>不能重定向到<code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn/index.html</span></code></p></li>
 </ul>
-<p>因为只有<code class="docutils literal notranslate"><span class="pre">www.idlepig.cn</span></code>设置了CDN，而<code class="docutils literal notranslate"><span class="pre">idlepig.cn</span></code>是通过域名解析设置显性URL和&#64;(主机记录)来实现的重定向的，所以<code class="docutils literal notranslate"><span class="pre">https://idlepig.cn</span></code>重定向暂时<strong>没实现</strong></p>
+<p>~~因为只有<code class="docutils literal notranslate"><span class="pre">www.idlepig.cn</span></code>设置了CDN，而<code class="docutils literal notranslate"><span class="pre">idlepig.cn</span></code>是通过域名解析设置显性URL和&#64;(主机记录)来实现的重定向的，所以<code class="docutils literal notranslate"><span class="pre">https://idlepig.cn</span></code>重定向暂时<strong>没实现</strong>~~</p>
+<p>解决方法：</p>
+<p><a class="reference external" href="https://netcn.console.aliyun.com/core/host/list2">万网主机基础设置里面配置301</a></p>
 </div>
 <div class="section" id="etc-nginx-nginx-conf">
 <h2>修改<code class="docutils literal notranslate"><span class="pre">/etc/nginx/nginx.conf</span></code>文件<a class="headerlink" href="#etc-nginx-nginx-conf" title="永久链接至标题">¶</a></h2>
@@ -291,6 +294,13 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="id4">
+<h2>正常重定向的流程<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">http://idlepig.cn/</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">https://idlepig.cn/</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn/</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">https://idlepig.cn/</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn/</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">http://www.idlepig.cn/</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn/</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn/</span></code> -&gt; web page</p>
 </div>
 </div>
 

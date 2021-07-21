@@ -69,3 +69,11 @@ server 80里面需要修改的如下
 ```
 rewrite ^(.*)$  https://$host$1 permanent;
 ```
+
+or
+
+```
+if ($scheme = https) {
+    return 301 https://www.idlepig.cn$request_uri;
+}
+```

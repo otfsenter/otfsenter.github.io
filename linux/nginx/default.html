@@ -259,6 +259,12 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rewrite ^(.*)$  https://$host$1 permanent;
 </pre></div>
 </div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if ($scheme = https) {
+    return 301 https://www.idlepig.cn$request_uri;
+}
+</pre></div>
+</div>
 </div>
 </div>
 

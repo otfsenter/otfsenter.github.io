@@ -12,7 +12,12 @@
 
 * 问题：`https://idlepig.cn`不能重定向到`https://www.idlepig.cn/index.html`
 
-因为只有`www.idlepig.cn`设置了CDN，而`idlepig.cn`是通过域名解析设置显性URL和@(主机记录)来实现的重定向的，所以`https://idlepig.cn`重定向暂时**没实现**
+
+~~因为只有`www.idlepig.cn`设置了CDN，而`idlepig.cn`是通过域名解析设置显性URL和@(主机记录)来实现的重定向的，所以`https://idlepig.cn`重定向暂时**没实现**~~
+
+解决方法：
+
+[万网主机基础设置里面配置301](https://netcn.console.aliyun.com/core/host/list2)
 
 ## 修改`/etc/nginx/nginx.conf`文件
 
@@ -68,3 +73,18 @@ location / {
 | -------- | -------- | ------------- | --------------------------------- | ------- |
 | www      | CNAME    | 默认          | www.idlepig.cn.w.cdngslb.com      | 10 分钟 |
 | @        | 显性URL  | 默认          | https://www.idlepig.cn/index.html | 10 分钟 |
+
+
+## 正常重定向的流程
+
+`http://idlepig.cn/` -> `https://idlepig.cn/`-> `https://www.idlepig.cn/`
+
+`https://idlepig.cn/`-> `https://www.idlepig.cn/`
+
+`http://www.idlepig.cn/` -> `https://www.idlepig.cn/`
+
+`https://www.idlepig.cn/` -> web page
+
+
+
+
