@@ -11,3 +11,4 @@ SRE
    structure_ops_system
    add_hosts
    alarm
+   chatops
