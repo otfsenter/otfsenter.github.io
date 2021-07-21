@@ -216,7 +216,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">http://www.idlepig.cn</span></code>可以重定向到<code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn</span></code></p></li>
 </ul>
-<p>这个效果是在阿里云全站加速CDN里面设置到重定向</p>
+<p>这个效果是在阿里云全站加速CDN里面设置重定向</p>
 <ul class="simple">
 <li><p>问题：<code class="docutils literal notranslate"><span class="pre">https://idlepig.cn</span></code>不能重定向到<code class="docutils literal notranslate"><span class="pre">https://www.idlepig.cn/index.html</span></code></p></li>
 </ul>
@@ -267,10 +267,30 @@
 <div class="section" id="id3">
 <h2>阿里云域名解析<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p><a class="reference external" href="https://dns.console.aliyun.com/#/dns/domainList">地址</a></p>
-<p>主机记录|记录类型|解析路线(isp)|记录值|TTL
--|-|-|-|-|-|-
-www|CNAME|默认|www.idlepig.cn.w.cdngslb.com|10 分钟
-&#64;|显性URL|默认|https://www.idlepig.cn/index.html</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>主机记录</p></th>
+<th class="head"><p>记录类型</p></th>
+<th class="head"><p>解析路线(isp)</p></th>
+<th class="head"><p>记录值</p></th>
+<th class="head"><p>TTL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>www</p></td>
+<td><p>CNAME</p></td>
+<td><p>默认</p></td>
+<td><p>www.idlepig.cn.w.cdngslb.com</p></td>
+<td><p>10 分钟</p></td>
+</tr>
+<tr class="row-odd"><td><p>&#64;</p></td>
+<td><p>显性URL</p></td>
+<td><p>默认</p></td>
+<td><p>https://www.idlepig.cn/index.html</p></td>
+<td><p>10 分钟</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

@@ -8,7 +8,7 @@
 
 * `http://www.idlepig.cn`可以重定向到`https://www.idlepig.cn`
 
-这个效果是在阿里云全站加速CDN里面设置到重定向
+这个效果是在阿里云全站加速CDN里面设置重定向
 
 * 问题：`https://idlepig.cn`不能重定向到`https://www.idlepig.cn/index.html`
 
@@ -64,7 +64,7 @@ location / {
 
 [地址](https://dns.console.aliyun.com/#/dns/domainList)
 
-主机记录|记录类型|解析路线(isp)|记录值|TTL
--|-|-|-|-|-|-
-www|CNAME|默认|www.idlepig.cn.w.cdngslb.com|10 分钟
-@|显性URL|默认|https://www.idlepig.cn/index.html
+| 主机记录 | 记录类型 | 解析路线(isp) | 记录值                            | TTL     |
+| -------- | -------- | ------------- | --------------------------------- | ------- |
+| www      | CNAME    | 默认          | www.idlepig.cn.w.cdngslb.com      | 10 分钟 |
+| @        | 显性URL  | 默认          | https://www.idlepig.cn/index.html | 10 分钟 |
