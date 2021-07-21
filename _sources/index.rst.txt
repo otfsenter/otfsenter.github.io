@@ -4,7 +4,7 @@
 
     <div id="image" style="display: inline-block">
         <a href="https://www.jetbrains.com/?from=idlepig.cn">
-            <img src="http://www.idlepig.cn/_static/jetbrains.png"
+            <img src="https://www.idlepig.cn/jetbrains.png"
                  height="45px" width="50px" alt="jetbrains">
         </a>
     </div>
@@ -26,6 +26,7 @@ Python、Linux运维、自动化
 
     0-todo
     apple
+    computer
     ansible/index
     books
     c
@@ -51,7 +52,7 @@ Python、Linux运维、自动化
 
 .. raw:: html
 
-    <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzU1NTY5MjMyNg==&mid=2247483848&idx=1&sn=25fcac6d45e01c65a8d688aa7c6f1202&chksm=fbd13981cca6b09796c0f8680be8fefc43f88e6402d10322750bb18d0c4b52ceeb0af2232ddb&token=994548522&lang=zh_CN#rd"> <img src="http://www.idlepig.cn/_static/wechat.jpeg" alt="wechat"> </a>
+    <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzU1NTY5MjMyNg==&mid=2247483848&idx=1&sn=25fcac6d45e01c65a8d688aa7c6f1202&chksm=fbd13981cca6b09796c0f8680be8fefc43f88e6402d10322750bb18d0c4b52ceeb0af2232ddb&token=994548522&lang=zh_CN#rd"> <img src="https://www.idlepig.cn/wechat.jpeg" alt="wechat"> </a>
 
 
 .. raw:: html
