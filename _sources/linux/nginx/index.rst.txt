@@ -10,3 +10,4 @@ nginx
     update_ssl_certificate
     config_cdn
     default
+    cdn_aliyun
