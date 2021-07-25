@@ -9,6 +9,7 @@ Sphinx文档
     
     attention
     locale
+    readthedocs
     md
     pandoc
     vscode

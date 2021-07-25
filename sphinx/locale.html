@@ -39,7 +39,7 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="include markdown" href="md.html" />
+    <link rel="next" title="readthedocs" href="readthedocs.html" />
     <link rel="prev" title="需要注意的地方" href="attention.html" /> 
 </head>
 
@@ -107,10 +107,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">locale</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#common-usage">common usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">官方链接</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#build-different-language-web-page">build different language web page</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#readthedocs">在readthedocs上面设置中英文</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="readthedocs.html">readthedocs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="md.html">include markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandoc.html">pandoc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vscode.html">vscode</a></li>
@@ -213,28 +212,6 @@
 <p>https://www.sphinx-doc.org/en/master/usage/advanced/intl.html</p>
 <p>https://docs.readthedocs.io/en/stable/localization.html</p>
 </div>
-<div class="section" id="build-different-language-web-page">
-<h2>build different language web page<a class="headerlink" href="#build-different-language-web-page" title="永久链接至标题">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="o">-</span><span class="n">e</span> <span class="n">SPHINXOPTS</span><span class="o">=</span><span class="s2">&quot;-D language=&#39;zh_CN&#39;&quot;</span> <span class="n">html</span>
-<span class="n">make</span> <span class="o">-</span><span class="n">e</span> <span class="n">SPHINXOPTS</span><span class="o">=</span><span class="s2">&quot;-D language=&#39;en&#39;&quot;</span> <span class="n">html</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="readthedocs">
-<h2>在readthedocs上面设置中英文<a class="headerlink" href="#readthedocs" title="永久链接至标题">¶</a></h2>
-<p><strong>先手动导入英文版本</strong></p>
-<p>项目名称：idlepig</p>
-<p>语言：英语</p>
-<p>branch：main</p>
-<p><strong>再导入中文版本</strong></p>
-<p>项目名称：idlepig_zh-CN</p>
-<p>语言：简体中文</p>
-<p>branch：main</p>
-<p>然后两个一起build</p>
-<p>分别看一下两个文档是否正常</p>
-<p>然后在英文文档项目里面设置翻译项：选择简体中文的版本</p>
-<p><strong>这样最后只能在中文文档里面看到翻译选项，英文的看不到</strong></p>
-</div>
 </div>
 
 
@@ -243,7 +220,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="md.html" class="btn btn-neutral float-right" title="include markdown" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="readthedocs.html" class="btn btn-neutral float-right" title="readthedocs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="attention.html" class="btn btn-neutral float-left" title="需要注意的地方" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
