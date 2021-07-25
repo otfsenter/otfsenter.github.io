@@ -10,6 +10,6 @@ Sphinx文档
     attention
     locale
     readthedocs
-    md
+    markdown
     pandoc
     vscode
