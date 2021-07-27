@@ -75,3 +75,6 @@ convert markdown to docx by pandoc
       word_document:
         pandoc_args: ["-o", "0-todo.docx", "-f", "markdown", "-s", "0-todo.md", "--reference-doc", "mystyles.docx"]
     ---
+
+
+mystyles.docx 在 百度云/resume/resume
