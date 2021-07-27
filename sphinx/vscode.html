@@ -111,6 +111,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">vscode</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#start-vscode-on-windows">start vscode on windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#extensions-paste-images">extensions: paste images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prince-xml-font-settings">prince xml font settings</a></li>
 </ul>
 </li>
 </ul>
@@ -202,6 +203,26 @@
 <h2>extensions: paste images<a class="headerlink" href="#extensions-paste-images" title="永久链接至标题">¶</a></h2>
 <p>Paste Image: Path</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${currentFileDir}/assets/${currentFileNameWithoutExt}
+</pre></div>
+</div>
+</div>
+<div class="section" id="prince-xml-font-settings">
+<h2>prince xml font settings<a class="headerlink" href="#prince-xml-font-settings" title="永久链接至标题">¶</a></h2>
+<p>reference url</p>
+<p>https://github.com/shd101wyy/markdown-preview-enhanced/blob/master/docs/customize-css.md</p>
+<p>To customize css for your markdown file, <code class="docutils literal notranslate"><span class="pre">cmd-shift-p</span></code> then run <code class="docutils literal notranslate"><span class="pre">Markdown</span> <span class="pre">Preview</span> <span class="pre">Enhanced:</span> <span class="pre">Customize</span> <span class="pre">Css</span></code> command.</p>
+<p>The style.less file will open, and you can override existing style like this:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">style.less</span></code> file is located at <code class="docutils literal notranslate"><span class="pre">~/.mume/style.less</span></code></p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="o">.</span><span class="n">markdown</span><span class="o">-</span><span class="n">preview</span><span class="o">.</span><span class="n">markdown</span><span class="o">-</span><span class="n">preview</span> <span class="p">{</span>
+
+  <span class="o">//</span> <span class="n">custom</span> <span class="n">prince</span> <span class="n">pdf</span> <span class="n">export</span> <span class="n">style</span>
+  <span class="o">&amp;.</span><span class="n">prince</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span> <span class="s2">&quot;PingFang SC&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
 </pre></div>
 </div>
 </div>
