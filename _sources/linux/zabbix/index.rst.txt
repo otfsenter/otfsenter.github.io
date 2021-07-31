@@ -8,3 +8,4 @@ zabbix
 
     zabbix
     gen_password
+    zabbix_md
