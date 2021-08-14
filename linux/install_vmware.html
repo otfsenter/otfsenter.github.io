@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Monitor software &mdash; IdlePig  文档</title>
+  <title>install centos in vmware &mdash; IdlePig  文档</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="nginx" href="nginx/index.html" />
-    <link rel="prev" title="k8s" href="docker/k8s.html" /> 
+    <link rel="next" title="MySQL" href="../mysql/index.html" />
+    <link rel="prev" title="commands" href="commands.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,7 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Linux</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="docker/index.html">Docker</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Monitor software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitor_software.html">Monitor software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nginx/index.html">nginx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="send_key/send_key.html">Send key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="work.html">Work</a></li>
@@ -109,7 +109,14 @@
 <li class="toctree-l2"><a class="reference internal" href="telnet_multi_ip_port.html">telnet多个IP和端口</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prometheus/index.html">Prometheus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html">commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_vmware.html">install centos in vmware</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">install centos in vmware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">选择固件类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">进入自定义设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">启动虚拟机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">选择预安装的软件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">网络配置</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mysql/index.html">MySQL</a></li>
@@ -172,13 +179,13 @@
         
           <li><a href="index.html">Linux</a> &raquo;</li>
         
-      <li>Monitor software</li>
+      <li>install centos in vmware</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/linux/monitor_software.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/linux/install_vmware.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -191,14 +198,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="monitor-software">
-<span id="linux-monitor-software"></span><h1>Monitor software<a class="headerlink" href="#monitor-software" title="永久链接至标题">¶</a></h1>
-<ul class="simple">
-<li><p>zabbix</p></li>
-<li><p>docker</p></li>
-<li><p>gitlab</p></li>
-<li><p>superset</p></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="install-centos-in-vmware">
+<h1>install centos in vmware<a class="headerlink" href="#install-centos-in-vmware" title="永久链接至标题">¶</a></h1>
+<p>官方安装vmware，</p>
+<p>下载centos的iso文件</p>
+<p>选择自定义安装</p>
+<div class="section" id="id1">
+<h2>选择固件类型<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>传统BIOS</p>
+</div>
+<div class="section" id="id2">
+<h2>进入自定义设置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>处理器和内存</p>
+<p>硬盘</p>
+</div>
+<div class="section" id="id3">
+<h2>启动虚拟机<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>如果有权限提示，记得打开权限允许，否则可能会报错</p>
+<p>macos</p>
+<p>系统设置 -&gt; 安全与隐私 -&gt; 通用 -&gt; 把vmware的设置放开</p>
+</div>
+<div class="section" id="id4">
+<h2>选择预安装的软件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>软件安装：选择最小化，把需要的东西安装即可</p>
+<p>安装位置：自动选择</p>
+<p>设置root密码</p>
+<p>开始安装</p>
+</div>
+<div class="section" id="id5">
+<h2>网络配置<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>vmware fusion 虚拟机 网络适配器 桥接模式 选择网线或者wifi</p>
+<p>选择完之后，重启虚拟机，然后运行</p>
+<p>dhclient</p>
+<p>来分配一个可用的IP</p>
+<p>接下来需要把IP固定下来</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">network</span><span class="o">-</span><span class="n">scripts</span><span class="o">/</span><span class="n">ifcfg</span><span class="o">-</span><span class="n">ens33</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BOOTPROTO</span><span class="o">=</span><span class="n">static</span>
+<span class="n">ONBOOT</span><span class="o">=</span><span class="n">yes</span>
+<span class="n">IPADDR</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">2.6</span>
+<span class="n">NETMASK</span><span class="o">=</span><span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+<span class="n">GATEWAY</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">2.1</span>
+<span class="n">DNS1</span><span class="o">=</span><span class="mf">119.29</span><span class="o">.</span><span class="mf">29.29</span>
+</pre></div>
+</div>
+<p>编辑完成，重启网络设置即可</p>
+<p>centos 7</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">restart</span> <span class="n">network</span><span class="o">.</span><span class="n">service</span>
+</pre></div>
+</div>
+<p>centos 8</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">start</span> <span class="n">NetworkManager</span><span class="o">.</span><span class="n">service</span> 
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -207,8 +261,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="nginx/index.html" class="btn btn-neutral float-right" title="nginx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="docker/k8s.html" class="btn btn-neutral float-left" title="k8s" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../mysql/index.html" class="btn btn-neutral float-right" title="MySQL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="commands.html" class="btn btn-neutral float-left" title="commands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -16,6 +16,7 @@ Linux
     telnet_multi_ip_port
     prometheus/index
     commands
+    install_vmware
 
 
 
