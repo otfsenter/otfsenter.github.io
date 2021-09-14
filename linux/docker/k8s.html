@@ -106,6 +106,10 @@
 <li class="toctree-l3"><a class="reference internal" href="gitlab.html">gitlab</a></li>
 <li class="toctree-l3"><a class="reference internal" href="k8s_course.html">课程目录</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">k8s</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tutorial-address-1-16-19">tutorial address: 1:16:19</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#insall-minikube">insall minikube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-deployment">create deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-deployment-from-yaml-file">create deployment from yaml file</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id1">阿里云镜像源安装K8S</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">从零开始部署k8s</a></li>
 </ul>
@@ -191,7 +195,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/linux/docker/k8s.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/linux/docker/k8s.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -204,15 +208,121 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="k8s">
-<span id="linux-docker-k8s"></span><h1>k8s<a class="headerlink" href="#k8s" title="永久链接至标题">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="k8s">
+<h1>k8s<a class="headerlink" href="#k8s" title="永久链接至标题">¶</a></h1>
+<div class="section" id="tutorial-address-1-16-19">
+<h2>tutorial address: 1:16:19<a class="headerlink" href="#tutorial-address-1-16-19" title="永久链接至标题">¶</a></h2>
+<p>https://www.youtube.com/watch?v=X48VuDVv0do&amp;t=6211s</p>
+</div>
+<div class="section" id="insall-minikube">
+<h2>insall minikube<a class="headerlink" href="#insall-minikube" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">update</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">hyperkit</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">minikube</span>
+
+<span class="n">brew</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">machine</span><span class="o">-</span><span class="n">driver</span><span class="o">-</span><span class="n">hyperkit</span>
+<span class="n">sudo</span> <span class="n">chown</span> <span class="n">root</span><span class="p">:</span><span class="n">wheel</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">machine</span><span class="o">-</span><span class="n">driver</span><span class="o">-</span><span class="n">hyperkit</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">machine</span><span class="o">-</span><span class="n">driver</span><span class="o">-</span><span class="n">hyperkit</span>
+<span class="n">sudo</span> <span class="n">chmod</span> <span class="n">u</span><span class="o">+</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">machine</span><span class="o">-</span><span class="n">driver</span><span class="o">-</span><span class="n">hyperkit</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">machine</span><span class="o">-</span><span class="n">driver</span><span class="o">-</span><span class="n">hyperkit</span>
+
+<span class="n">minikube</span> <span class="n">start</span> <span class="o">--</span><span class="n">vm</span><span class="o">-</span><span class="n">driver</span><span class="o">=</span><span class="n">hyperkit</span>
+
+<span class="n">minikube</span> <span class="n">status</span>
+<span class="n">kubectl</span> <span class="n">version</span>
+<span class="n">kubectl</span> <span class="n">get</span> <span class="n">nodes</span>
+<span class="n">kubectl</span> <span class="n">get</span> <span class="n">pod</span>
+<span class="n">kubectl</span> <span class="n">get</span> <span class="n">service</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-deployment">
+<h2>create deployment<a class="headerlink" href="#create-deployment" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">create</span> <span class="n">deployment</span> <span class="o">-</span><span class="n">h</span>
+<span class="n">kubectl</span> <span class="n">create</span> <span class="n">deployment</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deploy</span> <span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">nginx</span>
+<span class="n">kubectl</span> <span class="n">get</span> <span class="n">deployment</span>
+<span class="n">kubectl</span> <span class="n">get</span> <span class="n">replicaset</span>
+<span class="n">kubectl</span> <span class="n">get</span> <span class="n">node</span>
+
+<span class="n">kubectl</span> <span class="n">edit</span> <span class="n">deployment</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deploy</span>
+
+<span class="n">kubectl</span> <span class="n">create</span> <span class="n">deployment</span> <span class="n">mongo</span><span class="o">-</span><span class="n">depl</span> <span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">mongo</span>
+<span class="n">kubectl</span> <span class="n">describe</span> <span class="n">pod</span> <span class="n">mongo</span><span class="o">-</span><span class="n">depl</span><span class="o">-</span><span class="mi">5</span><span class="n">fd6b7d4b4</span><span class="o">-</span><span class="mi">8</span><span class="n">qxpz</span>
+<span class="n">kubectl</span> <span class="n">logs</span> <span class="n">mongo</span><span class="o">-</span><span class="n">depl</span><span class="o">-</span><span class="mi">5</span><span class="n">fd6b7d4b4</span><span class="o">-</span><span class="mi">8</span><span class="n">qxpz</span>
+<span class="n">kubectl</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">mongo</span><span class="o">-</span><span class="n">depl</span><span class="o">-</span><span class="mi">5</span><span class="n">fd6b7d4b4</span><span class="o">-</span><span class="mi">8</span><span class="n">qxpz</span> <span class="o">--</span> <span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+
+<span class="n">kubectl</span> <span class="n">delete</span> <span class="n">deployment</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deploy</span>
+<span class="n">kubectl</span> <span class="n">delete</span> <span class="n">deployment</span> <span class="n">mongo</span><span class="o">-</span><span class="n">depl</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-deployment-from-yaml-file">
+<h2>create deployment from yaml file<a class="headerlink" href="#create-deployment-from-yaml-file" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">apply</span> <span class="o">-</span><span class="n">f</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deployment</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>nginx-deployment.yaml</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apiVersion</span><span class="p">:</span> <span class="n">apps</span><span class="o">/</span><span class="n">v1</span>
+<span class="n">kind</span><span class="p">:</span> <span class="n">Deployment</span>
+<span class="n">metadata</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deployment</span>
+  <span class="n">labels</span><span class="p">:</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">nginx</span>
+<span class="n">spec</span><span class="p">:</span>
+  <span class="n">replicas</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="n">selector</span><span class="p">:</span>
+    <span class="n">matchLabels</span><span class="p">:</span>
+      <span class="n">app</span><span class="p">:</span> <span class="n">nginx</span>
+  <span class="n">template</span><span class="p">:</span>
+    <span class="n">metadata</span><span class="p">:</span>
+      <span class="n">labels</span><span class="p">:</span>
+        <span class="n">app</span><span class="p">:</span> <span class="n">nginx</span>
+    <span class="n">spec</span><span class="p">:</span>
+      <span class="n">containers</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">nginx</span>
+        <span class="n">image</span><span class="p">:</span> <span class="n">nginx</span><span class="p">:</span><span class="mf">1.16</span>
+        <span class="n">ports</span><span class="p">:</span>
+        <span class="o">-</span> <span class="n">containerPort</span><span class="p">:</span> <span class="mi">8080</span>
+</pre></div>
+</div>
+<p>nginx-service.yaml</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+<span class="n">kind</span><span class="p">:</span> <span class="n">Service</span>
+<span class="n">metadata</span><span class="p">:</span>
+  <span class="n">name</span><span class="p">:</span> <span class="n">nginx</span><span class="o">-</span><span class="n">service</span>
+<span class="n">spec</span><span class="p">:</span>
+  <span class="n">selector</span><span class="p">:</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">nginx</span>
+  <span class="n">ports</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">protocal</span><span class="p">:</span> <span class="n">TCP</span>
+      <span class="n">port</span><span class="p">:</span> <span class="mi">80</span>
+      <span class="n">targetPort</span><span class="p">:</span> <span class="mi">8080</span>
+</pre></div>
+</div>
+<p><strong>get service status</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">get</span> <span class="n">service</span>
+<span class="n">kubectl</span> <span class="n">describe</span> <span class="n">service</span> <span class="n">nginx</span><span class="o">-</span><span class="n">service</span>
+</pre></div>
+</div>
+<p><strong>get ip</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">get</span> <span class="n">pod</span> <span class="o">-</span><span class="n">o</span> <span class="n">wide</span>
+</pre></div>
+</div>
+<p><strong>get actual nginx-deployment yaml file</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">get</span> <span class="n">deployment</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deployment</span> <span class="o">-</span><span class="n">o</span> <span class="n">yaml</span>
+</pre></div>
+</div>
+<p><strong>delete deployment and service after test</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">delete</span> <span class="o">-</span><span class="n">f</span> <span class="n">nginx</span><span class="o">-</span><span class="n">deployment</span><span class="o">.</span><span class="n">yaml</span> 
+<span class="n">kubectl</span> <span class="n">delete</span> <span class="o">-</span><span class="n">f</span> <span class="n">nginx</span><span class="o">-</span><span class="n">service</span><span class="o">.</span><span class="n">yaml</span> 
+</pre></div>
+</div>
+</div>
 <div class="section" id="id1">
 <h2>阿里云镜像源安装K8S<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://zhuanlan.zhihu.com/p/59048502">https://zhuanlan.zhihu.com/p/59048502</a></p>
+<p>https://zhuanlan.zhihu.com/p/59048502</p>
 </div>
 <div class="section" id="id2">
 <h2>从零开始部署k8s<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://www.vickey-wu.com/posts/deploy-k8s-by-kubeadm/">https://www.vickey-wu.com/posts/deploy-k8s-by-kubeadm/</a></p>
+<p>https://www.vickey-wu.com/posts/deploy-k8s-by-kubeadm/</p>
 </div>
 </div>
 

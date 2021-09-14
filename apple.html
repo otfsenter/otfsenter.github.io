@@ -88,6 +88,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="0-todo.html">TODO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">apple</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#brew">更换brew镜像</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hide-your-computer-name-in-zsh-bash">Hide your computer name in ZSH/BASH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">关闭登陆界面多个用户登陆</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">强开随航</a></li>
@@ -187,6 +188,47 @@
             
   <div class="tex2jax_ignore mathjax_ignore section" id="apple">
 <h1>apple<a class="headerlink" href="#apple" title="永久链接至标题">¶</a></h1>
+<div class="section" id="brew">
+<h2>更换brew镜像<a class="headerlink" href="#brew" title="永久链接至标题">¶</a></h2>
+<p>科大真香实例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+
+git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
+git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+
+if [ $SHELL = &quot;/bin/bash&quot; ] # 如果你的是bash
+then 
+    echo &#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/&#39; &gt;&gt; ~/.bash_profile
+    source ~/.bash_profile
+elif [ $SHELL = &quot;/bin/zsh&quot; ] # 如果用的shell 是zsh 的话
+then
+    echo &#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/&#39; &gt;&gt; ~/.zshrc
+    source ~/.zshrc
+fi
+
+brew update
+</pre></div>
+</div>
+<p>如果需要恢复原有镜像源的话（国内镜像源突然不能用了或版本不够新）</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">brew</span><span class="o">.</span><span class="n">git</span>
+
+<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo homebrew/core)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span><span class="o">.</span><span class="n">git</span>
+
+<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo homebrew/cask)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">cask</span><span class="o">.</span><span class="n">git</span>
+
+<span class="c1"># 找到 ~/.bash_profile 或者 ~/.zshrc 中的HOMEBREW_BOTTLE_DOMAIN 一行删除</span>
+
+<span class="n">brew</span> <span class="n">update</span>
+</pre></div>
+</div>
+<p>如果不行的话可以依次尝试以下命令</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">doctor</span>
+<span class="n">brew</span> <span class="n">update</span><span class="o">-</span><span class="n">reset</span>
+<span class="n">brew</span> <span class="n">update</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="hide-your-computer-name-in-zsh-bash">
 <h2>Hide your computer name in ZSH/BASH<a class="headerlink" href="#hide-your-computer-name-in-zsh-bash" title="永久链接至标题">¶</a></h2>
 <p>vim .zshrc</p>

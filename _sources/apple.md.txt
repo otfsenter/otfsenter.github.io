@@ -1,6 +1,53 @@
 # apple
 
 
+## 更换brew镜像
+
+科大真香实例：
+
+```
+git -C "$(brew --repo)" remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+
+if [ $SHELL = "/bin/bash" ] # 如果你的是bash
+then 
+    echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/' >> ~/.bash_profile
+    source ~/.bash_profile
+elif [ $SHELL = "/bin/zsh" ] # 如果用的shell 是zsh 的话
+then
+    echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/' >> ~/.zshrc
+    source ~/.zshrc
+fi
+
+brew update
+```
+
+如果需要恢复原有镜像源的话（国内镜像源突然不能用了或版本不够新）
+
+```
+git -C "$(brew --repo)" remote set-url origin https://github.com/Homebrew/brew.git
+
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/Homebrew/homebrew-core.git
+
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://github.com/Homebrew/homebrew-cask.git
+
+# 找到 ~/.bash_profile 或者 ~/.zshrc 中的HOMEBREW_BOTTLE_DOMAIN 一行删除
+
+brew update
+```
+
+如果不行的话可以依次尝试以下命令
+
+```
+brew doctor
+brew update-reset
+brew update
+```
+
+
 ## Hide your computer name in ZSH/BASH
 
 vim .zshrc
