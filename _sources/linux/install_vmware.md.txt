@@ -75,7 +75,3 @@ centos 8
 ```
 systemctl start NetworkManager.service 
 ```
-
-
-
-

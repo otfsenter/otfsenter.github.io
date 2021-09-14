@@ -1,6 +1,14 @@
 # apple
 
 
+## Hide your computer name in ZSH/BASH
+
+vim .zshrc
+
+```
+export PS1="[~]$ "; clear;
+```
+
 ## 关闭登陆界面多个用户登陆
 
 

@@ -88,6 +88,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="0-todo.html">TODO</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">apple</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hide-your-computer-name-in-zsh-bash">Hide your computer name in ZSH/BASH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">关闭登陆界面多个用户登陆</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">强开随航</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">环境变量配置</a></li>
@@ -186,6 +187,13 @@
             
   <div class="tex2jax_ignore mathjax_ignore section" id="apple">
 <h1>apple<a class="headerlink" href="#apple" title="永久链接至标题">¶</a></h1>
+<div class="section" id="hide-your-computer-name-in-zsh-bash">
+<h2>Hide your computer name in ZSH/BASH<a class="headerlink" href="#hide-your-computer-name-in-zsh-bash" title="永久链接至标题">¶</a></h2>
+<p>vim .zshrc</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PS1</span><span class="o">=</span><span class="s2">&quot;[~]$ &quot;</span><span class="p">;</span> <span class="n">clear</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="id1">
 <h2>关闭登陆界面多个用户登陆<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">loginwindow</span> <span class="n">SHOWOTHERUSERS_MANAGED</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">FALSE</span>
