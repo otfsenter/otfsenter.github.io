@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -67,7 +70,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="在文档中搜索" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -96,19 +99,22 @@
 <li class="toctree-l1"><a class="reference internal" href="game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interview.html">interview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="java/java.html">java</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx/index.html">Sphinx文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sre/index.html">SRE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="website/website.html">网站相关的信息</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wechat/index.html">微信公众号</a></li>
 <li class="toctree-l1"><a class="reference internal" href="windows.html">windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zhihu/index.html">知乎</a></li>
 <li class="toctree-l1"><a class="reference internal" href="google.html">google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kibana.html">kibana</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zabbix.html">Install and configure Zabbix server for your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
             
@@ -163,7 +169,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/index.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -235,19 +241,6 @@
 <li class="toctree-l2"><a class="reference internal" href="jetbrains/index.html#idea-java-configuration">idea java configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="java/java.html">java</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id1">java基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id16">java高级</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#java-web">java web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id17">主流的框架和项目管理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id18">分布式、微服务、并行架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#devops-ci-cd">DevOps（开发运维一体化），自动化部分管理项目，解决CI/CD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id19">大数据技术</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id20">项目</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id21">大厂的高频面试题</a></li>
-<li class="toctree-l2"><a class="reference internal" href="java/java.html#id22">底层源码、内核研究</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="linux/docker/index.html">Docker</a></li>
@@ -255,16 +248,9 @@
 <li class="toctree-l2"><a class="reference internal" href="linux/nginx/index.html">nginx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linux/send_key/send_key.html">Send key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linux/work.html">Work</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux/zabbix/index.html">zabbix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linux/telnet_multi_ip_port.html">telnet多个IP和端口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linux/prometheus/index.html">Prometheus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linux/commands.html">commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="linux/install_vmware.html">install centos in vmware</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="mysql/index.html">MySQL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mysql/alter_character_set.html">修改MySQL数据库的编码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mysql/install_in_mac.html">install mysql in mac</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a><ul>
@@ -320,10 +306,6 @@
 <li class="toctree-l2"><a class="reference internal" href="website/website.html#ctrontab">ctrontab</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="wechat/index.html">微信公众号</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="wechat/re_split.html">re.split</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="windows.html">windows</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="windows.html#id2">字体</a></li>
 <li class="toctree-l2"><a class="reference internal" href="windows.html#id4">重置网络</a></li>
@@ -339,6 +321,39 @@
 <li class="toctree-l2"><a class="reference internal" href="google.html#apkpure">apkpure</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#tutorial-address-1-34-19">tutorial address: 1:34:19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#insall-minikube">insall minikube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#create-deployment">create deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#create-deployment-from-yaml-file">create deployment from yaml file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#id1">阿里云镜像源安装K8S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#id2">从零开始部署k8s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k8s.html#id3">课程</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kibana.html">kibana</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prometheus.html#install">install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zabbix.html">Install and configure Zabbix server for your platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zabbix.html#install-zabbix-repository">Install Zabbix repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zabbix.html#install-zabbix-server-frontend-agent">Install Zabbix server, frontend, agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zabbix.html#create-initial-database">Create initial database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zabbix.html#configure-the-database-for-zabbix-server">Configure the database for Zabbix server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zabbix.html#start-zabbix-server-and-agent-processes">Start Zabbix server and agent processes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zabbix.html#configure-zabbix-frontend">Configure Zabbix frontend</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html#id1">修改MySQL数据库的编码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html#install-mysql-in-mac">install mysql in mac</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mp_wechat.html">media platform for wechat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mp_wechat.html#re-split">re.split</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzU1NTY5MjMyNg==&mid=2247483848&idx=1&sn=25fcac6d45e01c65a8d688aa7c6f1202&chksm=fbd13981cca6b09796c0f8680be8fefc43f88e6402d10322750bb18d0c4b52ceeb0af2232ddb&token=994548522&lang=zh_CN#rd"> <img src="_static/wechat.jpeg" alt="wechat"> </a><br/>
@@ -350,7 +365,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="0-todo.html" class="btn btn-neutral float-right" title="TODO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="0-todo.html" class="btn btn-neutral float-right" title="TODO" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -364,11 +379,11 @@
     
     
     
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
 
 </footer>
         </div>

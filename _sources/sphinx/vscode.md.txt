@@ -1,8 +1,24 @@
 # vscode
 
+## How do I press and hold a key and have it repeat in VSCode?
+
+To disable the Apple press and hold for VSCode only, run this command in a terminal:
+
+```bash
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
+
+Then restart VSCode.
+
+To re-enable, run this command in a terminal:
+
+```bash
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool true
+```
+
 ## start vscode on windows
 
-```
+```bash
 D:\VSCode\Code.exe --disable-gpu --no-sandbox
 ```
 

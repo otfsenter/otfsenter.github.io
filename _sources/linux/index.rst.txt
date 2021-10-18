@@ -12,9 +12,7 @@ Linux
     nginx/index
     send_key/send_key
     work
-    zabbix/index
     telnet_multi_ip_port
-    prometheus/index
     commands
     install_vmware
 

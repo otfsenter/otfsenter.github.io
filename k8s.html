@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>k8s &mdash; IdlePig  文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="kibana" href="kibana.html" />
+    <link rel="prev" title="google" href="google.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IdlePig
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="0-todo.html">TODO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apple.html">apple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ansible/index.html">ansible</a></li>
+<li class="toctree-l1"><a class="reference internal" href="books.html">books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c.html">c and c++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="economy.html">Economy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="english/index.html">English</a></li>
+<li class="toctree-l1"><a class="reference internal" href="game/bns.html">bns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interview.html">interview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jetbrains/index.html">jetbrains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kenan.html">柯南主线剧情</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx/index.html">Sphinx文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sre/index.html">SRE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="website/website.html">网站相关的信息</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zhihu/index.html">知乎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="google.html">google</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">k8s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tutorial-address-1-34-19">tutorial address: 1:34:19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#insall-minikube">insall minikube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-deployment">create deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-deployment-from-yaml-file">create deployment from yaml file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">阿里云镜像源安装K8S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">从零开始部署k8s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">课程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">有道分享链接</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kibana.html">kibana</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zabbix.html">Install and configure Zabbix server for your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mp_wechat.html">media platform for wechat</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IdlePig</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>k8s</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/k8s.md.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="k8s">
+<h1>k8s<a class="headerlink" href="#k8s" title="永久链接至标题">¶</a></h1>
+<div class="section" id="tutorial-address-1-34-19">
+<h2>tutorial address: 1:34:19<a class="headerlink" href="#tutorial-address-1-34-19" title="永久链接至标题">¶</a></h2>
+<p>https://www.youtube.com/watch?v=X48VuDVv0do&amp;t=6211s</p>
+</div>
+<div class="section" id="insall-minikube">
+<h2>insall minikube<a class="headerlink" href="#insall-minikube" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew update
+brew install hyperkit
+brew install minikube
+
+brew install docker-machine-driver-hyperkit
+sudo chown root:wheel /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
+sudo chmod u+s /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
+
+minikube start --vm-driver<span class="o">=</span>hyperkit
+
+minikube status
+kubectl version
+kubectl get nodes
+kubectl get pod
+kubectl get service
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-deployment">
+<h2>create deployment<a class="headerlink" href="#create-deployment" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl create deployment -h
+kubectl create deployment nginx-deploy --image<span class="o">=</span>nginx
+kubectl get deployment
+kubectl get replicaset
+kubectl get node
+
+kubectl edit deployment nginx-deploy
+
+kubectl create deployment mongo-depl --image<span class="o">=</span>mongo
+kubectl describe pod mongo-depl-5fd6b7d4b4-8qxpz
+kubectl logs mongo-depl-5fd6b7d4b4-8qxpz
+kubectl <span class="nb">exec</span> -it mongo-depl-5fd6b7d4b4-8qxpz -- bin/bash
+
+kubectl delete deployment nginx-deploy
+kubectl delete deployment mongo-depl
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-deployment-from-yaml-file">
+<h2>create deployment from yaml file<a class="headerlink" href="#create-deployment-from-yaml-file" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f nginx-deployment.yaml
+</pre></div>
+</div>
+<p>nginx-deployment.yaml</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx-deployment</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">matchLabels</span><span class="p">:</span>
+      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+      <span class="nt">labels</span><span class="p">:</span>
+        <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.16</span>
+        <span class="nt">ports</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
+</pre></div>
+</div>
+<p>nginx-service.yaml</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx-service</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">selector</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+  <span class="nt">ports</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">protocal</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
+      <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+      <span class="nt">targetPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8080</span>
+</pre></div>
+</div>
+<p>get service status</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl get service
+kubectl describe service nginx-service
+</pre></div>
+</div>
+<p>get ip</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl get pod -o wide
+</pre></div>
+</div>
+<p>get actual nginx-deployment yaml file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl get deployment nginx-deployment -o yaml
+</pre></div>
+</div>
+<p>delete deployment and service after test</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl delete -f nginx-deployment.yaml 
+kubectl delete -f nginx-service.yaml 
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>阿里云镜像源安装K8S<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>https://zhuanlan.zhihu.com/p/59048502</p>
+</div>
+<div class="section" id="id2">
+<h2>从零开始部署k8s<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>https://www.vickey-wu.com/posts/deploy-k8s-by-kubeadm/</p>
+</div>
+<div class="section" id="id3">
+<h2>课程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h3>有道分享链接<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>文档：深入剖析k8s</p>
+<p>http://note.youdao.com/noteshare?id=c562c06a0cc20e09fd07faf1978d4f9d</p>
+<ul class="simple">
+<li><p>课前必读 (5讲)</p></li>
+</ul>
+<p>开篇词 | 打通“容器技术”的任督二脉免费</p>
+<p>01 | 预习篇 · 小鲸鱼大事记（一）：初出茅庐</p>
+<p>02 | 预习篇 · 小鲸鱼大事记（二）：崭露头角</p>
+<p>03 | 预习篇 · 小鲸鱼大事记（三）：群雄并起</p>
+<p>04 | 预习篇 · 小鲸鱼大事记（四）：尘埃落定</p>
+<ul class="simple">
+<li><p>容器技术概念入门篇 (5讲)</p></li>
+</ul>
+<p>05 | 白话容器基础（一）：从进程说开去</p>
+<p>06 | 白话容器基础（二）：隔离与限制</p>
+<p>07 | 白话容器基础（三）：深入理解容器镜像</p>
+<p>08 | 白话容器基础（四）：重新认识Docker容器</p>
+<p>09 | 从容器到容器云：谈谈Kubernetes的本质</p>
+<ul class="simple">
+<li><p>Kubernetes集群搭建与实践 (3讲)</p></li>
+</ul>
+<p>10 | Kubernetes一键部署利器：kubeadm</p>
+<p>11 | 从0到1：搭建一个完整的Kubernetes集群</p>
+<p>12 | 牛刀小试：我的第一个容器化应用</p>
+<ul class="simple">
+<li><p>容器编排与Kubernetes作业管理 (15讲)</p></li>
+</ul>
+<p>13 | 为什么我们需要Pod</p>
+<p>14 | 深入解析Pod对象（一）：基本概</p>
+<p>15 | 深入解析Pod对象（二）：使用进</p>
+<p>16 | 编排其实很简单：谈谈“控制器”模</p>
+<p>17 | 经典PaaS的记忆：作业副本与水平扩</p>
+<p>18 | 深入理解StatefulSet（一）：拓扑状</p>
+<p>19 | 深入理解StatefulSet（二）：存储状</p>
+<p>20 | 深入理解StatefulSet（三）：有状态应用实</p>
+<p>21 | 容器化守护进程的意义：DaemonSe</p>
+<p>22 | 撬动离线业务：Job与CronJo</p>
+<p>23 | 声明式API与Kubernetes编程范</p>
+<p>24 | 深入解析声明式API（一）：API对象的奥</p>
+<p>25 | 深入解析声明式API（二）：编写自定义控制</p>
+<p>26 | 基于角色的权限控制：RBA</p>
+<p>27 | 聪明的微创新：Operator工作原理解</p>
+<ul class="simple">
+<li><p>Kubernetes容器持久化存储 (4讲)</p></li>
+</ul>
+<p>28 | PV、PVC、StorageClass，这些到底在说啥</p>
+<p>29 | PV、PVC体系是不是多此一举？从本地持久化卷谈</p>
+<p>30 | 编写自己的存储插件：FlexVolume与CS</p>
+<p>31 | 容器存储实践：CSI插件编写指</p>
+<ul class="simple">
+<li><p>Kubernetes容器网络 (8讲)</p></li>
+</ul>
+<p>32 | 浅谈容器网络</p>
+<p>33 | 深入解析容器跨主机网络</p>
+<p>34 | Kubernetes网络模型与CNI网络插件</p>
+<p>35 | 解读Kubernetes三层网络方案</p>
+<p>36 | 为什么说Kubernetes只有soft multi-tenancy？</p>
+<p>37 | 找到容器不容易：Service、DNS与服务发现</p>
+<p>38 | 从外界连通Service与Service调试“三板斧”</p>
+<p>39 | 谈谈Service与Ingress</p>
+<ul class="simple">
+<li><p>Kubernetes作业调度与资源管理 (5讲)</p></li>
+</ul>
+<p>40 | Kubernetes的资源模型与资源管理</p>
+<p>41 | 十字路口上的Kubernetes默认调度器</p>
+<p>42 | Kubernetes默认调度器调度策略解析</p>
+<p>43 | Kubernetes默认调度器的优先级与抢占机制</p>
+<p>44 | Kubernetes GPU管理与Device Plugin机制</p>
+<ul class="simple">
+<li><p>Kubernetes容器运行时 (3讲)</p></li>
+</ul>
+<p>45 | 幕后英雄：SIG-Node与CRI</p>
+<p>46 | 解读 CRI 与 容器运行时</p>
+<p>47 | 绝不仅仅是安全：Kata Containers 与 gVisor</p>
+<ul class="simple">
+<li><p>Kubernetes容器监控与日志 (3讲)</p></li>
+</ul>
+<p>48 | Prometheus、Metrics Server与Kubernetes监控体系</p>
+<p>49 | Custom Metrics: 让Auto Scaling不再“食之无味”</p>
+<p>50 | 让日志无处可逃：容器日志收集与管理</p>
+<ul class="simple">
+<li><p>再谈开源与社区 (1讲)</p></li>
+</ul>
+<p>51 | 谈谈Kubernetes开源社区和未来走向</p>
+<ul class="simple">
+<li><p>答疑文章 (1讲)</p></li>
+</ul>
+<p>52 | 答疑：在问题中解决问题，在思考中产生思考</p>
+<ul class="simple">
+<li><p>特别放送 (2讲)</p></li>
+</ul>
+<p>特别放送 | 2019 年，容器技术生态会发生些什么？</p>
+<p>特别放送 | 基于 Kubernetes 的云原生应用管理，到底应该怎么做？</p>
+<ul class="simple">
+<li><p>结束语 (1讲)</p></li>
+</ul>
+<p>结束语 | Kubernetes：赢开发者赢天下</p>
+<ul class="simple">
+<li><p>结课测试 (1讲)</p></li>
+</ul>
+<p>结课测试｜这些Kubernetes的相关知识，你都掌握了吗？</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="kibana.html" class="btn btn-neutral float-right" title="kibana" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="google.html" class="btn btn-neutral float-left" title="google" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, IdlePig.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

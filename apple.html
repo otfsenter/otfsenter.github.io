@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -68,7 +71,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="在文档中搜索" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -106,19 +109,22 @@
 <li class="toctree-l1"><a class="reference internal" href="game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interview.html">interview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="java/java.html">java</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux/index.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx/index.html">Sphinx文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sre/index.html">SRE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="website/website.html">网站相关的信息</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wechat/index.html">微信公众号</a></li>
 <li class="toctree-l1"><a class="reference internal" href="windows.html">windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zhihu/index.html">知乎</a></li>
 <li class="toctree-l1"><a class="reference internal" href="google.html">google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kibana.html">kibana</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zabbix.html">Install and configure Zabbix server for your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
             
@@ -173,7 +179,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/apple.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/apple.md.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -191,61 +197,61 @@
 <div class="section" id="brew">
 <h2>更换brew镜像<a class="headerlink" href="#brew" title="永久链接至标题">¶</a></h2>
 <p>科大真香实例：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git -C &quot;$(brew --repo)&quot; remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git -C <span class="s2">&quot;</span><span class="k">$(</span>brew --repo<span class="k">)</span><span class="s2">&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/brew.git
 
-git -C &quot;$(brew --repo homebrew/core)&quot; remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+git -C <span class="s2">&quot;</span><span class="k">$(</span>brew --repo homebrew/core<span class="k">)</span><span class="s2">&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
 
-git -C &quot;$(brew --repo homebrew/cask)&quot; remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+git -C <span class="s2">&quot;</span><span class="k">$(</span>brew --repo homebrew/cask<span class="k">)</span><span class="s2">&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 
-if [ $SHELL = &quot;/bin/bash&quot; ] # 如果你的是bash
-then 
-    echo &#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/&#39; &gt;&gt; ~/.bash_profile
-    source ~/.bash_profile
-elif [ $SHELL = &quot;/bin/zsh&quot; ] # 如果用的shell 是zsh 的话
-then
-    echo &#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/&#39; &gt;&gt; ~/.zshrc
-    source ~/.zshrc
-fi
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$SHELL</span> <span class="o">=</span> <span class="s2">&quot;/bin/bash&quot;</span> <span class="o">]</span> <span class="c1"># 如果你的是bash</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/&#39;</span> &gt;&gt; ~/.bash_profile
+    <span class="nb">source</span> ~/.bash_profile
+<span class="k">elif</span> <span class="o">[</span> <span class="nv">$SHELL</span> <span class="o">=</span> <span class="s2">&quot;/bin/zsh&quot;</span> <span class="o">]</span> <span class="c1"># 如果用的shell 是zsh 的话</span>
+<span class="k">then</span>
+    <span class="nb">echo</span> <span class="s1">&#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/&#39;</span> &gt;&gt; ~/.zshrc
+    <span class="nb">source</span> ~/.zshrc
+<span class="k">fi</span>
 
 brew update
 </pre></div>
 </div>
 <p>如果需要恢复原有镜像源的话（国内镜像源突然不能用了或版本不够新）</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">brew</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git -C <span class="s2">&quot;</span><span class="k">$(</span>brew --repo<span class="k">)</span><span class="s2">&quot;</span> remote set-url origin https://github.com/Homebrew/brew.git
 
-<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo homebrew/core)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">core</span><span class="o">.</span><span class="n">git</span>
+git -C <span class="s2">&quot;</span><span class="k">$(</span>brew --repo homebrew/core<span class="k">)</span><span class="s2">&quot;</span> remote set-url origin https://github.com/Homebrew/homebrew-core.git
 
-<span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="s2">&quot;$(brew --repo homebrew/cask)&quot;</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">/</span><span class="n">homebrew</span><span class="o">-</span><span class="n">cask</span><span class="o">.</span><span class="n">git</span>
+git -C <span class="s2">&quot;</span><span class="k">$(</span>brew --repo homebrew/cask<span class="k">)</span><span class="s2">&quot;</span> remote set-url origin https://github.com/Homebrew/homebrew-cask.git
 
 <span class="c1"># 找到 ~/.bash_profile 或者 ~/.zshrc 中的HOMEBREW_BOTTLE_DOMAIN 一行删除</span>
 
-<span class="n">brew</span> <span class="n">update</span>
+brew update
 </pre></div>
 </div>
 <p>如果不行的话可以依次尝试以下命令</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">doctor</span>
-<span class="n">brew</span> <span class="n">update</span><span class="o">-</span><span class="n">reset</span>
-<span class="n">brew</span> <span class="n">update</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew doctor
+brew update-reset
+brew update
 </pre></div>
 </div>
 </div>
 <div class="section" id="hide-your-computer-name-in-zsh-bash">
 <h2>Hide your computer name in ZSH/BASH<a class="headerlink" href="#hide-your-computer-name-in-zsh-bash" title="永久链接至标题">¶</a></h2>
 <p>vim .zshrc</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PS1</span><span class="o">=</span><span class="s2">&quot;[~]$ &quot;</span><span class="p">;</span> <span class="n">clear</span><span class="p">;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;[~]</span>$<span class="s2"> &quot;</span><span class="p">;</span> clear<span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id1">
 <h2>关闭登陆界面多个用户登陆<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">loginwindow</span> <span class="n">SHOWOTHERUSERS_MANAGED</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">FALSE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo defaults write /Library/Preferences/com.apple.loginwindow SHOWOTHERUSERS_MANAGED -bool FALSE
 </pre></div>
 </div>
 </div>
 <div class="section" id="id2">
 <h2>强开随航<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">sidecar</span><span class="o">.</span><span class="n">display</span> <span class="n">AllowAllDevices</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">true</span>
-<span class="n">defaults</span> <span class="n">write</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">sidecar</span><span class="o">.</span><span class="n">display</span> <span class="n">hasShownPref</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">true</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.sidecar.display AllowAllDevices -bool <span class="nb">true</span>
+defaults write com.apple.sidecar.display hasShownPref -bool <span class="nb">true</span>
 </pre></div>
 </div>
 </div>
@@ -253,11 +259,11 @@ brew update
 <h2>环境变量配置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>因为terminal每次只会加载.zshrc，所以必须要在.zshrc里面写alias和环境变量，才会每次重启终端生效配置</p>
 <p>初始化的配置</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>alias t=&quot;ssh root@idlepig.cn&quot;
-alias ll=&quot;ls -l&quot;
-alias idlepig=&quot;cd /Users/username/docs/idlepig/source; source /Users/username/code/idlepig/bin/activate&quot;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">t</span><span class="o">=</span><span class="s2">&quot;ssh root@idlepig.cn&quot;</span>
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s2">&quot;ls -l&quot;</span>
+<span class="nb">alias</span> <span class="nv">idlepig</span><span class="o">=</span><span class="s2">&quot;cd /Users/username/docs/idlepig/source; source /Users/username/code/idlepig/bin/activate&quot;</span>
 
-export PATH=/Users/username/code/idlepig/bin:/Users/username/Library/Python/3.8/bin:$PATH
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/Users/username/code/idlepig/bin:/Users/username/Library/Python/3.8/bin:<span class="nv">$PATH</span>
 </pre></div>
 </div>
 </div>
@@ -267,12 +273,12 @@ export PATH=/Users/username/code/idlepig/bin:/Users/username/Library/Python/3.8/
 </div>
 <div class="section" id="id5">
 <h2>调整鼠标速度<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaults</span> <span class="n">write</span> <span class="o">-</span><span class="n">g</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">mouse</span><span class="o">.</span><span class="n">scaling</span> <span class="mi">18</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write -g com.apple.mouse.scaling <span class="m">18</span>
 </pre></div>
 </div>
 <p>terminal输入然后重启，已爽死，嫌快的调小数值就行</p>
 <p>还有滚轮速度</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaults</span> <span class="n">write</span> <span class="o">-</span><span class="n">g</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">scrollwheel</span><span class="o">.</span><span class="n">scaling</span> <span class="mf">1.2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write -g com.apple.scrollwheel.scaling <span class="m">1</span>.2
 </pre></div>
 </div>
 </div>
@@ -284,8 +290,8 @@ export PATH=/Users/username/code/idlepig/bin:/Users/username/Library/Python/3.8/
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="computer.html" class="btn btn-neutral float-right" title="computer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="0-todo.html" class="btn btn-neutral float-left" title="TODO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="computer.html" class="btn btn-neutral float-right" title="computer" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="0-todo.html" class="btn btn-neutral float-left" title="TODO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
@@ -299,11 +305,11 @@ export PATH=/Users/username/code/idlepig/bin:/Users/username/Library/Python/3.8/
     
     
     
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
 
 </footer>
         </div>

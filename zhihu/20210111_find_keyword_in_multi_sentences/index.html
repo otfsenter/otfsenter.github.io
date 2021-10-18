@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -68,7 +71,7 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="在文档中搜索" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -97,16 +100,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../game/bns.html">bns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../interview.html">interview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jetbrains/index.html">jetbrains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../java/java.html">java</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../kenan.html">柯南主线剧情</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/index.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mysql/index.html">MySQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sphinx/index.html">Sphinx文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sre/index.html">SRE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../website/website.html">网站相关的信息</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wechat/index.html">微信公众号</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../windows.html">windows</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">知乎</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">find one keyword in multiple sentences</a></li>
@@ -114,6 +114,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../google.html">google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../k8s.html">k8s</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kibana.html">kibana</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../prometheus.html">prometheus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zabbix.html">Install and configure Zabbix server for your platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mysql.html">mysql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
             
@@ -170,7 +176,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/zhihu/20210111_find_keyword_in_multi_sentences/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/zhihu/20210111_find_keyword_in_multi_sentences/index.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -188,77 +194,43 @@
 <p>address of question:</p>
 <p><a class="reference external" href="https://www.zhihu.com/question/436629423">https://www.zhihu.com/question/436629423</a></p>
 <p>code:</p>
-<div class="highlight-python3 notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_match_info</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    split content by &#39;.&#39;, then find keyword in every element in list.</span>
-<span class="sd">    the length of list in match list.</span>
-
-<span class="sd">    :param source: content</span>
-<span class="sd">    :param keyword: keyword in each sentence</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">chinese_dot_list</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;。&#39;</span><span class="p">)</span>
-    <span class="n">match_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">chinese_dot_list</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
-            <span class="n">ru</span><span class="p">(</span><span class="n">sentence</span> <span class="o">+</span> <span class="s1">&#39;。&#39;</span><span class="p">)</span>
-
-            <span class="n">match_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
-    <span class="n">ru</span><span class="p">(</span><span class="s1">&#39;there are </span><span class="si">% s</span><span class="s1">entences&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">match_list</span><span class="p">))</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Python supports both process-oriented programming and object-oriented programming. &#39;</span> \
-             <span class="s1">&#39;In the &quot;object-oriented&quot; language, Programs are built from procedures or functions &#39;</span> \
-             <span class="s1">&#39;that are just reusable code. In &quot;object-oriented&quot; languages, programs are composed of data and functions.&#39;</span> \
-             <span class="s1">&#39; Compared with other object-oriented languages (such as C++ and Java), Python does not emphasize concepts, &#39;</span> \
-             <span class="s1">&#39;And focus on practicality. Let programmers feel the benefits of object-oriented, which is one of the reasons it can attract many supporters.&#39;</span>
-
-    <span class="n">ru</span><span class="p">(</span><span class="s1">&#39;source：&#39;</span><span class="p">)</span>
-    <span class="n">ru</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
-
-    <span class="n">keyword</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;please input keyword(like: Python): &quot;</span><span class="p">)</span>
-
-    <span class="n">get_match_info</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">keyword</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">get_match_info</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
+<span class="linenos"> 2</span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 3</span><span class="sd">    split content by &#39;.&#39;, then find keyword in every element in list.</span>
+<span class="linenos"> 4</span><span class="sd">    the length of list in match list.</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="sd">    :param source: content</span>
+<span class="linenos"> 7</span><span class="sd">    :param keyword: keyword in each sentence</span>
+<span class="linenos"> 8</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 9</span>    <span class="n">chinese_dot_list</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;。&#39;</span><span class="p">)</span>
+<span class="linenos">10</span>    <span class="n">match_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">11</span>    <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">chinese_dot_list</span><span class="p">:</span>
+<span class="linenos">12</span>        <span class="k">if</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+<span class="linenos">13</span>            <span class="n">ru</span><span class="p">(</span><span class="n">sentence</span> <span class="o">+</span> <span class="s1">&#39;。&#39;</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>            <span class="n">match_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="linenos">16</span>    <span class="n">ru</span><span class="p">(</span><span class="s1">&#39;there are </span><span class="si">% s</span><span class="s1">entences&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">match_list</span><span class="p">))</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="linenos">20</span>    <span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;Python supports both process-oriented programming and object-oriented programming. &#39;</span> \
+<span class="linenos">21</span>             <span class="s1">&#39;In the &quot;object-oriented&quot; language, Programs are built from procedures or functions &#39;</span> \
+<span class="linenos">22</span>             <span class="s1">&#39;that are just reusable code. In &quot;object-oriented&quot; languages, programs are composed of data and functions.&#39;</span> \
+<span class="linenos">23</span>             <span class="s1">&#39; Compared with other object-oriented languages (such as C++ and Java), Python does not emphasize concepts, &#39;</span> \
+<span class="linenos">24</span>             <span class="s1">&#39;And focus on practicality. Let programmers feel the benefits of object-oriented, which is one of the reasons it can attract many supporters.&#39;</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span>    <span class="n">ru</span><span class="p">(</span><span class="s1">&#39;source：&#39;</span><span class="p">)</span>
+<span class="linenos">27</span>    <span class="n">ru</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>    <span class="n">keyword</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;please input keyword(like: Python): &quot;</span><span class="p">)</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>    <span class="n">get_match_info</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">keyword</span><span class="p">)</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos">35</span>    <span class="n">main</span><span class="p">()</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 
 
@@ -267,8 +239,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../20210112_re_split/index.html" class="btn btn-neutral float-right" title="re的split问题" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../index.html" class="btn btn-neutral float-left" title="知乎" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../20210112_re_split/index.html" class="btn btn-neutral float-right" title="re的split问题" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="知乎" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
@@ -282,11 +254,11 @@
     
     
     
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
 
 </footer>
         </div>
