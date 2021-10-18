@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install and configure Zabbix server for your platform &mdash; idlepig  文档</title>
+  <title>zabbix &mdash; idlepig  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -63,7 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kibana.html">kibana</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prometheus.html">prometheus</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Install and configure Zabbix server for your platform</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">zabbix</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install-zabbix-repository">Install Zabbix repository</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-zabbix-server-frontend-agent">Install Zabbix server, frontend, agent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-initial-database">Create initial database</a></li>
@@ -73,7 +73,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mp_wechat.html">media platform for wechat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mp_wechat.html">wechat official account</a></li>
 </ul>
 
         </div>
@@ -90,7 +90,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Install and configure Zabbix server for your platform</li>
+      <li>zabbix</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/zabbix.md.txt" rel="nofollow"> 查看页面源码</a>
       </li>
@@ -100,8 +100,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="install-and-configure-zabbix-server-for-your-platform">
-<h1>Install and configure Zabbix server for your platform<a class="headerlink" href="#install-and-configure-zabbix-server-for-your-platform" title="永久链接至标题"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="zabbix">
+<h1>zabbix<a class="headerlink" href="#zabbix" title="永久链接至标题"></a></h1>
 <section id="install-zabbix-repository">
 <h2>Install Zabbix repository<a class="headerlink" href="#install-zabbix-repository" title="永久链接至标题"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rpm</span> <span class="o">-</span><span class="n">Uvh</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">zabbix</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">zabbix</span><span class="o">/</span><span class="mf">5.4</span><span class="o">/</span><span class="n">rhel</span><span class="o">/</span><span class="mi">8</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">zabbix</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="mf">5.4</span><span class="o">-</span><span class="mf">1.</span><span class="n">el8</span><span class="o">.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>

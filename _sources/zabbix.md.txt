@@ -1,4 +1,4 @@
-# Install and configure Zabbix server for your platform
+# zabbix
 
 ## Install Zabbix repository
 

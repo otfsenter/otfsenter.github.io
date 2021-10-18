@@ -51,7 +51,6 @@ Python、Linux运维、自动化
     windows
     zhihu/index
     google
-
     k8s
     kibana
     prometheus

@@ -1,5 +1,5 @@
 
-# media platform for wechat
+# wechat official account
 
 
 ## re.split
