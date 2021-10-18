@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>没有重复字母的最长子字符串的计算 &mdash; IdlePig  文档</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="合并多行" href="merge_lines_with_regular.html" />
     <link rel="prev" title="robotframework里面的插件系统" href="plugin_in_in_robot_framework.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> IdlePig
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="在文档中搜索" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
@@ -145,78 +95,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">IdlePig</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Python</a> &raquo;</li>
-        
       <li>没有重复字母的最长子字符串的计算</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/python/length_of_the_longest_substring_without_repeating_characters.rst.txt" rel="nofollow"> 查看页面源码</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="python-length-of-the-longest-substring-without-repeating-characters">
-<span id="id1"></span><h1>没有重复字母的最长子字符串的计算<a class="headerlink" href="#python-length-of-the-longest-substring-without-repeating-characters" title="永久链接至标题">¶</a></h1>
+             
+  <section id="python-length-of-the-longest-substring-without-repeating-characters">
+<span id="id1"></span><h1>没有重复字母的最长子字符串的计算<a class="headerlink" href="#python-length-of-the-longest-substring-without-repeating-characters" title="永久链接至标题"></a></h1>
 <p>length of the longest substring without repeating characters</p>
-<div class="section" id="id2">
-<h2>代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>代码<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
 <p>时间复杂度：O(n+d) ，其中n为输入字符串的长度，d为输入字符串字母表的字符数。</p>
 <p>例如，如果字符串由小写英文字符组成，那么d的值是26。</p>
 <p>空间复杂度：O(d) 。</p>
@@ -252,25 +160,25 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The length of the longest non-repeating character substring is&quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>如何算最大的长度<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2>如何算最大的长度<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
 <p>子字符串长度 = 末尾的索引 - 开始的索引 + 1</p>
 <p>末尾的索引：end</p>
 <p>开始的索引：start</p>
 <p>这样只要遍历不重复的字符串长度，然后用max保存最大的值就行</p>
 <p>maximum_length=max(maximum_length, end - start + 1)</p>
-</div>
-<div class="section" id="end">
-<h2>end怎么来的<a class="headerlink" href="#end" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="end">
+<h2>end怎么来的<a class="headerlink" href="#end" title="永久链接至标题"></a></h2>
 <p>每次遍历的索引值就是end</p>
-</div>
-<div class="section" id="start">
-<h2>start怎么来<a class="headerlink" href="#start" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="start">
+<h2>start怎么来<a class="headerlink" href="#start" title="永久链接至标题"></a></h2>
 <p>弄一个字典，记录每个字母对应索引，如果重复了，就更新字母对应的索引位置</p>
-</div>
-<div class="section" id="startmax">
-<h2>为什么start也要max<a class="headerlink" href="#startmax" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="startmax">
+<h2>为什么start也要max<a class="headerlink" href="#startmax" title="永久链接至标题"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -323,13 +231,13 @@
 <p>当第二次g出现的时候，start=0+1=1，</p>
 <p>但其实e已经出现了两次，start=2了，</p>
 <p>这样会从第一个e开始算，导致出现问题</p>
-</div>
-<div class="section" id="maximum-lengthmax">
-<h2>为什么maximum_length也要用max<a class="headerlink" href="#maximum-lengthmax" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="maximum-lengthmax">
+<h2>为什么maximum_length也要用max<a class="headerlink" href="#maximum-lengthmax" title="永久链接至标题"></a></h2>
 <p>为了保存最大值</p>
-</div>
-<div class="section" id="startend">
-<h2>start为什么不直接用end<a class="headerlink" href="#startend" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="startend">
+<h2>start为什么不直接用end<a class="headerlink" href="#startend" title="永久链接至标题"></a></h2>
 <p>用了end之后start，end值的变化如下：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -429,9 +337,9 @@
 <p>第二个g，</p>
 <p>到g的时候，上次start=2，end=7，最大长度就是6，</p>
 <p>一旦到g，start=8，end=8，其实这里第二个e到第二个g，最大长度是7，这样就出现了问题，少算了第二个g，导致少了1位。</p>
-</div>
-<div class="section" id="start-1">
-<h2>为什么start用的是上一次的值+1<a class="headerlink" href="#start-1" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="start-1">
+<h2>为什么start用的是上一次的值+1<a class="headerlink" href="#start-1" title="永久链接至标题"></a></h2>
 <p>这就相当于如果后面有重复，就去掉第一个重复的值，从第二个开始，</p>
 <p>比如gekga</p>
 <p>就相当于去掉第一个g，从ekga计算</p>
@@ -504,9 +412,9 @@
 <p>但是e已经出现了两次，start=2，</p>
 <p>取最大值，start=2，</p>
 <p>end是8，算出来最大值8-2+1=7</p>
-</div>
-<div class="section" id="id4">
-<h2>解耦<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id4">
+<h2>解耦<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>得先解决一个特定的问题，循环中的一个例子</p></li>
 <li><p>每个阶段一个py文件，一个日志文件，最好是csv文件，方便整理成任何想要的格式，或者“｜｜”分隔，也方便整理，方便分阶段调试</p></li>
@@ -515,55 +423,38 @@
 <li><p>最后输出到文件里面，一定要有日志，方便随时断开，随时从有问题的地方开始</p></li>
 <li><p>最后整理的配置文件一定是从日志生成，不能依赖程序执行完生成配置文件</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="merge_lines_with_regular.html" class="btn btn-neutral float-right" title="合并多行" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="plugin_in_in_robot_framework.html" class="btn btn-neutral float-left" title="robotframework里面的插件系统" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="merge_lines_with_regular.html" class="btn btn-neutral float-right" title="合并多行" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; 版权所有 2021, IdlePig.
-
-    </p>
+    <p>&#169; 版权所有 2021, IdlePig.</p>
   </div>
-    
-    
-    
-    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

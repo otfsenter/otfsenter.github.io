@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>内部的3大流程 &mdash; IdlePig  文档</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="业务迁移、扩容机器注意事项" href="add_hosts.html" />
     <link rel="prev" title="架构" href="structure.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> IdlePig
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="在文档中搜索" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
@@ -164,77 +114,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">IdlePig</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">SRE</a> &raquo;</li>
-        
       <li>内部的3大流程</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/sre/structure_ops_system.md.txt" rel="nofollow"> 查看页面源码</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>内部的3大流程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="sd">
-<h2>SD<a class="headerlink" href="#sd" title="永久链接至标题">¶</a></h2>
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>内部的3大流程<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
+<section id="sd">
+<h2>SD<a class="headerlink" href="#sd" title="永久链接至标题"></a></h2>
 <p>service deploy</p>
 <ul class="simple">
 <li><p>工单管理</p></li>
@@ -249,9 +157,9 @@
 <li><p>SQL执行</p></li>
 <li><p>中间件部署</p></li>
 </ul>
-</div>
-<div class="section" id="itr">
-<h2>ITR<a class="headerlink" href="#itr" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="itr">
+<h2>ITR<a class="headerlink" href="#itr" title="永久链接至标题"></a></h2>
 <p>issue to resolve</p>
 <ul class="simple">
 <li><p>告警管理</p></li>
@@ -268,52 +176,52 @@
 <li><p>Zabbix监控</p></li>
 <li><p>服务监控</p></li>
 </ul>
-</div>
-<div class="section" id="bcm">
-<h2>BCM<a class="headerlink" href="#bcm" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="bcm">
+<h2>BCM<a class="headerlink" href="#bcm" title="永久链接至标题"></a></h2>
 <p>Business Continuity Management</p>
 <ul class="simple">
 <li><p>Chaos Monkey</p></li>
 <li><p>健康管家</p></li>
 <li><p>BCM问题管理</p></li>
 </ul>
-</div>
-<div class="section" id="eap">
-<h2>EAP<a class="headerlink" href="#eap" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="eap">
+<h2>EAP<a class="headerlink" href="#eap" title="永久链接至标题"></a></h2>
 <p>Event Automation Platform - 事件自动化平台</p>
 <ul class="simple">
 <li><p>作业平台</p></li>
 <li><p>定时任务</p></li>
 <li><p>ChatOPs 规则、流程</p></li>
 </ul>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="id2">
-<h1>内部-功能模块<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id3">
-<h2>权限管理<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="cmdb">
-<h2>CMDB<a class="headerlink" href="#cmdb" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>内部-功能模块<a class="headerlink" href="#id2" title="永久链接至标题"></a></h1>
+<section id="id3">
+<h2>权限管理<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
+</section>
+<section id="cmdb">
+<h2>CMDB<a class="headerlink" href="#cmdb" title="永久链接至标题"></a></h2>
 <p>configure management database</p>
 <ul class="simple">
 <li><p>域名管理</p></li>
 <li><p>主机管理</p></li>
 <li><p>网络管理（EIP、ELB、SLB）</p></li>
 </ul>
-</div>
-<div class="section" id="id4">
-<h2>配置管理<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id5">
-<h2>部署<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id4">
+<h2>配置管理<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
+</section>
+<section id="id5">
+<h2>部署<a class="headerlink" href="#id5" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>集群管理</p></li>
 <li><p>部署管理</p></li>
 </ul>
-</div>
-<div class="section" id="id6">
-<h2>作业平台<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id6">
+<h2>作业平台<a class="headerlink" href="#id6" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>工具库</p>
 <ul>
@@ -327,16 +235,16 @@
 <li><p>作业清单</p></li>
 <li><p>文件分发（上传）</p></li>
 </ul>
-</div>
-<div class="section" id="id7">
-<h2>EAP<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id7">
+<h2>EAP<a class="headerlink" href="#id7" title="永久链接至标题"></a></h2>
 <p>Event Automation Platform - 事件自动化平台</p>
 <ul class="simple">
 <li><p>ChatOps</p></li>
 </ul>
-</div>
-<div class="section" id="id8">
-<h2>告警系统<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id8">
+<h2>告警系统<a class="headerlink" href="#id8" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>告警列表</p></li>
 <li><p>告警抑制</p></li>
@@ -349,9 +257,9 @@
 <li><p>告警模拟测试</p></li>
 <li><p>业务报表</p></li>
 </ul>
-</div>
-<div class="section" id="id9">
-<h2>业务监控<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id9">
+<h2>业务监控<a class="headerlink" href="#id9" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>zabbix模板管理</p>
 <ul>
@@ -362,122 +270,105 @@
 </li>
 <li><p>插件管理</p></li>
 </ul>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="github-spug">
-<h1>github-spug<a class="headerlink" href="#github-spug" title="永久链接至标题">¶</a></h1>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="github-spug">
+<h1>github-spug<a class="headerlink" href="#github-spug" title="永久链接至标题"></a></h1>
 <p><a class="reference external" href="https://github.com/openspug/spug">github地址</a></p>
-<div class="section" id="id10">
-<h2>主机管理<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id11">
-<h2>主机批量执行<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id12">
-<h2>主机在线终端<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id13">
-<h2>文件在线上传下载<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id14">
-<h2>应用发布部署<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id15">
-<h2>在线任务计划<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id16">
-<h2>配置中心<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id17">
-<h2>监控<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
-</div>
-<div class="section" id="id18">
-<h2>报警<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="github-codo">
-<h1>github-CODO<a class="headerlink" href="#github-codo" title="永久链接至标题">¶</a></h1>
+<section id="id10">
+<h2>主机管理<a class="headerlink" href="#id10" title="永久链接至标题"></a></h2>
+</section>
+<section id="id11">
+<h2>主机批量执行<a class="headerlink" href="#id11" title="永久链接至标题"></a></h2>
+</section>
+<section id="id12">
+<h2>主机在线终端<a class="headerlink" href="#id12" title="永久链接至标题"></a></h2>
+</section>
+<section id="id13">
+<h2>文件在线上传下载<a class="headerlink" href="#id13" title="永久链接至标题"></a></h2>
+</section>
+<section id="id14">
+<h2>应用发布部署<a class="headerlink" href="#id14" title="永久链接至标题"></a></h2>
+</section>
+<section id="id15">
+<h2>在线任务计划<a class="headerlink" href="#id15" title="永久链接至标题"></a></h2>
+</section>
+<section id="id16">
+<h2>配置中心<a class="headerlink" href="#id16" title="永久链接至标题"></a></h2>
+</section>
+<section id="id17">
+<h2>监控<a class="headerlink" href="#id17" title="永久链接至标题"></a></h2>
+</section>
+<section id="id18">
+<h2>报警<a class="headerlink" href="#id18" title="永久链接至标题"></a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="github-codo">
+<h1>github-CODO<a class="headerlink" href="#github-codo" title="永久链接至标题"></a></h1>
 <p><a class="reference external" href="https://github.com/opendevops-cn/opendevops">总体文档地址</a></p>
-<div class="section" id="codo-admin">
-<h2>codo-admin<a class="headerlink" href="#codo-admin" title="永久链接至标题">¶</a></h2>
+<section id="codo-admin">
+<h2>codo-admin<a class="headerlink" href="#codo-admin" title="永久链接至标题"></a></h2>
 <p>基于Tornado实现，提供Restful风格的API，提供基于RBAC的完善权限管理，可对所有用户的操作进行审计</p>
-</div>
-<div class="section" id="codo-cron">
-<h2>codo-cron<a class="headerlink" href="#codo-cron" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="codo-cron">
+<h2>codo-cron<a class="headerlink" href="#codo-cron" title="永久链接至标题"></a></h2>
 <p>基于Tornado框架实现的一套定时任务系统，完全兼容Linux Crontab支持到秒级</p>
-</div>
-<div class="section" id="codo-task">
-<h2>codo-task<a class="headerlink" href="#codo-task" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="codo-task">
+<h2>codo-task<a class="headerlink" href="#codo-task" title="永久链接至标题"></a></h2>
 <p>基于Tornado实现，系统核心调度，可分布式扩展</p>
-</div>
-<div class="section" id="codo-cmdb">
-<h2>codo-cmdb<a class="headerlink" href="#codo-cmdb" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="codo-cmdb">
+<h2>codo-cmdb<a class="headerlink" href="#codo-cmdb" title="永久链接至标题"></a></h2>
 <p>基于Tornado实现的一套资产管理系统,</p>
 <p>支持AWS、阿里云、腾讯云、华为云自动拉取资产信息等</p>
-</div>
-<div class="section" id="codo-kerrigan">
-<h2>codo-kerrigan<a class="headerlink" href="#codo-kerrigan" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="codo-kerrigan">
+<h2>codo-kerrigan<a class="headerlink" href="#codo-kerrigan" title="永久链接至标题"></a></h2>
 <p>基于Tornado实现的一套配置中心，</p>
 <p>可基于分项目、环境管理配置，语法高亮、对比历史版本、快速回滚等，并提供Restful风格的API</p>
-</div>
-<div class="section" id="codo-tools">
-<h2>codo-tools<a class="headerlink" href="#codo-tools" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="codo-tools">
+<h2>codo-tools<a class="headerlink" href="#codo-tools" title="永久链接至标题"></a></h2>
 <p>CODO运维工具支持：</p>
 <p>告警管理、告警自愈、项目管理、事件管理、加密解密、随机密码、提醒管理等</p>
-</div>
-<div class="section" id="codo-dns">
-<h2>codo-dns<a class="headerlink" href="#codo-dns" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="codo-dns">
+<h2>codo-dns<a class="headerlink" href="#codo-dns" title="永久链接至标题"></a></h2>
 <p>支持多区域智能解析、可视化Bind操作、操作日志记录等。</p>
 <p>支持阿里云、腾讯云、DNSPod、GoDaddy等厂商的云解析</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="add_hosts.html" class="btn btn-neutral float-right" title="业务迁移、扩容机器注意事项" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="structure.html" class="btn btn-neutral float-left" title="架构" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="add_hosts.html" class="btn btn-neutral float-right" title="业务迁移、扩容机器注意事项" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; 版权所有 2021, IdlePig.
-
-    </p>
+    <p>&#169; 版权所有 2021, IdlePig.</p>
   </div>
-    
-    
-    
-    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

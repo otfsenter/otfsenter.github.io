@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>nginx自动更新ssl证书 &mdash; IdlePig  文档</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="config cdn" href="config_cdn.html" />
     <link rel="prev" title="nginx" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../index.html" class="icon icon-home"> IdlePig
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="在文档中搜索" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../apple.html">apple</a></li>
@@ -140,80 +90,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../../mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">IdlePig</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../index.html">Linux</a> &raquo;</li>
-        
           <li><a href="index.html">nginx</a> &raquo;</li>
-        
       <li>nginx自动更新ssl证书</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/linux/nginx/update_ssl_certificate.rst.txt" rel="nofollow"> 查看页面源码</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="nginxssl">
-<span id="linux-nginx-update-ssl-certificate"></span><h1>nginx自动更新ssl证书<a class="headerlink" href="#nginxssl" title="永久链接至标题">¶</a></h1>
+             
+  <section id="nginxssl">
+<span id="linux-nginx-update-ssl-certificate"></span><h1>nginx自动更新ssl证书<a class="headerlink" href="#nginxssl" title="永久链接至标题"></a></h1>
 <p><a class="reference internal" href="../../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
-<div class="section" id="id1">
-<h2>安装工具<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<section id="id1">
+<h2>安装工具<a class="headerlink" href="#id1" title="永久链接至标题"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum install epel-release
 
 wget https://dl.eff.org/certbot-auto --no-check-certificate
@@ -223,9 +130,9 @@ chmod +x certbot-auto
 ./certbot-auto -n
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h2>生成证书，定时任务<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id2">
+<h2>生成证书，定时任务<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>第一次生成证书</p></li>
 </ul>
@@ -241,9 +148,9 @@ chmod +x certbot-auto
 <p>0 3 * * * /root/certbot-auto renew –disable-hook-validation –renew-hook “/usr/sbin/nginx -s reload”</p>
 <p>这里表示每天凌晨3点更新一遍证书，如果证书没有失效，不会起作用</p>
 <p>/usr/sbin/nginx是nginx的实际路径，可以用 which nginx 来定位位置</p>
-</div>
-<div class="section" id="https">
-<h2>https配置<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="https">
+<h2>https配置<a class="headerlink" href="#https" title="永久链接至标题"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
     listen 443 ssl;
     server_name pydict.com;
@@ -273,9 +180,9 @@ chmod +x certbot-auto
 }
 </pre></div>
 </div>
-</div>
-<div class="section" id="http">
-<h2>http配置<a class="headerlink" href="#http" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="http">
+<h2>http配置<a class="headerlink" href="#http" title="永久链接至标题"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
     listen  80;
     server_name pydict.com;
@@ -297,55 +204,38 @@ chmod +x certbot-auto
 </pre></div>
 </div>
 <p><strong>这个http的配置中，配置了一个301，这样就算访问http也会重定向到https</strong></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="config_cdn.html" class="btn btn-neutral float-right" title="config cdn" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="nginx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="config_cdn.html" class="btn btn-neutral float-right" title="config cdn" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; 版权所有 2021, IdlePig.
-
-    </p>
+    <p>&#169; 版权所有 2021, IdlePig.</p>
   </div>
-    
-    
-    
-    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

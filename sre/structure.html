@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>架构 &mdash; IdlePig  文档</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="内部的3大流程" href="structure_ops_system.html" />
     <link rel="prev" title="SRE" href="index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> IdlePig
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="在文档中搜索" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
@@ -136,85 +86,43 @@
 <li class="toctree-l1"><a class="reference internal" href="../mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">IdlePig</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">SRE</a> &raquo;</li>
-        
       <li>架构</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/sre/structure.rst.txt" rel="nofollow"> 查看页面源码</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="sre-structure">
-<span id="id1"></span><h1>架构<a class="headerlink" href="#sre-structure" title="永久链接至标题">¶</a></h1>
+             
+  <section id="sre-structure">
+<span id="id1"></span><h1>架构<a class="headerlink" href="#sre-structure" title="永久链接至标题"></a></h1>
 <ul class="simple">
 <li><p>双云架构</p></li>
 <li><p>大数据监控</p></li>
 <li><p>微服务架构</p></li>
 </ul>
-<div class="section" id="id2">
-<h2>双云架构<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>双云架构<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
 <p>所谓双云就是主机群在一个数据中心，备集群在另一个数据中心，正常的流量走向是全部到主集群，如果一个数据中心出现问题，会自动切换到备集群，以实现主备架构，保证业务不会中断。</p>
-<div class="section" id="id3">
-<h3>名词解释<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<section id="id3">
+<h3>名词解释<a class="headerlink" href="#id3" title="永久链接至标题"></a></h3>
 <dl class="simple">
 <dt>域名</dt><dd><p>一个网站的的入口、名字。</p>
 </dd>
@@ -227,65 +135,48 @@
 <p>域名到ELB，比如 idlepig.cn 这个域名后端配置两个A记录，分别对应的是两个ELB的公网IP，端口是443端口，对应的协议是https，证书也是绑定在ELB上面，这样用户访问域名的时候，流量会转发到两个IP上面。</p>
 <p>ELB到SLB，两个ELB的分别绑定同样的SLB服务器，SLB的端口是8080，这样域名到ELB的443端口，再把流量转发到SLB的8080端口。</p>
 <p>SLB到后端服务器，SLB由openresty搭建，openresty由nginx加lua脚本，扩展了nginx的功能。SLB通过不同的uri把不同的流量转发到不同的后端集群，比如平时流量都是到主集群，灰度变更的时候，通过配置规则，可以让流量转发到灰度集群，当主集群出现问题的时候，流量会自动转发到备集群。</p>
-</div>
-<div class="section" id="todo-slb">
-<span id="sre-structure-todo-slb-config"></span><h3>todo, 具体的SLB配置<a class="headerlink" href="#todo-slb" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="todo-slb">
+<span id="sre-structure-todo-slb-config"></span><h3>todo, 具体的SLB配置<a class="headerlink" href="#todo-slb" title="永久链接至标题"></a></h3>
 <p>1</p>
-</div>
-</div>
-<div class="section" id="id4">
-<h2>大数据监控<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+</section>
+</section>
+<section id="id4">
+<h2>大数据监控<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
 <p>业务服务器 - flume - 流kafka - spark - 批kafka - es - kibana</p>
 <p>业务服务器 - flume - 流kafka - spark - 批kafka - druid - 前端报表</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="structure_ops_system.html" class="btn btn-neutral float-right" title="内部的3大流程" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="SRE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="structure_ops_system.html" class="btn btn-neutral float-right" title="内部的3大流程" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; 版权所有 2021, IdlePig.
-
-    </p>
+    <p>&#169; 版权所有 2021, IdlePig.</p>
   </div>
-    
-    
-    
-    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

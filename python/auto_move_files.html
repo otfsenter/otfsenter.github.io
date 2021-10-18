@@ -1,74 +1,35 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="zh-CN" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>自动归档文件 &mdash; IdlePig  文档</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="自动重命名电影名字" href="auto_rename_files.html" />
     <link rel="prev" title="用Python自动获取排班人员" href="auto_get_schedule.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html" class="icon icon-home"> IdlePig
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="在文档中搜索" />
@@ -76,18 +37,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apple.html">apple</a></li>
@@ -140,75 +90,33 @@
 <li class="toctree-l1"><a class="reference internal" href="../mp_wechat.html">media platform for wechat</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">IdlePig</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="index.html">Python</a> &raquo;</li>
-        
       <li>自动归档文件</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/python/auto_move_files.rst.txt" rel="nofollow"> 查看页面源码</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="python-auto-move-files">
-<span id="id1"></span><h1>自动归档文件<a class="headerlink" href="#python-auto-move-files" title="永久链接至标题">¶</a></h1>
+             
+  <section id="python-auto-move-files">
+<span id="id1"></span><h1>自动归档文件<a class="headerlink" href="#python-auto-move-files" title="永久链接至标题"></a></h1>
 <p><a class="reference internal" href="../index.html#wechat"><span class="std std-ref">Python、Linux运维、自动化</span></a></p>
 <p>一共三种文件：电影、图片、小说，</p>
 <p>想要实现的效果是：当这些文件从浏览器下载到一个固定文件夹下面时，脚本能及时识别 并 自动归档到相应的电影、图片、小说的文件夹下面。</p>
@@ -216,16 +124,16 @@
 <li><p>监视文件夹变化需要用到 <cite>watchdog</cite> 模块</p></li>
 <li><p>移动文件需要用到 <cite>shutil</cite> 模块</p></li>
 </ul>
-<div class="section" id="id2">
-<h2>步骤<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id2">
+<h2>步骤<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
 <ol class="arabic simple">
 <li><p>监视 downloads 文件夹的文件变化情况，类名：MyHandler, 继承自 watchdog.events.FileSystemEventHandler</p></li>
 <li><p>根据规则判断得到目标路径，函数名：get_des_folder, 参数是 filename(文件名)</p></li>
 <li><p>移动文件，函数名： move_multiple_times，参数是 file_src(原路径), file_des(目标路径)</p></li>
 </ol>
-</div>
-<div class="section" id="config-json">
-<span id="python-auto-move-files-config-json"></span><h2>规则配置文件 config.json<a class="headerlink" href="#config-json" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="config-json">
+<span id="python-auto-move-files-config-json"></span><h2>规则配置文件 config.json<a class="headerlink" href="#config-json" title="永久链接至标题"></a></h2>
 <ul class="simple">
 <li><p>电影的关键字，前缀、后缀的列表、文件夹名字</p></li>
 </ul>
@@ -249,9 +157,9 @@
 <p>keywords 中有前缀、后缀，逐一判断这些关键字，如果匹配，</p>
 <p>取 folder 对应的 movie 来作为文件夹的名字，</p>
 <p>图片、小说同理，具体的配置放在了最后面的 <a class="reference internal" href="#python-auto-move-files-config-file"><span class="std std-ref">配置文件</span></a></p>
-</div>
-<div class="section" id="id3">
-<h2>具体的代码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="id3">
+<h2>具体的代码<a class="headerlink" href="#id3" title="永久链接至标题"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
 <span class="kn">import</span> <span class="nn">time</span>
@@ -357,9 +265,9 @@
     <span class="n">observer</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="python-auto-move-files-config-file">
-<span id="id4"></span><h2>配置文件<a class="headerlink" href="#python-auto-move-files-config-file" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="python-auto-move-files-config-file">
+<span id="id4"></span><h2>配置文件<a class="headerlink" href="#python-auto-move-files-config-file" title="永久链接至标题"></a></h2>
 <p>回到 <a class="reference internal" href="#python-auto-move-files-config-json"><span class="std std-ref">规则配置文件 config.json</span></a> 标题</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;movie&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -404,55 +312,38 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="auto_rename_files.html" class="btn btn-neutral float-right" title="自动重命名电影名字" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="auto_get_schedule.html" class="btn btn-neutral float-left" title="用Python自动获取排班人员" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="auto_rename_files.html" class="btn btn-neutral float-right" title="自动重命名电影名字" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; 版权所有 2021, IdlePig.
-
-    </p>
+    <p>&#169; 版权所有 2021, IdlePig.</p>
   </div>
-    
-    
-    
-    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
-    
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    
-    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
