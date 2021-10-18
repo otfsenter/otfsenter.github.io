@@ -9,17 +9,23 @@
         </a>
     </div>
     <div id="title" style="display: inline-block">
-        <h1>IdlePig · 懒猪</h1>
+        <h1>idlepig</h1>
     </div>
 
+.. figure:: _static/wechat.jpeg
+      :width: 100px
+      :align: right
+
 .. _wechat:
+
 
 Python、Linux运维、自动化
 ==============================
 
 .. raw:: html
 
-    <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzU1NTY5MjMyNg==&mid=2247483848&idx=1&sn=25fcac6d45e01c65a8d688aa7c6f1202&chksm=fbd13981cca6b09796c0f8680be8fefc43f88e6402d10322750bb18d0c4b52ceeb0af2232ddb&token=994548522&lang=zh_CN#rd"> <h5>公众号：Python脚本</h5> </a>
+    <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzU1NTY5MjMyNg==&mid=2247483848&idx=1&sn=25fcac6d45e01c65a8d688aa7c6f1202&chksm=fbd13981cca6b09796c0f8680be8fefc43f88e6402d10322750bb18d0c4b52ceeb0af2232ddb&token=994548522&lang=zh_CN#rd"> <h5>WeChat Official Account: pythonscripts</h5> </a>
+
 
 .. toctree::
     :maxdepth: 2
@@ -55,9 +61,6 @@ Python、Linux运维、自动化
 
 
 
-.. raw:: html
-
-    <a target="_blank" href="https://mp.weixin.qq.com/s?__biz=MzU1NTY5MjMyNg==&mid=2247483848&idx=1&sn=25fcac6d45e01c65a8d688aa7c6f1202&chksm=fbd13981cca6b09796c0f8680be8fefc43f88e6402d10322750bb18d0c4b52ceeb0af2232ddb&token=994548522&lang=zh_CN#rd"> <img src="_static/wechat.jpeg" alt="wechat"> </a>
 
 
 .. raw:: html
