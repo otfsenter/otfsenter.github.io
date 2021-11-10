@@ -34,9 +34,6 @@ Python、Linux运维、自动化
     apple
     computer
     ansible/index
-    books
-    c
-    economy
     english/index
     game/bns
     interview
@@ -56,7 +53,7 @@ Python、Linux运维、自动化
     prometheus
     zabbix
     mysql
-    mp_wechat
+    mp_wechat/index
 
 
 

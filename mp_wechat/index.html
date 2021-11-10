@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>业务迁移、扩容机器注意事项 &mdash; idlepig  文档</title>
+  <title>media platform &mdash; idlepig  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="alarm" href="alarm.html" />
-    <link rel="prev" title="内部的3大流程" href="structure_ops_system.html" /> 
+    <link rel="next" title="find all links" href="find_all_links.html" />
+    <link rel="prev" title="mysql" href="../mysql.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,17 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/index.html">Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/index.html">Sphinx文档</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">SRE</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="structure.html">架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html">内部的3大流程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html#id2">内部-功能模块</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html#github-spug">github-spug</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure_ops_system.html#github-codo">github-CODO</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">业务迁移、扩容机器注意事项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alarm.html">alarm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chatops.html">ChatOps</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../sre/index.html">SRE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../website/website.html">网站相关的信息</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../windows.html">windows</a></li>
@@ -72,7 +62,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../prometheus.html">prometheus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../zabbix.html">zabbix</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mysql.html">mysql</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mp_wechat/index.html">media platform</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">media platform</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="find_all_links.html">find all links</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -89,10 +82,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">SRE</a> &raquo;</li>
-      <li>业务迁移、扩容机器注意事项</li>
+      <li>media platform</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/sre/add_hosts.md.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../_sources/mp_wechat/index.rst.txt" rel="nofollow"> 查看页面源码</a>
       </li>
   </ul>
   <hr/>
@@ -100,28 +92,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>业务迁移、扩容机器注意事项<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
-<ul class="simple">
-<li><p>检查是否有公网权限，若不需要【去除】</p></li>
-<li><p>检查规格，磁盘，所属用户是否一致</p></li>
-<li><p>RASP【nuwa已集成】、wiseapm【调用链】、flume【日志采集】、添加软链接：workdir、nginxdir、applogs、logdir</p></li>
-<li><p>安装SLB、刷新hosts、部署业务、</p></li>
-<li><p>如果有使用ELB，需要把机器IP添加到内网或者公网ELB里面</p></li>
-<li><p>如果是部署在新子网，需要给数据库加业务用户白名单</p></li>
-<li><p>如果该模块有单独再其他领域添加白名单，需要联系开发将新机器IP给对应领域放通白名单</p></li>
-<li><p>安装Datapush</p></li>
-<li><p>检查业务是否具备开机自启</p></li>
-<li><p>更新台账：跳板机、svn台账、云眼集群管理、云眼资源管理等</p></li>
+  <section id="media-platform">
+<span id="mp-wechat-index"></span><h1>media platform<a class="headerlink" href="#media-platform" title="永久链接至标题"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="find_all_links.html">find all links</a></li>
 </ul>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="structure_ops_system.html" class="btn btn-neutral float-left" title="内部的3大流程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="alarm.html" class="btn btn-neutral float-right" title="alarm" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../mysql.html" class="btn btn-neutral float-left" title="mysql" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="find_all_links.html" class="btn btn-neutral float-right" title="find all links" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
