@@ -36,6 +36,6 @@ Enter a URL (include `http://`): https://www.baidu.com
 
 输出结果
 
-```bash
+```
 http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u='+ encodeURIComponent(window.location.href+ (window.location.search === 
 ```
