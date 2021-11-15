@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>windows &mdash; idlepig  文档</title>
+  <title>git &mdash; idlepig  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="知乎" href="zhihu/index.html" />
-    <link rel="prev" title="网站相关的信息" href="website/website.html" /> 
+    <link rel="prev" title="java" href="java.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,11 +53,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sre/index.html">SRE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="website/website.html">网站相关的信息</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">windows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">字体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">重置网络</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zhihu/index.html">知乎</a></li>
 <li class="toctree-l1"><a class="reference internal" href="google.html">google</a></li>
 <li class="toctree-l1"><a class="reference internal" href="k8s.html">k8s</a></li>
@@ -68,7 +63,10 @@
 <li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mp_wechat/index.html">media platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="java.html">java</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">git</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pull-request">处理别人的pull request</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -85,9 +83,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>windows</li>
+      <li>git</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/windows.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="_sources/git.md.txt" rel="nofollow"> 查看页面源码</a>
       </li>
   </ul>
   <hr/>
@@ -95,33 +93,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="windows">
-<span id="id1"></span><h1>windows<a class="headerlink" href="#windows" title="永久链接至标题"></a></h1>
-<section id="id2">
-<h2>字体<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
-<p>fonts</p>
-<p><a class="reference external" href="https://www.jianshu.com/p/7be5dca21094">Windows10字体渲染优化</a> 解释了字体模糊的原因，字体渲染的修改</p>
-<p><a class="reference external" href="https://sspai.com/post/52557">如何在 Windows 上享受更棒的字体渲染</a> 这个也解释了字体模糊的原因</p>
-<p>比如一块 1920 x 1080 的 15.6 寸显示器，它的 PPI 就是 √(1920² + 1080²) / 15.6 = 141.21。从这个公式中可以看出「同等分辨率的屏幕越大，PPI 就越低」。</p>
-<p>计算方法:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-
-<span class="c1"># 台式机的ppi（Pixels Per Inch）：92.55912479337388</span>
-<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1920</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1080</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">23.8</span>
-
-<span class="c1"># 笔记本的ppi（Pixels Per Inch）：165.6321180513006</span>
-<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1920</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1080</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">13.3</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="git">
+<h1>git<a class="headerlink" href="#git" title="永久链接至标题"></a></h1>
+<section id="pull-request">
+<h2>处理别人的pull request<a class="headerlink" href="#pull-request" title="永久链接至标题"></a></h2>
+<p>先添加别人的源</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote add otfsenter https://github.com/otfsenter/test_merge.git
 </pre></div>
 </div>
-<p><strong>important</strong></p>
-<p>windows系统下，字体渲染很容易模糊，没有好的解决方案</p>
-</section>
-<section id="id4">
-<h2>重置网络<a class="headerlink" href="#id4" title="永久链接至标题"></a></h2>
-<p>reset net</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipconfig</span><span class="o">/</span><span class="n">flushdns</span>
-
-<span class="n">netsh</span> <span class="n">winsock</span> <span class="n">reset</span>
+<p>现在remote有自己的、别人的各种分支</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+</div>
+<p>fetch别人的代码</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch otfsenter
+</pre></div>
+</div>
+<p>会下载远程的别人的代码</p>
+<p>local的分支有自己的、别人的各种分支</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -a
+</pre></div>
+</div>
+<p>切换到别人的代码，review或者查看</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout -b otfsenter remotes/otfsenter/main
+</pre></div>
+</div>
+<p>切换到自己的分支，merge别人的分支</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout main
+git merge otfsenter
+git branch -D otfsenter
+git push
 </pre></div>
 </div>
 </section>
@@ -131,8 +132,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="website/website.html" class="btn btn-neutral float-left" title="网站相关的信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="zhihu/index.html" class="btn btn-neutral float-right" title="知乎" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="java.html" class="btn btn-neutral float-left" title="java" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
