@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>git &mdash; idlepig  文档</title>
+  <title>vpn &mdash; idlepig  文档</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,7 @@
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="java" href="java.html" /> 
+    <link rel="search" title="搜索" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,7 +36,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="0-todo.html">TODO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apple.html">apple</a></li>
 <li class="toctree-l1"><a class="reference internal" href="computer.html">computer</a></li>
@@ -63,10 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="mysql.html">mysql</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mp_wechat/index.html">media platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="java.html">java</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">git</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pull-request">处理别人的pull request</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">git</a></li>
 </ul>
 
         </div>
@@ -83,9 +79,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>git</li>
+      <li>vpn</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/git.md.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="_sources/vpn.md.txt" rel="nofollow"> 查看页面源码</a>
       </li>
   </ul>
   <hr/>
@@ -93,49 +89,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="git">
-<h1>git<a class="headerlink" href="#git" title="永久链接至标题"></a></h1>
-<section id="pull-request">
-<h2>处理别人的pull request<a class="headerlink" href="#pull-request" title="永久链接至标题"></a></h2>
-<p>先添加别人的源</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote add otfsenter https://github.com/otfsenter/test_merge.git
-</pre></div>
-</div>
-<p>现在remote有自己的、别人的各种分支</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git remote -v
-</pre></div>
-</div>
-<p>fetch别人的代码</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch otfsenter
-</pre></div>
-</div>
-<p>会下载远程的别人的代码</p>
-<p>local的分支有自己的、别人的各种分支</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -a
-</pre></div>
-</div>
-<p>切换到别人的代码，review或者查看</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout -b otfsenter remotes/otfsenter/main
-</pre></div>
-</div>
-<p>切换到自己的分支，merge别人的分支</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout main
-git merge otfsenter
-git branch -D otfsenter
-git push
-</pre></div>
-</div>
-<p>参考资料</p>
-<p>https://liuyib.github.io/2020/09/19/add-commits-to-others-pr/#%E5%9B%BE%E5%BD%A2%E5%8C%96%E6%96%B9%E5%BC%8F</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="vpn">
+<h1>vpn<a class="headerlink" href="#vpn" title="永久链接至标题"></a></h1>
+<section id="curl-7-failed-to-connect-to-raw-githubusercontent-com-port-443-connection-refused">
+<h2>curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused<a class="headerlink" href="#curl-7-failed-to-connect-to-raw-githubusercontent-com-port-443-connection-refused" title="永久链接至标题"></a></h2>
+<p>export https_proxy=http://127.0.0.1:1087 http_proxy=http://127.0.0.1:1087 all_proxy=socks5://127.0.0.1:1087</p>
+</section>
+<section id="dns">
+<h2>DNS<a class="headerlink" href="#dns" title="永久链接至标题"></a></h2>
+<p>192.168.2.1</p>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="java.html" class="btn btn-neutral float-left" title="java" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-    </div>
+          <footer>
 
   <hr/>
 

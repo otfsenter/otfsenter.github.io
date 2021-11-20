@@ -45,3 +45,7 @@ git merge otfsenter
 git branch -D otfsenter
 git push
 ```
+
+参考资料
+
+https://liuyib.github.io/2020/09/19/add-commits-to-others-pr/#%E5%9B%BE%E5%BD%A2%E5%8C%96%E6%96%B9%E5%BC%8F

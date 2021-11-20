@@ -57,6 +57,7 @@
 <li class="toctree-l2"><a class="reference internal" href="markdown.html">include markdown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandoc.html">pandoc</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">vscode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#run-custom-commands-as-run-configurations-in-visual-studio-code">Run custom commands as run configurations in Visual Studio Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode">How do I press and hold a key and have it repeat in VSCode?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#start-vscode-on-windows">start vscode on windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#extensions-paste-images">extensions: paste images</a></li>
@@ -108,6 +109,30 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="vscode">
 <h1>vscode<a class="headerlink" href="#vscode" title="永久链接至标题"></a></h1>
+<section id="run-custom-commands-as-run-configurations-in-visual-studio-code">
+<h2>Run custom commands as run configurations in Visual Studio Code<a class="headerlink" href="#run-custom-commands-as-run-configurations-in-visual-studio-code" title="永久链接至标题"></a></h2>
+<p>cmd+shift+p</p>
+<p>tasks: configure task</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+    <span class="p">{</span>
+      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Run current&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;shell&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;run.exe $</span><span class="si">{file}</span><span class="s2">&quot;</span>
+    <span class="p">}</span>
+
+</pre></div>
+</div>
+<p>Redefine the F5 keybinding in keybindings.json</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="p">{</span>
+  <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;F5&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;workbench.action.tasks.runTask&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="s2">&quot;Run current&quot;</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</section>
 <section id="how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode">
 <h2>How do I press and hold a key and have it repeat in VSCode?<a class="headerlink" href="#how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode" title="永久链接至标题"></a></h2>
 <p>To disable the Apple press and hold for VSCode only, run this command in a terminal:</p>

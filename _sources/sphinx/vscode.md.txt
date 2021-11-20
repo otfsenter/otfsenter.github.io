@@ -1,5 +1,33 @@
 # vscode
 
+## Run custom commands as run configurations in Visual Studio Code
+
+cmd+shift+p
+
+tasks: configure task
+
+```
+
+    {
+      "label": "Run current",
+      "type": "shell",
+      "command": "run.exe ${file}"
+    }
+
+```
+
+Redefine the F5 keybinding in keybindings.json
+
+```
+
+{
+  "key": "F5",
+  "command": "workbench.action.tasks.runTask",
+  "args": "Run current"
+}
+
+```
+
 ## How do I press and hold a key and have it repeat in VSCode?
 
 To disable the Apple press and hold for VSCode only, run this command in a terminal:
